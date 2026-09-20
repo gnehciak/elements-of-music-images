@@ -7,7 +7,8 @@
   "alpha": false,
   "kb": 21,
   "caption": "A tempo marking sits above the first bar",
-  "credit": ""
+  "credit": "",
+  "url": "https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/ex_tempo_mark.png"
  },
  {
   "file": "nv_semibreve.png",
@@ -17,7 +18,8 @@
   "alpha": false,
   "kb": 2,
   "caption": "Semibreve – 4 beats",
-  "credit": ""
+  "credit": "",
+  "url": "https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/nv_semibreve.png"
  },
  {
   "file": "nv_minim.png",
@@ -27,7 +29,8 @@
   "alpha": false,
   "kb": 2,
   "caption": "Minim – 2 beats",
-  "credit": ""
+  "credit": "",
+  "url": "https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/nv_minim.png"
  },
  {
   "file": "nv_crotchet.png",
@@ -37,7 +40,8 @@
   "alpha": false,
   "kb": 1,
   "caption": "Crotchet – 1 beat",
-  "credit": ""
+  "credit": "",
+  "url": "https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/nv_crotchet.png"
  },
  {
   "file": "nv_quaver.png",
@@ -47,7 +51,8 @@
   "alpha": false,
   "kb": 2,
   "caption": "Quaver – half a beat",
-  "credit": ""
+  "credit": "",
+  "url": "https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/nv_quaver.png"
  },
  {
   "file": "nv_quaverpair.png",
@@ -57,7 +62,8 @@
   "alpha": false,
   "kb": 2,
   "caption": "Two beamed quavers – 1 beat altogether",
-  "credit": ""
+  "credit": "",
+  "url": "https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/nv_quaverpair.png"
  },
  {
   "file": "nv_semiquavers.png",
@@ -67,7 +73,8 @@
   "alpha": false,
   "kb": 2,
   "caption": "Four semiquavers – 1 beat altogether",
-  "credit": ""
+  "credit": "",
+  "url": "https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/nv_semiquavers.png"
  },
  {
   "file": "nv_dotted_minim.png",
@@ -77,7 +84,8 @@
   "alpha": false,
   "kb": 2,
   "caption": "Dotted minim – 3 beats",
-  "credit": ""
+  "credit": "",
+  "url": "https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/nv_dotted_minim.png"
  },
  {
   "file": "nv_dotted_crotchet.png",
@@ -87,7 +95,8 @@
   "alpha": false,
   "kb": 2,
   "caption": "Dotted crotchet – 1½ beats",
-  "credit": ""
+  "credit": "",
+  "url": "https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/nv_dotted_crotchet.png"
  },
  {
   "file": "ex_note_tree.png",
@@ -97,7 +106,8 @@
   "alpha": false,
   "kb": 56,
   "caption": "The note-value pyramid: every row lasts the same time (4 beats). Each note splits into two of the next kind",
-  "credit": ""
+  "credit": "",
+  "url": "https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/ex_note_tree.png"
  },
  {
   "file": "rest_semibreve.png",
@@ -107,7 +117,8 @@
   "alpha": false,
   "kb": 8,
   "caption": "Semibreve rest – 4 beats. HANGS below the line",
-  "credit": ""
+  "credit": "",
+  "url": "https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/rest_semibreve.png"
  },
  {
   "file": "rest_minim.png",
@@ -117,7 +128,8 @@
   "alpha": false,
   "kb": 8,
   "caption": "Minim rest – 2 beats. SITS on the line like a hat",
-  "credit": ""
+  "credit": "",
+  "url": "https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/rest_minim.png"
  },
  {
   "file": "rest_crotchet.png",
@@ -127,7 +139,8 @@
   "alpha": false,
   "kb": 10,
   "caption": "Crotchet rest – 1 beat",
-  "credit": ""
+  "credit": "",
+  "url": "https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/rest_crotchet.png"
  },
  {
   "file": "rest_quaver.png",
@@ -137,7 +150,8 @@
   "alpha": false,
   "kb": 9,
   "caption": "Quaver rest – half a beat",
-  "credit": ""
+  "credit": "",
+  "url": "https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/rest_quaver.png"
  },
  {
   "file": "ts_44.png",
@@ -147,7 +161,8 @@
   "alpha": false,
   "kb": 10,
   "caption": "4/4 – four crotchet beats per bar (simple quadruple)",
-  "credit": ""
+  "credit": "",
+  "url": "https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/ts_44.png"
  },
  {
   "file": "ts_34.png",
@@ -157,7 +172,8 @@
   "alpha": false,
   "kb": 10,
   "caption": "3/4 – three crotchet beats per bar (simple triple)",
-  "credit": ""
+  "credit": "",
+  "url": "https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/ts_34.png"
  },
  {
   "file": "ts_68.png",
@@ -167,7 +183,8 @@
   "alpha": false,
   "kb": 11,
   "caption": "6/8 – compound duple",
-  "credit": ""
+  "credit": "",
+  "url": "https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/ts_68.png"
  },
  {
   "file": "bar_68_group.png",
@@ -177,7 +194,8 @@
   "alpha": false,
   "kb": 17,
   "caption": "6/8: quavers are beamed in two groups of three",
-  "credit": ""
+  "credit": "",
+  "url": "https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/bar_68_group.png"
  },
  {
   "file": "ts_24.png",
@@ -187,7 +205,8 @@
   "alpha": false,
   "kb": 11,
   "caption": "2/4 – two crotchet beats per bar (simple duple), like a march",
-  "credit": ""
+  "credit": "",
+  "url": "https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/ts_24.png"
  },
  {
   "file": "ex_34_quavers.png",
@@ -197,7 +216,8 @@
   "alpha": false,
   "kb": 16,
   "caption": "3/4 also holds six quavers – but grouped in THREE pairs (simple time). Compare with 6/8 above: TWO groups of three (compound time)",
-  "credit": ""
+  "credit": "",
+  "url": "https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/ex_34_quavers.png"
  },
  {
   "file": "ex_ostinato.png",
@@ -207,7 +227,8 @@
   "alpha": false,
   "kb": 10,
   "caption": "Ostinato – the same one-bar rhythm repeated over and over",
-  "credit": ""
+  "credit": "",
+  "url": "https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/ex_ostinato.png"
  },
  {
   "file": "ex_syncopation.png",
@@ -217,7 +238,8 @@
   "alpha": false,
   "kb": 27,
   "caption": "Syncopation – bar 2 accents the notes that fall BETWEEN the beats",
-  "credit": ""
+  "credit": "",
+  "url": "https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/ex_syncopation.png"
  },
  {
   "file": "ex_backbeat.png",
@@ -227,7 +249,8 @@
   "alpha": false,
   "kb": 12,
   "caption": "Backbeat on a drum kit – hi-hat quavers on top, bass drum on beats 1 and 3, accented snare on beats 2 and 4",
-  "credit": ""
+  "credit": "",
+  "url": "https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/ex_backbeat.png"
  },
  {
   "file": "ex_repeat_both.png",
@@ -237,7 +260,8 @@
   "alpha": false,
   "kb": 17,
   "caption": "Start and end repeat signs – play the two bars between the dots twice, then go on",
-  "credit": ""
+  "credit": "",
+  "url": "https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/ex_repeat_both.png"
  },
  {
   "file": "final_barline.png",
@@ -247,7 +271,8 @@
   "alpha": false,
   "kb": 11,
   "caption": "Final (double) bar line – the end of the piece",
-  "credit": ""
+  "credit": "",
+  "url": "https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/final_barline.png"
  },
  {
   "file": "repeat_sign.png",
@@ -257,7 +282,8 @@
   "alpha": false,
   "kb": 12,
   "caption": "Repeat sign – go back and play the section again",
-  "credit": ""
+  "credit": "",
+  "url": "https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/repeat_sign.png"
  },
  {
   "file": "clef_treble.png",
@@ -267,7 +293,8 @@
   "alpha": false,
   "kb": 8,
   "caption": "Treble clef (G clef) – higher notes. It curls around the G line",
-  "credit": ""
+  "credit": "",
+  "url": "https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/clef_treble.png"
  },
  {
   "file": "clef_bass.png",
@@ -277,7 +304,8 @@
   "alpha": false,
   "kb": 5,
   "caption": "Bass clef (F clef) – lower notes. The two dots sit either side of the F line",
-  "credit": ""
+  "credit": "",
+  "url": "https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/clef_bass.png"
  },
  {
   "file": "ref_grand_staff.png",
@@ -287,7 +315,8 @@
   "alpha": false,
   "kb": 42,
   "caption": "The grand staff (piano music): treble and bass staves joined by a brace. MIDDLE C sits on a ledger line between them – it is the same note in both clefs",
-  "credit": ""
+  "credit": "",
+  "url": "https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/ref_grand_staff.png"
  },
  {
   "file": "ex_ledger.png",
@@ -297,7 +326,8 @@
   "alpha": false,
   "kb": 22,
   "caption": "Ledger lines extend the staff below and above",
-  "credit": ""
+  "credit": "",
+  "url": "https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/ex_ledger.png"
  },
  {
   "file": "ref_treble_notes.png",
@@ -307,7 +337,8 @@
   "alpha": false,
   "kb": 39,
   "caption": "Treble clef: middle C (on a ledger line) up to high A",
-  "credit": ""
+  "credit": "",
+  "url": "https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/ref_treble_notes.png"
  },
  {
   "file": "ref_bass_notes.png",
@@ -317,7 +348,8 @@
   "alpha": false,
   "kb": 35,
   "caption": "Bass clef: low E up to middle C (on a ledger line)",
-  "credit": ""
+  "credit": "",
+  "url": "https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/ref_bass_notes.png"
  },
  {
   "file": "ref_keyboard.png",
@@ -327,7 +359,8 @@
   "alpha": false,
   "kb": 13,
   "caption": "C is always the white key to the left of the group of TWO black keys (middle C highlighted)",
-  "credit": ""
+  "credit": "",
+  "url": "https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/ref_keyboard.png"
  },
  {
   "file": "kb_semitone_tone.png",
@@ -337,7 +370,8 @@
   "alpha": false,
   "kb": 15,
   "caption": "C to D is a TONE (there is a black key in between). E to F is a SEMITONE (no key in between)",
-  "credit": ""
+  "credit": "",
+  "url": "https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/kb_semitone_tone.png"
  },
  {
   "file": "kb_octave.png",
@@ -347,7 +381,8 @@
   "alpha": false,
   "kb": 17,
   "caption": "An octave on the keyboard",
-  "credit": ""
+  "credit": "",
+  "url": "https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/kb_octave.png"
  },
  {
   "file": "ex_octave.png",
@@ -357,7 +392,8 @@
   "alpha": false,
   "kb": 13,
   "caption": "An octave on the staff: middle C up to the next C",
-  "credit": ""
+  "credit": "",
+  "url": "https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/ex_octave.png"
  },
  {
   "file": "ex_intervals.png",
@@ -367,7 +403,8 @@
   "alpha": false,
   "kb": 32,
   "caption": "Intervals above C – count both notes: C to E is C-D-E = a 3rd",
-  "credit": ""
+  "credit": "",
+  "url": "https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/ex_intervals.png"
  },
  {
   "file": "acc_sharp.png",
@@ -377,7 +414,8 @@
   "alpha": false,
   "kb": 10,
   "caption": "Sharp – raises the note by a semitone (F sharp)",
-  "credit": ""
+  "credit": "",
+  "url": "https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/acc_sharp.png"
  },
  {
   "file": "acc_flat.png",
@@ -387,7 +425,8 @@
   "alpha": false,
   "kb": 10,
   "caption": "Flat – lowers the note by a semitone (B flat)",
-  "credit": ""
+  "credit": "",
+  "url": "https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/acc_flat.png"
  },
  {
   "file": "acc_natural.png",
@@ -397,7 +436,8 @@
   "alpha": false,
   "kb": 10,
   "caption": "Natural – cancels a sharp or flat",
-  "credit": ""
+  "credit": "",
+  "url": "https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/acc_natural.png"
  },
  {
   "file": "mel_steps.png",
@@ -407,7 +447,8 @@
   "alpha": false,
   "kb": 14,
   "caption": "By STEP – to the next-door note",
-  "credit": ""
+  "credit": "",
+  "url": "https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/mel_steps.png"
  },
  {
   "file": "mel_leaps.png",
@@ -417,7 +458,8 @@
   "alpha": false,
   "kb": 14,
   "caption": "By LEAP – jumping over notes",
-  "credit": ""
+  "credit": "",
+  "url": "https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/mel_leaps.png"
  },
  {
   "file": "mel_repeat.png",
@@ -427,7 +469,8 @@
   "alpha": false,
   "kb": 12,
   "caption": "REPEATED notes",
-  "credit": ""
+  "credit": "",
+  "url": "https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/mel_repeat.png"
  },
  {
   "file": "mel_ascending.png",
@@ -437,7 +480,8 @@
   "alpha": false,
   "kb": 15,
   "caption": "Ascending contour",
-  "credit": ""
+  "credit": "",
+  "url": "https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/mel_ascending.png"
  },
  {
   "file": "mel_arch.png",
@@ -447,7 +491,8 @@
   "alpha": false,
   "kb": 14,
   "caption": "Arch contour – up, then down",
-  "credit": ""
+  "credit": "",
+  "url": "https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/mel_arch.png"
  },
  {
   "file": "mel_descending.png",
@@ -457,7 +502,8 @@
   "alpha": false,
   "kb": 15,
   "caption": "Descending contour",
-  "credit": ""
+  "credit": "",
+  "url": "https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/mel_descending.png"
  },
  {
   "file": "mel_wave.png",
@@ -467,7 +513,8 @@
   "alpha": false,
   "kb": 13,
   "caption": "Wave-like contour – up and down, over and over",
-  "credit": ""
+  "credit": "",
+  "url": "https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/mel_wave.png"
  },
  {
   "file": "scale_cmaj.png",
@@ -477,7 +524,8 @@
   "alpha": false,
   "kb": 15,
   "caption": "C major scale – eight notes moving by step from C to C",
-  "credit": ""
+  "credit": "",
+  "url": "https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/scale_cmaj.png"
  },
  {
   "file": "key_g.png",
@@ -487,7 +535,8 @@
   "alpha": false,
   "kb": 9,
   "caption": "G major – one sharp (F sharp)",
-  "credit": ""
+  "credit": "",
+  "url": "https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/key_g.png"
  },
  {
   "file": "key_f.png",
@@ -497,7 +546,8 @@
   "alpha": false,
   "kb": 9,
   "caption": "F major – one flat (B flat)",
-  "credit": ""
+  "credit": "",
+  "url": "https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/key_f.png"
  },
  {
   "file": "scale_cmaj_tts.png",
@@ -507,7 +557,8 @@
   "alpha": false,
   "kb": 18,
   "caption": "Every major scale follows the same pattern of steps: Tone, Tone, Semitone, Tone, Tone, Tone, Semitone",
-  "credit": ""
+  "credit": "",
+  "url": "https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/scale_cmaj_tts.png"
  },
  {
   "file": "scale_amin.png",
@@ -517,7 +568,8 @@
   "alpha": false,
   "kb": 15,
   "caption": "A minor scale (natural minor) – same notes as C major but starting on A. Sounds darker",
-  "credit": ""
+  "credit": "",
+  "url": "https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/scale_amin.png"
  },
  {
   "file": "scale_cpent.png",
@@ -527,7 +579,8 @@
   "alpha": false,
   "kb": 14,
   "caption": "C major pentatonic – only five different notes: C D E G A (no F or B)",
-  "credit": ""
+  "credit": "",
+  "url": "https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/scale_cpent.png"
  },
  {
   "file": "scale_ddorian.png",
@@ -537,7 +590,8 @@
   "alpha": false,
   "kb": 15,
   "caption": "D Dorian mode (modal) – the white notes from D to D",
-  "credit": ""
+  "credit": "",
+  "url": "https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/scale_ddorian.png"
  },
  {
   "file": "scale_chromatic.png",
@@ -547,7 +601,8 @@
   "alpha": false,
   "kb": 21,
   "caption": "Chromatic scale – every semitone, all 12 notes",
-  "credit": ""
+  "credit": "",
+  "url": "https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/scale_chromatic.png"
  },
  {
   "file": "key_d.png",
@@ -557,7 +612,8 @@
   "alpha": false,
   "kb": 10,
   "caption": "D major – two sharps (F sharp, C sharp)",
-  "credit": ""
+  "credit": "",
+  "url": "https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/key_d.png"
  },
  {
   "file": "key_bb.png",
@@ -567,7 +623,8 @@
   "alpha": false,
   "kb": 10,
   "caption": "B flat major – two flats (B flat, E flat)",
-  "credit": ""
+  "credit": "",
+  "url": "https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/key_bb.png"
  },
  {
   "file": "triad_c.png",
@@ -577,7 +634,8 @@
   "alpha": false,
   "kb": 11,
   "caption": "C major triad: C – E – G",
-  "credit": ""
+  "credit": "",
+  "url": "https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/triad_c.png"
  },
  {
   "file": "ex_chords_c.png",
@@ -587,7 +645,8 @@
   "alpha": false,
   "kb": 27,
   "caption": "The primary chords in C major, with chord symbols above and Roman numerals below",
-  "credit": ""
+  "credit": "",
+  "url": "https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/ex_chords_c.png"
  },
  {
   "file": "ex_major_minor.png",
@@ -597,7 +656,8 @@
   "alpha": false,
   "kb": 20,
   "caption": "Major vs minor triad – only the middle note changes (E becomes E flat)",
-  "credit": ""
+  "credit": "",
+  "url": "https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/ex_major_minor.png"
  },
  {
   "file": "ex_guitar_chord_c.png",
@@ -607,7 +667,8 @@
   "alpha": false,
   "kb": 25,
   "caption": "Chord diagram: C on guitar. Dots = where fingers press, O = open string, X = do not play",
-  "credit": ""
+  "credit": "",
+  "url": "https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/ex_guitar_chord_c.png"
  },
  {
   "file": "ex_uke_chord_c.png",
@@ -617,7 +678,8 @@
   "alpha": false,
   "kb": 18,
   "caption": "Chord diagram: C on ukulele – one finger on the 3rd fret",
-  "credit": ""
+  "credit": "",
+  "url": "https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/ex_uke_chord_c.png"
  },
  {
   "file": "ex_riff.png",
@@ -627,7 +689,8 @@
   "alpha": false,
   "kb": 15,
   "caption": "A bass riff – a short, catchy pattern that keeps repeating (note the repeat sign)",
-  "credit": ""
+  "credit": "",
+  "url": "https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/ex_riff.png"
  },
  {
   "file": "ex_drone.png",
@@ -637,7 +700,8 @@
   "alpha": false,
   "kb": 43,
   "caption": "A drone – the bottom staff holds the same two notes (D and A) while the melody moves above",
-  "credit": ""
+  "credit": "",
+  "url": "https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/ex_drone.png"
  },
  {
   "file": "ex_tab_staff.png",
@@ -647,7 +711,8 @@
   "alpha": false,
   "kb": 33,
   "caption": "The same notes written in staff notation (top) and guitar TAB (bottom)",
-  "credit": ""
+  "credit": "",
+  "url": "https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/ex_tab_staff.png"
  },
  {
   "file": "ex_graphic_notation.png",
@@ -657,7 +722,8 @@
   "alpha": false,
   "kb": 33,
   "caption": "A graphic score – shapes show pitch (height), length (width) and volume (size)",
-  "credit": ""
+  "credit": "",
+  "url": "https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/ex_graphic_notation.png"
  },
  {
   "file": "tab.png",
@@ -667,7 +733,8 @@
   "alpha": false,
   "kb": 13,
   "caption": "Guitar tablature (TAB)",
-  "credit": ""
+  "credit": "",
+  "url": "https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/tab.png"
  },
  {
   "file": "ex_texture_graph.png",
@@ -677,7 +744,8 @@
   "alpha": false,
   "kb": 36,
   "caption": "A texture graph (layer diagram) of a pop song – count the coloured layers in each section to see the texture get thicker and thinner",
-  "credit": ""
+  "credit": "",
+  "url": "https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/ex_texture_graph.png"
  },
  {
   "file": "tex_roles.png",
@@ -687,7 +755,8 @@
   "alpha": false,
   "kb": 61,
   "caption": "Roles of layers: melodic (top), harmonic (middle), bass line (bottom)",
-  "credit": ""
+  "credit": "",
+  "url": "https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/tex_roles.png"
  },
  {
   "file": "tex_unison.png",
@@ -697,7 +766,8 @@
   "alpha": false,
   "kb": 41,
   "caption": "Unison – both voices have exactly the same notes",
-  "credit": ""
+  "credit": "",
+  "url": "https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/tex_unison.png"
  },
  {
   "file": "tex_poly.png",
@@ -707,7 +777,8 @@
   "alpha": false,
   "kb": 45,
   "caption": "Polyphonic – a round (Frère Jacques): Voice 2 starts the tune two bars later, so two independent melodies overlap",
-  "credit": ""
+  "credit": "",
+  "url": "https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/tex_poly.png"
  },
  {
   "file": "tex_mono.png",
@@ -717,7 +788,8 @@
   "alpha": false,
   "kb": 19,
   "caption": "Monophonic – one melody line only",
-  "credit": ""
+  "credit": "",
+  "url": "https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/tex_mono.png"
  },
  {
   "file": "tex_homo.png",
@@ -727,7 +799,8 @@
   "alpha": false,
   "kb": 31,
   "caption": "Homophonic – melody (top) supported by chords (bottom)",
-  "credit": ""
+  "credit": "",
+  "url": "https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/tex_homo.png"
  },
  {
   "file": "ex_orchestra_layout.png",
@@ -737,7 +810,8 @@
   "alpha": false,
   "kb": 88,
   "caption": "Where the families sit in a symphony orchestra – quieter strings at the front, louder brass and percussion at the back",
-  "credit": ""
+  "credit": "",
+  "url": "https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/ex_orchestra_layout.png"
  },
  {
   "file": "violin.jpg",
@@ -747,7 +821,8 @@
   "alpha": false,
   "kb": 31,
   "caption": "Violin – highest string instrument",
-  "credit": "Just plain Bill, public domain, via Wikimedia Commons"
+  "credit": "Just plain Bill, public domain, via Wikimedia Commons",
+  "url": "https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/violin.jpg"
  },
  {
   "file": "cello.png",
@@ -757,7 +832,8 @@
   "alpha": true,
   "kb": 204,
   "caption": "Cello – played sitting down",
-  "credit": "Georg Feitscher, CC BY 3.0, via Wikimedia Commons"
+  "credit": "Georg Feitscher, CC BY 3.0, via Wikimedia Commons",
+  "url": "https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/cello.png"
  },
  {
   "file": "double_bass.jpg",
@@ -767,7 +843,8 @@
   "alpha": false,
   "kb": 116,
   "caption": "Double bass – lowest string instrument",
-  "credit": "AndrewKepert, CC BY-SA 3.0, via Wikimedia Commons"
+  "credit": "AndrewKepert, CC BY-SA 3.0, via Wikimedia Commons",
+  "url": "https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/double_bass.jpg"
  },
  {
   "file": "flute.jpg",
@@ -777,7 +854,8 @@
   "alpha": false,
   "kb": 86,
   "caption": "Flute – blow across the hole (no reed)",
-  "credit": "Thea Paraskevaides, CC BY-SA 4.0, via Wikimedia Commons"
+  "credit": "Thea Paraskevaides, CC BY-SA 4.0, via Wikimedia Commons",
+  "url": "https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/flute.jpg"
  },
  {
   "file": "clarinet.jpg",
@@ -787,7 +865,8 @@
   "alpha": false,
   "kb": 25,
   "caption": "Clarinet – single reed",
-  "credit": "Yamaha Corporation, CC BY-SA 4.0, via Wikimedia Commons"
+  "credit": "Yamaha Corporation, CC BY-SA 4.0, via Wikimedia Commons",
+  "url": "https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/clarinet.jpg"
  },
  {
   "file": "saxophone.jpg",
@@ -797,7 +876,8 @@
   "alpha": false,
   "kb": 298,
   "caption": "Alto saxophone – metal body but a single reed, so it is woodwind",
-  "credit": "muzyczny.pl, CC BY-SA 4.0, via Wikimedia Commons"
+  "credit": "muzyczny.pl, CC BY-SA 4.0, via Wikimedia Commons",
+  "url": "https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/saxophone.jpg"
  },
  {
   "file": "trumpet.jpg",
@@ -807,7 +887,8 @@
   "alpha": false,
   "kb": 46,
   "caption": "Trumpet – highest brass, three valves",
-  "credit": "Yamaha Corporation, CC BY-SA 4.0, via Wikimedia Commons"
+  "credit": "Yamaha Corporation, CC BY-SA 4.0, via Wikimedia Commons",
+  "url": "https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/trumpet.jpg"
  },
  {
   "file": "french_horn.png",
@@ -817,7 +898,8 @@
   "alpha": false,
   "kb": 458,
   "caption": "French horn – coiled tubing, mellow sound",
-  "credit": "BenP, CC BY 2.5, via Wikimedia Commons"
+  "credit": "BenP, CC BY 2.5, via Wikimedia Commons",
+  "url": "https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/french_horn.png"
  },
  {
   "file": "trombone.jpg",
@@ -827,7 +909,8 @@
   "alpha": false,
   "kb": 23,
   "caption": "Trombone – uses a slide instead of valves",
-  "credit": "Yamaha Corporation, CC BY-SA 4.0, via Wikimedia Commons"
+  "credit": "Yamaha Corporation, CC BY-SA 4.0, via Wikimedia Commons",
+  "url": "https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/trombone.jpg"
  },
  {
   "file": "tuba.png",
@@ -837,7 +920,8 @@
   "alpha": true,
   "kb": 1391,
   "caption": "Tuba – lowest brass",
-  "credit": "Buffet Crampon, CC BY-SA 4.0, via Wikimedia Commons"
+  "credit": "Buffet Crampon, CC BY-SA 4.0, via Wikimedia Commons",
+  "url": "https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/tuba.png"
  },
  {
   "file": "timpani.jpg",
@@ -847,7 +931,8 @@
   "alpha": false,
   "kb": 247,
   "caption": "Timpani (kettledrums) – TUNED percussion",
-  "credit": "Reinhold Möller, CC BY-SA 4.0, via Wikimedia Commons"
+  "credit": "Reinhold Möller, CC BY-SA 4.0, via Wikimedia Commons",
+  "url": "https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/timpani.jpg"
  },
  {
   "file": "snare_drum.png",
@@ -857,7 +942,8 @@
   "alpha": true,
   "kb": 628,
   "caption": "Snare drum – UNTUNED percussion",
-  "credit": "Edrocked, CC BY-SA 4.0, via Wikimedia Commons"
+  "credit": "Edrocked, CC BY-SA 4.0, via Wikimedia Commons",
+  "url": "https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/snare_drum.png"
  },
  {
   "file": "drum_kit.jpg",
@@ -867,7 +953,8 @@
   "alpha": false,
   "kb": 95,
   "caption": "Drum kit – bass drum, snare, toms, hi-hat and cymbals",
-  "credit": "Mostafameraji, CC BY 4.0, via Wikimedia Commons"
+  "credit": "Mostafameraji, CC BY 4.0, via Wikimedia Commons",
+  "url": "https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/drum_kit.jpg"
  },
  {
   "file": "maracas.jpg",
@@ -877,7 +964,8 @@
   "alpha": false,
   "kb": 203,
   "caption": "Maracas – played by SHAKING",
-  "credit": "Axel Heymann, CC BY-SA 3.0, via Wikimedia Commons"
+  "credit": "Axel Heymann, CC BY-SA 3.0, via Wikimedia Commons",
+  "url": "https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/maracas.jpg"
  },
  {
   "file": "guiro.jpg",
@@ -887,7 +975,8 @@
   "alpha": false,
   "kb": 36,
   "caption": "Guiro – played by SCRAPING",
-  "credit": "Miguel Andrade, public domain, via Wikimedia Commons"
+  "credit": "Miguel Andrade, public domain, via Wikimedia Commons",
+  "url": "https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/guiro.jpg"
  },
  {
   "file": "ex_drum_key.png",
@@ -897,7 +986,8 @@
   "alpha": false,
   "kb": 24,
   "caption": "How the drum kit is written on a percussion staff",
-  "credit": ""
+  "credit": "",
+  "url": "https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/ex_drum_key.png"
  },
  {
   "file": "piano.png",
@@ -907,7 +997,8 @@
   "alpha": false,
   "kb": 362,
   "caption": "Grand piano – hammers strike strings",
-  "credit": "Steinway and Sons, CC BY-SA 3.0, via Wikimedia Commons"
+  "credit": "Steinway and Sons, CC BY-SA 3.0, via Wikimedia Commons",
+  "url": "https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/piano.png"
  },
  {
   "file": "synthesizer.jpg",
@@ -917,7 +1008,8 @@
   "alpha": false,
   "kb": 110,
   "caption": "Synthesiser – ELECTRONIC sound source",
-  "credit": "PerfectCircuit, CC0, via Wikimedia Commons"
+  "credit": "PerfectCircuit, CC0, via Wikimedia Commons",
+  "url": "https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/synthesizer.jpg"
  },
  {
   "file": "acoustic_guitar.jpg",
@@ -927,7 +1019,8 @@
   "alpha": false,
   "kb": 330,
   "caption": "Acoustic guitar – strummed or plucked",
-  "credit": "Tony 1212, CC BY-SA 4.0, via Wikimedia Commons"
+  "credit": "Tony 1212, CC BY-SA 4.0, via Wikimedia Commons",
+  "url": "https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/acoustic_guitar.jpg"
  },
  {
   "file": "electric_guitar.png",
@@ -937,7 +1030,8 @@
   "alpha": false,
   "kb": 1432,
   "caption": "Electric guitar – needs an amplifier",
-  "credit": "Spike78, CC BY-SA 4.0, via Wikimedia Commons"
+  "credit": "Spike78, CC BY-SA 4.0, via Wikimedia Commons",
+  "url": "https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/electric_guitar.png"
  },
  {
   "file": "ukulele.jpg",
@@ -947,7 +1041,8 @@
   "alpha": false,
   "kb": 284,
   "caption": "Ukulele – four strings",
-  "credit": "Zapyon, CC BY-SA 4.0, via Wikimedia Commons"
+  "credit": "Zapyon, CC BY-SA 4.0, via Wikimedia Commons",
+  "url": "https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/ukulele.jpg"
  },
  {
   "file": "didgeridoo.jpg",
@@ -957,7 +1052,8 @@
   "alpha": false,
   "kb": 298,
   "caption": "Didgeridoo (yidaki) – played with vibrating lips to make a drone",
-  "credit": "CC BY-SA 3.0, via Wikimedia Commons"
+  "credit": "CC BY-SA 3.0, via Wikimedia Commons",
+  "url": "https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/didgeridoo.jpg"
  },
  {
   "file": "ex_pizz_arco.png",
@@ -967,7 +1063,8 @@
   "alpha": false,
   "kb": 25,
   "caption": "Playing techniques are written into the music: pizz. = pluck the strings, arco = go back to the bow",
-  "credit": ""
+  "credit": "",
+  "url": "https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/ex_pizz_arco.png"
  },
  {
   "file": "ex_voice_ranges.png",
@@ -977,7 +1074,8 @@
   "alpha": false,
   "kb": 59,
   "caption": "Approximate ranges of the four voice types, lowest note to highest note",
-  "credit": ""
+  "credit": "",
+  "url": "https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/ex_voice_ranges.png"
  },
  {
   "file": "dyn_pp.png",
@@ -987,7 +1085,8 @@
   "alpha": false,
   "kb": 5,
   "caption": "pianissimo – very soft",
-  "credit": ""
+  "credit": "",
+  "url": "https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/dyn_pp.png"
  },
  {
   "file": "dyn_mp.png",
@@ -997,7 +1096,8 @@
   "alpha": false,
   "kb": 7,
   "caption": "mezzo piano – moderately soft",
-  "credit": ""
+  "credit": "",
+  "url": "https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/dyn_mp.png"
  },
  {
   "file": "dyn_mf.png",
@@ -1007,7 +1107,8 @@
   "alpha": false,
   "kb": 7,
   "caption": "mezzo forte – moderately loud",
-  "credit": ""
+  "credit": "",
+  "url": "https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/dyn_mf.png"
  },
  {
   "file": "dyn_ff.png",
@@ -1017,7 +1118,8 @@
   "alpha": false,
   "kb": 5,
   "caption": "fortissimo – very loud",
-  "credit": ""
+  "credit": "",
+  "url": "https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/dyn_ff.png"
  },
  {
   "file": "dyn_p.png",
@@ -1027,7 +1129,8 @@
   "alpha": false,
   "kb": 5,
   "caption": "piano – soft",
-  "credit": ""
+  "credit": "",
+  "url": "https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/dyn_p.png"
  },
  {
   "file": "dyn_f.png",
@@ -1037,7 +1140,8 @@
   "alpha": false,
   "kb": 5,
   "caption": "forte – loud",
-  "credit": ""
+  "credit": "",
+  "url": "https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/dyn_f.png"
  },
  {
   "file": "ex_dynamics_passage.png",
@@ -1047,7 +1151,8 @@
   "alpha": false,
   "kb": 28,
   "caption": "Dynamics in a real melody: start soft (p), crescendo to loud (f), diminuendo, end very soft (pp)",
-  "credit": ""
+  "credit": "",
+  "url": "https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/ex_dynamics_passage.png"
  },
  {
   "file": "hairpin_cresc.png",
@@ -1057,7 +1162,8 @@
   "alpha": false,
   "kb": 15,
   "caption": "Crescendo (cresc.) – gradually getting louder",
-  "credit": ""
+  "credit": "",
+  "url": "https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/hairpin_cresc.png"
  },
  {
   "file": "hairpin_dim.png",
@@ -1067,7 +1173,8 @@
   "alpha": false,
   "kb": 15,
   "caption": "Diminuendo / decrescendo (dim.) – gradually getting softer",
-  "credit": ""
+  "credit": "",
+  "url": "https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/hairpin_dim.png"
  },
  {
   "file": "ex_cresc_text.png",
@@ -1077,7 +1184,8 @@
   "alpha": false,
   "kb": 21,
   "caption": "A crescendo can also be written as a word (cresc.) with a dashed line instead of a hairpin",
-  "credit": ""
+  "credit": "",
+  "url": "https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/ex_cresc_text.png"
  },
  {
   "file": "art_staccato.png",
@@ -1087,7 +1195,8 @@
   "alpha": false,
   "kb": 12,
   "caption": "Staccato (dots) – short and detached",
-  "credit": ""
+  "credit": "",
+  "url": "https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/art_staccato.png"
  },
  {
   "file": "art_accent.png",
@@ -1097,7 +1206,8 @@
   "alpha": false,
   "kb": 12,
   "caption": "Accent – play the note with emphasis",
-  "credit": ""
+  "credit": "",
+  "url": "https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/art_accent.png"
  },
  {
   "file": "art_slur.png",
@@ -1107,7 +1217,8 @@
   "alpha": false,
   "kb": 13,
   "caption": "Slur – play legato (smooth and connected)",
-  "credit": ""
+  "credit": "",
+  "url": "https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/art_slur.png"
  },
  {
   "file": "art_tie.png",
@@ -1117,7 +1228,8 @@
   "alpha": false,
   "kb": 11,
   "caption": "Tie – joins two notes of the SAME pitch into one longer note",
-  "credit": ""
+  "credit": "",
+  "url": "https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/art_tie.png"
  },
  {
   "file": "art_fermata.png",
@@ -1127,7 +1239,8 @@
   "alpha": false,
   "kb": 11,
   "caption": "Fermata (pause) – hold the note longer",
-  "credit": ""
+  "credit": "",
+  "url": "https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/art_fermata.png"
  },
  {
   "file": "art_tenuto.png",
@@ -1137,7 +1250,8 @@
   "alpha": false,
   "kb": 11,
   "caption": "Tenuto (lines) – hold each note for its full length, slightly stressed",
-  "credit": ""
+  "credit": "",
+  "url": "https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/art_tenuto.png"
  },
  {
   "file": "ex_gliss.png",
@@ -1147,7 +1261,8 @@
   "alpha": false,
   "kb": 13,
   "caption": "Glissando – slide from one note to the other",
-  "credit": ""
+  "credit": "",
+  "url": "https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/ex_gliss.png"
  },
  {
   "file": "ex_trill.png",
@@ -1157,7 +1272,8 @@
   "alpha": false,
   "kb": 11,
   "caption": "Trill (tr) – rapidly alternate with the note above",
-  "credit": ""
+  "credit": "",
+  "url": "https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/ex_trill.png"
  },
  {
   "file": "ex_expression_text.png",
@@ -1167,7 +1283,8 @@
   "alpha": false,
   "kb": 29,
   "caption": "Expressive directions in a score: Andante (tempo), rit. (slow down) and a fermata on the last note",
-  "credit": ""
+  "credit": "",
+  "url": "https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/ex_expression_text.png"
  },
  {
   "file": "form_binary.png",
@@ -1177,7 +1294,8 @@
   "alpha": false,
   "kb": 6,
   "caption": "Binary – two contrasting sections",
-  "credit": ""
+  "credit": "",
+  "url": "https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/form_binary.png"
  },
  {
   "file": "form_ternary.png",
@@ -1187,7 +1305,8 @@
   "alpha": false,
   "kb": 7,
   "caption": "Ternary – the A section comes back",
-  "credit": ""
+  "credit": "",
+  "url": "https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/form_ternary.png"
  },
  {
   "file": "form_rondo.png",
@@ -1197,7 +1316,8 @@
   "alpha": false,
   "kb": 8,
   "caption": "Rondo – A keeps returning between new sections",
-  "credit": ""
+  "credit": "",
+  "url": "https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/form_rondo.png"
  },
  {
   "file": "form_verse_chorus.png",
@@ -1207,7 +1327,8 @@
   "alpha": false,
   "kb": 19,
   "caption": "A typical verse–chorus song map",
-  "credit": ""
+  "credit": "",
+  "url": "https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/form_verse_chorus.png"
  },
  {
   "file": "form_12bar_blues.png",
@@ -1217,7 +1338,8 @@
   "alpha": false,
   "kb": 22,
   "caption": "The 12-bar blues chord pattern (shown in C) – this 12-bar cycle repeats for the whole song",
-  "credit": ""
+  "credit": "",
+  "url": "https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/form_12bar_blues.png"
  },
  {
   "file": "ex_motif.png",
@@ -1227,7 +1349,8 @@
   "alpha": false,
   "kb": 53,
   "caption": "Motif – the famous four-note idea from Beethoven's Symphony No. 5, then repeated a step lower",
-  "credit": ""
+  "credit": "",
+  "url": "https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/ex_motif.png"
  },
  {
   "file": "ex_phrases.png",
@@ -1237,7 +1360,8 @@
   "alpha": false,
   "kb": 63,
   "caption": "Phrases – Beethoven's Ode to Joy: a 'question' phrase that sounds unfinished, then an 'answer' phrase that ends on the home note",
-  "credit": ""
+  "credit": "",
+  "url": "https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/ex_phrases.png"
  },
  {
   "file": "ex_call_response.png",
@@ -1247,7 +1371,8 @@
   "alpha": false,
   "kb": 27,
   "caption": "Call and response",
-  "credit": ""
+  "credit": "",
+  "url": "https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/ex_call_response.png"
  },
  {
   "file": "ex_volta.png",
@@ -1257,7 +1382,8 @@
   "alpha": false,
   "kb": 22,
   "caption": "1st and 2nd time bars – first time play bracket 1 and repeat; second time skip to bracket 2",
-  "credit": ""
+  "credit": "",
+  "url": "https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/ex_volta.png"
  },
  {
   "file": "ex_dc_fine.png",
@@ -1267,6 +1393,7 @@
   "alpha": false,
   "kb": 25,
   "caption": "D.C. al Fine – go back to the beginning and stop at Fine",
-  "credit": ""
+  "credit": "",
+  "url": "https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/ex_dc_fine.png"
  }
 ]
