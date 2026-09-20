@@ -6,22 +6,28 @@
 <style>
 :root{
   --ground:#EDF0F5; --surface:#FFFFFF; --ink:#141C2B; --muted:#55607A; --line:#C9D0DD; --dot:#CFD5E0;
-  --c1:#C8451F; --c2:#2460C8; --c3:#12806A; --c4:#7A45C4; --c5:#C02A6E; --c6:#94690A;
-  --on-c:#FFFFFF; --hl:#F5B800;
+  --c1:#CB912F; --c2:#D44C47; --c3:#9065B0; --c4:#337EA9; --c5:#448361; --c6:#D9730D;
+  --f1:#FDECC8; --f2:#FFE2DD; --f3:#E8DEEE; --f4:#D3E5EF; --f5:#DBEDDB; --f6:#FADEC9;
+  --t1:#402C1B; --t2:#5D1715; --t3:#412454; --t4:#183347; --t5:#1C3829; --t6:#49290E;
+  --hl:#2F6FEB;
   --display:"Bricolage Grotesque","Avenir Next","Segoe UI",sans-serif;
   --body:"Atkinson Hyperlegible","Verdana","Segoe UI",sans-serif;
 }
 @media (prefers-color-scheme: dark){
   :root:not([data-theme="light"]){
     --ground:#0F141D; --surface:#19202D; --ink:#E8ECF4; --muted:#9AA5BC; --line:#2E3849; --dot:#252E3D;
-    --c1:#FF8A5C; --c2:#7FB0FF; --c3:#4FD1B0; --c4:#B794F6; --c5:#FF7EB6; --c6:#E5B94A;
-    --on-c:#0F141D; --hl:#FFD24A;
+    --c1:#D9A441; --c2:#E5645E; --c3:#A77FCB; --c4:#5E9FD8; --c5:#5FA37E; --c6:#E08A3C;
+    --f1:#89632A; --f2:#6E3630; --f3:#492F64; --f4:#28456C; --f5:#2B593F; --f6:#854C1D;
+    --t1:#FBF1DC; --t2:#FCE6E3; --t3:#EFE4F6; --t4:#DDEBF5; --t5:#E0F0E3; --t6:#FBE8D8;
+    --hl:#8AB4FF;
   }
 }
 :root[data-theme="dark"]{
   --ground:#0F141D; --surface:#19202D; --ink:#E8ECF4; --muted:#9AA5BC; --line:#2E3849; --dot:#252E3D;
-  --c1:#FF8A5C; --c2:#7FB0FF; --c3:#4FD1B0; --c4:#B794F6; --c5:#FF7EB6; --c6:#E5B94A;
-  --on-c:#0F141D; --hl:#FFD24A;
+  --c1:#D9A441; --c2:#E5645E; --c3:#A77FCB; --c4:#5E9FD8; --c5:#5FA37E; --c6:#E08A3C;
+    --f1:#89632A; --f2:#6E3630; --f3:#492F64; --f4:#28456C; --f5:#2B593F; --f6:#854C1D;
+    --t1:#FBF1DC; --t2:#FCE6E3; --t3:#EFE4F6; --t4:#DDEBF5; --t5:#E0F0E3; --t6:#FBE8D8;
+  --hl:#8AB4FF;
 }
 *{box-sizing:border-box}
 html,body{height:100%}
@@ -36,8 +42,8 @@ button,input{font:inherit;color:inherit}
 .brand p{margin:0;color:var(--muted);font-size:13px}
 .chips{display:flex;gap:6px;overflow-x:auto;max-width:100%;padding:3px;margin:-3px;scrollbar-width:none}
 .chips::-webkit-scrollbar{display:none}
-.chip{flex:none;border:0;border-radius:999px;padding:6px 12px;background:var(--b);color:var(--on-c);font-weight:700;font-size:13px;cursor:pointer;white-space:nowrap}
-.chip:hover{filter:brightness(1.08)}
+.chip{flex:none;border:1px solid color-mix(in srgb,var(--b) 40%,var(--f));border-radius:999px;padding:5px 12px;background:var(--f);color:var(--tf);font-weight:700;font-size:13px;cursor:pointer;white-space:nowrap}
+.chip:hover{border-color:var(--b)}
 .tools{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin-left:auto}
 .search{display:flex;align-items:center;gap:8px;border:1.5px solid var(--line);border-radius:10px;padding:0 10px;background:var(--ground)}
 .search:focus-within{border-color:var(--ink)}
@@ -69,9 +75,10 @@ button,input{font:inherit;color:inherit}
 .node span{display:block}
 .node .t{font-weight:700;font-size:14.5px}
 .node .def{color:var(--muted);font-size:13px;margin-top:1px}
-.node .eyebrow{font-size:10.5px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--b);margin-bottom:1px}
+.node .eyebrow{font-size:10.5px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:color-mix(in srgb,var(--b) 65%,var(--ink));margin-bottom:1px}
+.node .t{color:inherit}
 .node .count{flex:none;min-width:22px;height:22px;border-radius:11px;padding:0 6px;font-size:12px;font-weight:700;line-height:22px;text-align:center;
-  background:color-mix(in srgb,var(--b) 18%,var(--surface));font-variant-numeric:tabular-nums}
+  background:color-mix(in srgb,var(--f) 80%,var(--surface));color:var(--tf);font-variant-numeric:tabular-nums}
 .node .pic{background:#fff;border:1px solid var(--line);border-radius:8px;margin-top:6px;overflow:hidden;cursor:zoom-in;max-width:100%}
 .node .pic img{display:block;width:100%;height:100%;object-fit:contain}
 .node .credit{font-size:10px;line-height:1.25;margin-top:3px;opacity:.75}
@@ -85,16 +92,16 @@ button,input{font:inherit;color:inherit}
 .vbody img{display:block;width:auto;height:auto;max-width:100%;max-height:70vh;margin:0 auto;background:#fff;border-radius:10px;padding:8px}
 .vbody figcaption{margin-top:8px;color:var(--muted);font-size:14px;text-align:center;text-wrap:balance}
 .node.tip{border-style:dashed;border-color:var(--b)}
-.node.ask{background:color-mix(in srgb,var(--b) 9%,var(--surface))}
+.node.ask{background:color-mix(in srgb,var(--f) 45%,var(--surface))}
 
 .node.d0{background:var(--ink);border-color:var(--ink);color:var(--ground);border-radius:26px;padding:18px 24px;cursor:pointer;max-width:250px}
 .node.d0 .t{font-family:var(--display);font-weight:800;font-size:27px;line-height:1.05;letter-spacing:-.01em}
 .node.d0 .def{color:color-mix(in srgb,var(--ground) 72%,var(--ink));margin-top:6px}
-.node.d1{background:var(--b);border-color:var(--b);color:var(--on-c);border-radius:20px;padding:12px 16px;max-width:310px}
+.node.d1{background:var(--f);border-color:color-mix(in srgb,var(--b) 45%,var(--f));color:var(--tf);border-radius:20px;padding:12px 16px;max-width:310px}
 .node.d1 .t{font-family:var(--display);font-weight:700;font-size:21px;line-height:1.1}
-.node.d1 .def{color:var(--on-c);opacity:.92;margin-top:4px}
-.node.d1 .count{background:color-mix(in srgb,var(--on-c) 24%,transparent)}
-.node.d1:hover{filter:brightness(1.06)}
+.node.d1 .def{color:var(--tf);opacity:.85;margin-top:4px}
+.node.d1 .count{background:color-mix(in srgb,var(--tf) 13%,transparent)}
+.node.d1:hover{border-color:var(--b)}
 .node.d2{border-width:2px;border-color:var(--b);max-width:250px}
 .node.d2 .t{font-size:15.5px}
 
@@ -453,6 +460,7 @@ function build(src,parent,depth,branch,side){
   el.type="button";
   el.className="node d"+Math.min(depth,3)+(side<0?" l":"")+(src.k?" "+src.k:"")+(src.c.length?" has":"");
   el.style.setProperty("--b",depth?"var(--c"+(branch+1)+")":"var(--ink)");
+  if(depth){ el.style.setProperty("--f","var(--f"+(branch+1)+")"); el.style.setProperty("--tf","var(--t"+(branch+1)+")") }
   const body=document.createElement("span"); body.className="body";
   if(src.k==="tip"||(src.k==="ask"&&src.c.length)){const e=document.createElement("span");e.className="eyebrow";e.textContent=src.k==="tip"?"Tip":"Listening";body.appendChild(e)}
   const t=document.createElement("span"); t.className="t"; t.textContent=src.t; body.appendChild(t);
@@ -711,7 +719,7 @@ quizBtn.onclick=()=>{
 const chips=document.getElementById("chips");
 root.children.forEach((c,i)=>{
   const b=document.createElement("button"); b.type="button"; b.className="chip";
-  b.style.setProperty("--b","var(--c"+(i+1)+")"); b.textContent=c.t;
+  b.style.setProperty("--b","var(--c"+(i+1)+")"); b.style.setProperty("--f","var(--f"+(i+1)+")"); b.style.setProperty("--tf","var(--t"+(i+1)+")"); b.textContent=c.t;
   b.onclick=()=>{
     clearSearch(true);
     const solo=c.open&&root.children.every(x=>x===c||!x.open);
