@@ -1,0 +1,199 @@
+{
+ "Complex note and rest values>Triplet": [
+  "s5_triplets.png"
+ ],
+ "Complex note and rest values>Duplet": [
+  "s5_duplet.png"
+ ],
+ "Complex note and rest values>Dotted rhythms": [
+  "s5_dotted.png"
+ ],
+ "Mixed and irregular metre>Mixed metre (changing metre)": [
+  "s5_mixed_metre.png"
+ ],
+ "Irregular (asymmetric) metre>5/4": [
+  "s5_54.png"
+ ],
+ "Irregular (asymmetric) metre>7/8": [
+  "s5_78.png"
+ ],
+ "Rhythmic devices>Up-beat / anacrusis": [
+  "s5_anacrusis.png"
+ ],
+ "Rhythmic devices>Polyrhythm": [
+  "s5_polyrhythm.png"
+ ],
+ "Rhythmic devices>Cross-rhythm": [
+  "s5_cross_rhythm.png"
+ ],
+ "Rhythmic devices>Swung (swing)": [
+  "s5_swing.png"
+ ],
+ "Rhythmic devices>Diminution": [
+  "s5_dim_aug.png"
+ ],
+ "Rhythmic devices>Augmentation": [
+  "s5_dim_aug.png"
+ ],
+ "Melodic devices>Sequence": [
+  "s5_sequence.png"
+ ],
+ "Melodic devices>Melisma": [
+  "s5_melisma.png"
+ ],
+ "Melodic devices>Chromaticism": [
+  "s5_chromaticism.png"
+ ],
+ "Melodic devices>Ornamentation": [
+  "s5_ornaments.png"
+ ],
+ "Scales>Blues": [
+  "s5_scale_blues.png"
+ ],
+ "Scales>Whole-tone": [
+  "s5_scale_wholetone.png"
+ ],
+ "Scales>Harmonic minor": [
+  "s5_scale_harm_minor.png"
+ ],
+ "Scales>Raga (India)": [
+  "s5_scale_raga.png"
+ ],
+ "Raga (India)>Sargam": [
+  "s5_sargam.png"
+ ],
+ "Raga (India)>Sitar": [
+  "sitar.jpg"
+ ],
+ "Raga (India)>Tabla": [
+  "tabla.jpg"
+ ],
+ "Scales>Maqam (Arabic music)": [
+  "s5_scale_maqam.png"
+ ],
+ "Maqam (Arabic music)>Oud": [
+  "oud.jpg"
+ ],
+ "Harmonic devices>Consonance": [
+  "s5_cons_diss.png"
+ ],
+ "Harmonic devices>Dissonance": [
+  "s5_cons_diss.png"
+ ],
+ "Harmonic devices>Cadence": [
+  "s5_cadences.png"
+ ],
+ "Harmonic devices>Extended chords": [
+  "s5_extended.png"
+ ],
+ "Harmonic devices>Modulation": [
+  "s5_modulation.png"
+ ],
+ "Harmonic devices>Pedal point": [
+  "s5_pedal.png"
+ ],
+ "Other ways of notating music>Lead sheet": [
+  "s5_lead_sheet.png"
+ ],
+ "Other ways of notating music>Chord chart": [
+  "s5_chord_chart.png"
+ ],
+ "Other ways of notating music>Piano roll": [
+  "s5_piano_roll.png"
+ ],
+ "Other ways of notating music>Gamelan cipher notation": [
+  "s5_cipher.png",
+  "gamelan.jpg"
+ ],
+ "Textural devices>Doubling": [
+  "s5_tex_doubling.png"
+ ],
+ "Textural devices>Imitation": [
+  "s5_tex_imitation.png"
+ ],
+ "Textural devices>Canon": [
+  "s5_tex_canon.png"
+ ],
+ "Textural devices>Counter-melody": [
+  "s5_tex_countermelody.png"
+ ],
+ "Textural devices>Contrary motion": [
+  "s5_tex_contrary.png"
+ ],
+ "Small ensembles>String quartet": [
+  "s5_string_quartet.png"
+ ],
+ "Range and register>Range": [
+  "s5_ranges.png"
+ ],
+ "Range and register>Register": [
+  "s5_register.png"
+ ],
+ "Directions for techniques>8va": [
+  "s5_dir_8va.png"
+ ],
+ "Directions for techniques>flz. (flutter-tongue)": [
+  "s5_dir_flutter.png"
+ ],
+ "Directions for techniques>Harmonic (small circle)": [
+  "s5_dir_harmonic.png"
+ ],
+ "Directions for techniques>con sord. / senza sord.": [
+  "s5_dir_consord.png"
+ ],
+ "Directions for techniques>P.M. (palm mute)": [
+  "s5_palm_mute.png"
+ ],
+ "Gradations of dynamics>sforzando (sfz)": [
+  "dyn_sfz.png",
+  "s5_sfz.png"
+ ],
+ "Gradations of dynamics>fortepiano (fp)": [
+  "dyn_fp.png"
+ ],
+ "Gradations of dynamics>niente (n)": [
+  "s5_niente.png"
+ ],
+ "Articulation>Tenuto (line)": [
+  "s5_tenuto.png"
+ ],
+ "Articulation>Marcato (wedge)": [
+  "s5_marcato.png"
+ ],
+ "Articulation>Portato": [
+  "s5_portato.png"
+ ],
+ "Electronic manipulation>Looping": [
+  "s5_daw_loop.png"
+ ],
+ "Electronic manipulation>Compression": [
+  "s5_compression.png"
+ ],
+ "Electronic manipulation>Sustain": [
+  "s5_adsr.png"
+ ],
+ "Dynamics and expression>Expressive directions": [
+  "s5_expression_directions.png"
+ ],
+ "Macrostructures>Strophic": [
+  "s5_form_strophic.png"
+ ],
+ "Macrostructures>Through-composed": [
+  "s5_form_through.png"
+ ],
+ "Macrostructures>Theme and variations": [
+  "s5_form_variations.png"
+ ],
+ "Macrostructures>Sonata form": [
+  "s5_form_sonata.png"
+ ],
+ "Macrostructures>Multi-movement works": [
+  "s5_form_movements.png"
+ ],
+ "Microstructures>Head": [
+  "s5_form_head.png"
+ ],
+ "Microstructures>Colotomic structure": [
+  "s5_colotomic.png"
+ ]
+}

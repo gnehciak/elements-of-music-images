@@ -1,11 +1,13 @@
 # Elements of Music – images and mindmap
 
+Live: https://elements-of-music.vercel.app (Stage 4 and Stage 5, switch with the toggle in the header; `#stage5` in the link opens Stage 5 directly).
+
 Images for the Stage 4 *Elements of Music* reference (NSW Music 7–10 Syllabus, 2024), plus the interactive mindmap that uses them.
 
 - `index.html` – the interactive mindmap (open it in a browser; it loads pictures from `images/`)
 - `src/` + `build.py` – mindmap source: `content.js` (the text), `image-map.json` (which picture goes on which node), `template.html` (design and behaviour). Run `python3 build.py` to rebuild `index.html`
 - `lilypond/` – LilyPond sources for the notation graphics added later
-- `images/` – 153 notation graphics and instrument photos, exported from the Notion page
+- `images/` – 218 notation graphics and instrument photos, exported from the Notion page
 - `captions.json` – file name, caption, credit and pixel size for every image
 
 ## Linking an image
@@ -177,3 +179,68 @@ Instrument photos come from Wikimedia Commons under the licences listed; keep th
 | [`cymbals.jpg`](https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/cymbals.jpg) | Cymbals – UNTUNED percussion | Kovac9478, CC BY 3.0, via Wikimedia Commons |
 | [`tambourine.jpg`](https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/tambourine.jpg) | Tambourine – UNTUNED percussion, struck or shaken | Unknown photographer, CC0, via Wikimedia Commons |
 | [`bass_guitar.jpg`](https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/bass_guitar.jpg) | Bass guitar – four strings, plays the bass line | Niranjan Arminius, CC BY-SA 4.0, via Wikimedia Commons |
+| [`s5_triplets.png`](https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/s5_triplets.png) | Triplets – the small 3 and bracket show three notes in the time of two | Own notation graphic |
+| [`s5_duplet.png`](https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/s5_duplet.png) | Duplet in 6/8 – two quavers take the time of three | Own notation graphic |
+| [`s5_dotted.png`](https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/s5_dotted.png) | Dotted rhythms – dotted quaver + semiquaver (long-short), then dotted crotchet + quaver | Own notation graphic |
+| [`s5_mixed_metre.png`](https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/s5_mixed_metre.png) | Mixed metre – 4/4, then 3/4, then 2/4, then back to 4/4 | Own notation graphic |
+| [`s5_54.png`](https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/s5_54.png) | 5/4 – five crotchet beats, usually felt as 3 + 2 (or 2 + 3) | Own notation graphic |
+| [`s5_78.png`](https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/s5_78.png) | 7/8 – seven quavers grouped 2 + 2 + 3. The beams show the grouping | Own notation graphic |
+| [`s5_anacrusis.png`](https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/s5_anacrusis.png) | Anacrusis – the piece starts on beat 4; the final bar has only 3 beats | Own notation graphic |
+| [`s5_polyrhythm.png`](https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/s5_polyrhythm.png) | Polyrhythm – 3 against 2. Clap the top line with one hand and the bottom with the other | Own notation graphic |
+| [`s5_cross_rhythm.png`](https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/s5_cross_rhythm.png) | Cross-rhythm – accents every 3 + 3 + 2 quavers pull against the steady crotchet beat underneath | Own notation graphic |
+| [`s5_swing.png`](https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/s5_swing.png) | Swing – written as even quavers, but played long-short | Own notation graphic |
+| [`s5_dim_aug.png`](https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/s5_dim_aug.png) | The same four-note idea in its original values, in diminution (halved) and in augmentation (doubled) | Own notation graphic |
+| [`s5_sequence.png`](https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/s5_sequence.png) | Sequence – the same four-note shape, each time one step higher | Own notation graphic |
+| [`s5_melisma.png`](https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/s5_melisma.png) | Syllabic (one note per syllable) then melismatic (the syllable 'A' is stretched over eight notes – the slur shows it) | Own notation graphic |
+| [`s5_chromaticism.png`](https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/s5_chromaticism.png) | Chromaticism – the melody creeps up and down by semitones, using notes outside C major | Own notation graphic |
+| [`s5_ornaments.png`](https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/s5_ornaments.png) | Common ornaments and their symbols | Own notation graphic |
+| [`s5_scale_blues.png`](https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/s5_scale_blues.png) | C blues scale | Own notation graphic |
+| [`s5_scale_wholetone.png`](https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/s5_scale_wholetone.png) | Whole-tone scale on C | Own notation graphic |
+| [`s5_scale_harm_minor.png`](https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/s5_scale_harm_minor.png) | A harmonic minor – note the raised 7th (G sharp) | Own notation graphic |
+| [`s5_scale_raga.png`](https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/s5_scale_raga.png) | The notes of Raga Bhairav (a morning raga) written on C | Own notation graphic |
+| [`s5_scale_maqam.png`](https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/s5_scale_maqam.png) | Maqam Hijaz on D, shown in the nearest Western notes | Own notation graphic |
+| [`s5_sargam.png`](https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/s5_sargam.png) | Sargam – the Indian note names Sa Re Ga Ma Pa Dha Ni Sa, like do re mi | Own notation graphic |
+| [`sitar.jpg`](https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/sitar.jpg) | Sitar – plays the raga | Sathyadeep, public domain, via Wikimedia Commons |
+| [`tabla.jpg`](https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/tabla.jpg) | Tabla – the drums that accompany it | muzyczny.pl, CC BY-SA 4.0, via Wikimedia Commons |
+| [`oud.jpg`](https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/oud.jpg) | Oud – the fretless lute of Arabic music | Frank Kovalchek, CC BY 2.0, via Wikimedia Commons |
+| [`s5_cons_diss.png`](https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/s5_cons_diss.png) | Consonant chord (C major) and a dissonant cluster | Own notation graphic |
+| [`s5_cadences.png`](https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/s5_cadences.png) | The four cadences in C major | Own notation graphic |
+| [`s5_extended.png`](https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/s5_extended.png) | Extended chords on C: triad, dominant 7th, major 7th, minor 7th, 9th | Own notation graphic |
+| [`s5_modulation.png`](https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/s5_modulation.png) | Modulation – the music moves from C major to G major; the new key signature (F sharp) confirms it | Own notation graphic |
+| [`s5_pedal.png`](https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/s5_pedal.png) | Pedal point – the bass holds C while the chords above change | Own notation graphic |
+| [`s5_lead_sheet.png`](https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/s5_lead_sheet.png) | Lead sheet – melody, lyrics and chord symbols only. The players work out the rest. Used in jazz and pop | Own notation graphic |
+| [`s5_chord_chart.png`](https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/s5_chord_chart.png) | Chord chart – chords and beats only (slashes), no melody. Used by rhythm sections | Own notation graphic |
+| [`s5_piano_roll.png`](https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/s5_piano_roll.png) | Piano roll – how a digital audio workstation (DAW) shows MIDI notes | Own notation graphic |
+| [`s5_cipher.png`](https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/s5_cipher.png) | Gamelan cipher notation – numbers instead of notes (an illustrative line) | Own notation graphic |
+| [`gamelan.jpg`](https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/gamelan.jpg) | A model of a Javanese gamelan – gongs, metallophones and drums | CC BY-SA 4.0, via Wikimedia Commons |
+| [`s5_tex_doubling.png`](https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/s5_tex_doubling.png) | Doubling – flute and bassoon play the same melody two octaves apart | Own notation graphic |
+| [`s5_tex_imitation.png`](https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/s5_tex_imitation.png) | Imitation – Voice 2 copies the opening shape a bar later and a 5th higher, then goes its own way | Own notation graphic |
+| [`s5_tex_canon.png`](https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/s5_tex_canon.png) | Canon – Voice 2 copies Voice 1 exactly, two bars later (Frère Jacques) | Own notation graphic |
+| [`s5_tex_countermelody.png`](https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/s5_tex_countermelody.png) | Counter-melody – a busier second tune weaves under the slow main melody | Own notation graphic |
+| [`s5_tex_contrary.png`](https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/s5_tex_contrary.png) | Contrary motion – the right hand climbs while the left hand descends | Own notation graphic |
+| [`s5_string_quartet.png`](https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/s5_string_quartet.png) | A string quartet score – four staves, one player each. The viola reads the alto clef (middle C is the middle line) | Own notation graphic |
+| [`s5_ranges.png`](https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/s5_ranges.png) | Approximate sounding ranges of common instruments and voices, against the piano keyboard | Own notation graphic |
+| [`s5_register.png`](https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/s5_register.png) | The same figure in a low register and a high register | Own notation graphic |
+| [`s5_dir_8va.png`](https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/s5_dir_8va.png) | 8va – sounds an octave higher | Own notation graphic |
+| [`s5_dir_flutter.png`](https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/s5_dir_flutter.png) | Flutter-tonguing (flz.) | Own notation graphic |
+| [`s5_dir_harmonic.png`](https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/s5_dir_harmonic.png) | Harmonics – the small circle | Own notation graphic |
+| [`s5_dir_consord.png`](https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/s5_dir_consord.png) | con sord. (mute on) and senza sord. (mute off) | Own notation graphic |
+| [`s5_palm_mute.png`](https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/s5_palm_mute.png) | Palm muting (P.M.) on guitar, in staff notation and TAB | Own notation graphic |
+| [`dyn_sfz.png`](https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/dyn_sfz.png) | sforzando | Own notation graphic |
+| [`dyn_fp.png`](https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/dyn_fp.png) | fortepiano | Own notation graphic |
+| [`s5_sfz.png`](https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/s5_sfz.png) | sfz in context – sudden accents in a soft passage | Own notation graphic |
+| [`s5_niente.png`](https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/s5_niente.png) | dim. al niente – the hairpin ends in a small circle: fade to nothing | Own notation graphic |
+| [`s5_tenuto.png`](https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/s5_tenuto.png) | Tenuto (line) – hold for the full value, slightly stressed | Own notation graphic |
+| [`s5_marcato.png`](https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/s5_marcato.png) | Marcato (wedge) – marked: a strong accent, stronger than a normal accent | Own notation graphic |
+| [`s5_portato.png`](https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/s5_portato.png) | Portato (dots and lines under a slur) – gently separated, halfway between legato and staccato | Own notation graphic |
+| [`s5_daw_loop.png`](https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/s5_daw_loop.png) | Looping – the 2-bar drum and bass regions are copied end to end; other tracks are layered on top | Own notation graphic |
+| [`s5_compression.png`](https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/s5_compression.png) | Compression – peaks above the threshold are squashed | Own notation graphic |
+| [`s5_adsr.png`](https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/s5_adsr.png) | The ADSR envelope of a synth sound – sustain is the level the note holds at | Own notation graphic |
+| [`s5_expression_directions.png`](https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/s5_expression_directions.png) | Expressive directions in a score – a tempo and mood marking, dolce, poco a poco cresc., rit. and a tempo | Own notation graphic |
+| [`s5_form_strophic.png`](https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/s5_form_strophic.png) | Strophic – hymns, folk songs, many ballads | Own notation graphic |
+| [`s5_form_through.png`](https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/s5_form_through.png) | Through-composed – no section returns; follows a story (art songs, some film music) | Own notation graphic |
+| [`s5_form_variations.png`](https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/s5_form_variations.png) | Theme and variations – the theme returns each time changed (melody decorated, new rhythm, minor key, new texture...) | Own notation graphic |
+| [`s5_form_sonata.png`](https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/s5_form_sonata.png) | Sonata form – two contrasting themes are presented, developed, then brought back. In the recapitulation both themes are in the home key | Own notation graphic |
+| [`s5_form_movements.png`](https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/s5_form_movements.png) | Multi-movement works – symphonies, concertos (usually 3 movements: fast, slow, fast), sonatas and suites are made of several complete, contrasting movements | Own notation graphic |
+| [`s5_form_head.png`](https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/s5_form_head.png) | Head arrangement – the standard shape of a small-group jazz performance | Own notation graphic |
+| [`s5_colotomic.png`](https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/s5_colotomic.png) | Colotomic structure – the punctuating gongs of a 16-beat lancaran cycle in Javanese gamelan | Own notation graphic |

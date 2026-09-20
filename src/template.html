@@ -34,7 +34,10 @@ button,input{font:inherit;color:inherit}
 .bill{flex:none;display:flex;flex-wrap:wrap;align-items:center;gap:10px 22px;padding:10px 16px;background:var(--ink);color:var(--paper);
   border-bottom:3px solid var(--paper);box-shadow:0 5px 0 var(--ink)}
 .bill :focus-visible{outline-color:var(--paper)}
-.brand{display:flex;align-items:baseline;gap:12px}
+.brand{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.stages{display:flex}
+.stages .btn+.btn{margin-left:-2px}
+.stages .btn[aria-pressed="true"]{background:var(--c1);border-color:var(--c1);color:#0E0E0E}
 .brand h1{margin:0;font-family:var(--gothic);font-weight:400;font-size:34px;line-height:.95;letter-spacing:.02em;text-transform:uppercase}
 .brand p{margin:0;font-family:var(--gothic);font-size:17px;letter-spacing:.08em;text-transform:uppercase;color:var(--c1)}
 .chips{display:flex;overflow-x:auto;max-width:100%;padding:3px;margin:-3px;scrollbar-width:none;isolation:isolate}
@@ -171,7 +174,6 @@ button,input{font:inherit;color:inherit}
 @media (max-width:720px){
   .bill{gap:8px 12px;padding:8px 16px}
   .brand h1{font-size:28px}
-  .brand p{display:none}
   .tools{margin-left:0;width:100%}
   .search{flex:1 1 150px}
   .mini{display:none}
@@ -198,7 +200,11 @@ FORM: letterpress concert bill, candidate 7 of 7. Branches pull out on one axis,
 FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, DESIGN.md, and every shipping raster carrying its provenance
 -->
 <header class="bill" id="bar">
-  <div class="brand"><h1>Elements of Music</h1><p>Stage 4 mindmap</p></div>
+  <div class="brand"><h1>Elements of Music</h1>
+    <div class="stages" role="group" aria-label="Choose a stage">
+      <button class="btn" id="stage4" type="button" aria-pressed="true">Stage 4</button><button class="btn" id="stage5" type="button" aria-pressed="false">Stage 5</button>
+    </div>
+  </div>
   <nav class="chips" id="chips" aria-label="Jump to an element"></nav>
   <div class="tools">
     <label class="search">
@@ -231,9 +237,12 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
 
 <script>
 /*__CONTENT__*/
+/*__CONTENT5__*/
+const STAGES={4:DATA,5:DATA5};
 
 /* ---------- images (files live in images/) ---------- */
-const IMG=/*__IMG__*/;
+const IMGS={4:/*__IMG__*/,5:/*__IMG5__*/};
+let IMG=IMGS[4];
 const META=/*__META__*/;
 
 
@@ -295,12 +304,8 @@ function light(o,on){ for(let p=o;p&&p.link;p=p.parent) p.link.classList.toggle(
 function setSide(o,s){ o.side=s; o.el.classList.toggle("l",s<0); o.children.forEach(c=>setSide(c,s)) }
 function applySides(){ root.children.forEach((c,i)=>setSide(c,narrow||i>=3?1:-1)) }
 
-root=build(DATA,null,0,0);
 /* display order: first three sit left of the headline (top to bottom), last three right. Colours stay tied to the element. */
 const ORDER=["Pitch","Duration","Dynamics and expression","Performing media and timbre","Texture","Structure"];
-root.children.sort((a,b)=>ORDER.indexOf(a.t)-ORDER.indexOf(b.t));
-root.open=true;
-applySides();
 
 function measure(){
   world.classList.add("measuring");
@@ -622,7 +627,7 @@ quizBtn.onclick=()=>{
 
 /* element chips: show one element on its own */
 const chips=document.getElementById("chips");
-root.children.forEach((c,i)=>{
+function makeChips(){ chips.textContent=""; root.children.forEach((c,i)=>{
   const b=mk("button","chip",c.t); b.type="button";
   b.style.setProperty("--b","var(--c"+(c.branch+1)+")"); b.style.setProperty("--o","var(--o"+(c.branch+1)+")");
   b.onclick=()=>{
@@ -634,7 +639,7 @@ root.children.forEach((c,i)=>{
     fit([root,c].concat(collect(c)));
   };
   chips.appendChild(b);
-});
+}) }
 function collect(o){ let a=[]; if(o.open) o.children.forEach(c=>{a.push(c);a=a.concat(collect(c))}); return a }
 
 /* search */
@@ -673,7 +678,29 @@ function boot(){
   if(raf){cancelAnimationFrame(raf);raf=0}
   leaving.clear(); measure(); first=true; layout(); fit(null,true);
 }
-boot();
+/* Stage 4 / Stage 5: each stage is its own bill, printed fresh */
+let stageNow=0;
+const stageBtns={4:document.getElementById("stage4"),5:document.getElementById("stage5")};
+function mount(stage){
+  if(stage===stageNow) return;
+  stageNow=stage;
+  if(raf){cancelAnimationFrame(raf);raf=0}
+  leaving.clear(); snapshot=null; q.value=""; qcount.textContent=""; world.classList.remove("searching");
+  nodes.forEach(o=>{ o.el.remove(); if(o.link) o.link.remove() }); nodes.length=0; vis=[];
+  IMG=IMGS[stage];
+  root=build(STAGES[stage],null,0,0);
+  root.children.sort((a,b)=>ORDER.indexOf(a.t)-ORDER.indexOf(b.t));
+  root.open=true; applySides(); makeChips(); boot();
+  for(const s in stageBtns) stageBtns[s].setAttribute("aria-pressed",String(+s===stage));
+  try{ localStorage.setItem("eom-stage",String(stage)) }catch(_){}
+  if(location.hash!=="#stage"+stage){ try{ history.replaceState(null,"","#stage"+stage) }catch(_){} }
+}
+stageBtns[4].onclick=()=>mount(4);
+stageBtns[5].onclick=()=>mount(5);
+let startStage=4;
+try{ if(localStorage.getItem("eom-stage")==="5") startStage=5 }catch(_){}
+if(/^#stage[45]$/.test(location.hash)) startStage=+location.hash.slice(6);
+mount(startStage);
 if(document.fonts&&document.fonts.ready) document.fonts.ready.then(boot);
 /* refit whenever the press bed changes size (also catches a pane that opens small and then grows) */
 let rz=0, lastW=stage.clientWidth, lastH=stage.clientHeight;
