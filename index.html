@@ -2,224 +2,224 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>Elements of Music Mindmap</title>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Bricolage+Grotesque:opsz,wght@12..96,500..800&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Archivo:ital,wght@0,400;0,600;0,700;1,400&family=League+Gothic&display=swap">
 <style>
-@property --ang{syntax:"<angle>";inherits:false;initial-value:0deg}
 :root{
-  --ground:#F3F4F8; --surface:#FFFFFF; --ink:#151B29; --muted:#5A6378; --line:#D8DCE6; --dot:#C6CBD8;
-  --glass:rgba(255,255,255,.8); --shadow:20 28 43; --on-b:#FFFFFF; --hl:#2F6FEB;
-  /* element colours follow the Notion tags: line / fill / text-on-fill */
-  --c1:#CB912F; --c2:#D44C47; --c3:#9065B0; --c4:#337EA9; --c5:#448361; --c6:#D9730D;
-  --f1:#FDECC8; --f2:#FFE2DD; --f3:#E8DEEE; --f4:#D3E5EF; --f5:#DBEDDB; --f6:#FADEC9;
-  --t1:#402C1B; --t2:#5D1715; --t3:#412454; --t4:#183347; --t5:#1C3829; --t6:#49290E;
-  --display:"Bricolage Grotesque","Avenir Next","Segoe UI",sans-serif;
-  --body:"Atkinson Hyperlegible","Verdana","Segoe UI",sans-serif;
+  --paper:#E7EAEA; --sheet:#FBFBF9; --ink:#0E0E0E; --muted:#33373A; --hair:#9BA1A3;
+  /* six inks = the Notion tag hues, deepened just enough to carry reversed type */
+  --c1:#CB912F; --c2:#C8403B; --c3:#8459A6; --c4:#2E739B; --c5:#3E7A59; --c6:#D9730D;
+  --o1:#0E0E0E; --o2:#FFFFFF; --o3:#FFFFFF; --o4:#FFFFFF; --o5:#FFFFFF; --o6:#0E0E0E;
+  --marks:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cpath d='M60 54v12M54 60h12' stroke='%230E0E0E' stroke-opacity='.28' stroke-width='1.2'/%3E%3C/svg%3E");
+  --gothic:"League Gothic","Oswald","Arial Narrow",sans-serif;
+  --slab:"Alfa Slab One","Rockwell","Georgia",serif;
+  --body:"Archivo","Helvetica Neue",Arial,sans-serif;
 }
 @media (prefers-color-scheme: dark){
   :root:not([data-theme="light"]){
-    --ground:#0D1118; --surface:#1A2130; --ink:#E9EDF5; --muted:#9BA6BC; --line:#2B3547; --dot:#252E3E;
-    --glass:rgba(22,28,40,.8); --shadow:0 0 0; --on-b:#0D1118; --hl:#8AB4FF;
-    --c1:#D9A441; --c2:#E5645E; --c3:#A77FCB; --c4:#5E9FD8; --c5:#5FA37E; --c6:#E08A3C;
-    --f1:#89632A; --f2:#6E3630; --f3:#492F64; --f4:#28456C; --f5:#2B593F; --f6:#854C1D;
-    --t1:#FBF1DC; --t2:#FCE6E3; --t3:#EFE4F6; --t4:#DDEBF5; --t5:#E0F0E3; --t6:#FBE8D8;
+    --paper:#121211; --sheet:#1D1D1B; --ink:#EDEDE8; --muted:#C4C4BD; --hair:#55554F;
+    --c1:#D9A03A; --c2:#D9534D; --c3:#9A70BD; --c4:#3C8AB8; --c5:#4C9470; --c6:#E5821F;
+    --marks:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cpath d='M60 54v12M54 60h12' stroke='%23EDEDE8' stroke-opacity='.22' stroke-width='1.2'/%3E%3C/svg%3E");
   }
 }
 :root[data-theme="dark"]{
-  --ground:#0D1118; --surface:#1A2130; --ink:#E9EDF5; --muted:#9BA6BC; --line:#2B3547; --dot:#252E3E;
-  --glass:rgba(22,28,40,.8); --shadow:0 0 0; --on-b:#0D1118; --hl:#8AB4FF;
-  --c1:#D9A441; --c2:#E5645E; --c3:#A77FCB; --c4:#5E9FD8; --c5:#5FA37E; --c6:#E08A3C;
-  --f1:#89632A; --f2:#6E3630; --f3:#492F64; --f4:#28456C; --f5:#2B593F; --f6:#854C1D;
-  --t1:#FBF1DC; --t2:#FCE6E3; --t3:#EFE4F6; --t4:#DDEBF5; --t5:#E0F0E3; --t6:#FBE8D8;
+  --paper:#121211; --sheet:#1D1D1B; --ink:#EDEDE8; --muted:#C4C4BD; --hair:#55554F;
+  --c1:#D9A03A; --c2:#D9534D; --c3:#9A70BD; --c4:#3C8AB8; --c5:#4C9470; --c6:#E5821F;
+  --marks:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cpath d='M60 54v12M54 60h12' stroke='%23EDEDE8' stroke-opacity='.22' stroke-width='1.2'/%3E%3C/svg%3E");
 }
-*{box-sizing:border-box}
+*{box-sizing:border-box;border-radius:0}
 html,body{height:100%}
-body{margin:0;background:var(--ground);color:var(--ink);font-family:var(--body);font-size:15px;line-height:1.35;position:relative;overflow:hidden}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--body);font-size:15px;line-height:1.35;display:flex;flex-direction:column;overflow:hidden}
 button,input{font:inherit;color:inherit}
-:focus-visible{outline:3px solid var(--ink);outline-offset:2px}
+::selection{background:var(--ink);color:var(--paper)}
+:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
 
-/* ---------- canvas ---------- */
+/* ---------- bill head ---------- */
+.bill{flex:none;display:flex;flex-wrap:wrap;align-items:center;gap:10px 22px;padding:10px 16px;background:var(--ink);color:var(--paper);
+  border-bottom:3px solid var(--paper);box-shadow:0 5px 0 var(--ink)}
+.bill :focus-visible{outline-color:var(--paper)}
+.brand{display:flex;align-items:baseline;gap:12px}
+.brand h1{margin:0;font-family:var(--gothic);font-weight:400;font-size:34px;line-height:.95;letter-spacing:.02em;text-transform:uppercase}
+.brand p{margin:0;font-family:var(--gothic);font-size:17px;letter-spacing:.08em;text-transform:uppercase;color:var(--c1)}
+.chips{display:flex;overflow-x:auto;max-width:100%;padding:3px;margin:-3px;scrollbar-width:none;isolation:isolate}
+.chips::-webkit-scrollbar{display:none}
+.chip{flex:none;border:0;padding:6px 13px 5px;background:var(--b);color:var(--o);font-family:var(--gothic);font-size:19px;letter-spacing:.04em;text-transform:uppercase;line-height:1;
+  cursor:pointer;white-space:nowrap;transition:transform .14s cubic-bezier(.2,.8,.2,1)}
+.chip:hover{transform:translateY(-3px)}
+.chip:active{transform:translateY(1px)}
+.tools{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin-left:auto}
+.search{display:flex;align-items:center;gap:8px;border:2px solid var(--paper);padding:0 10px;background:var(--paper);color:var(--ink)}
+.search svg{width:15px;height:15px;flex:none;fill:none;stroke:currentColor;stroke-width:2.4;stroke-linecap:square}
+.search input{border:0;background:transparent;outline:0;padding:6px 0;width:150px;min-width:0;caret-color:var(--c2);font-weight:600}
+.search input::placeholder{color:var(--muted);opacity:1;font-weight:400}
+.search:focus-within{outline:3px solid var(--c1);outline-offset:2px}
+.search output{font-family:var(--gothic);font-size:16px;letter-spacing:.04em;text-transform:uppercase;white-space:nowrap;font-variant-numeric:tabular-nums}
+.btn{border:2px solid var(--paper);background:transparent;color:var(--paper);padding:5px 12px 4px;cursor:pointer;font-family:var(--gothic);font-size:19px;letter-spacing:.05em;text-transform:uppercase;line-height:1.1;
+  transition:background-color .12s,color .12s}
+.btn:hover,.btn[aria-pressed="true"]{background:var(--paper);color:var(--ink)}
+.btn:active{transform:translateY(1px)}
+
+/* ---------- press bed ---------- */
+.floor{position:relative;flex:1;min-height:0}
 .stage{position:absolute;inset:0;overflow:hidden;touch-action:none;cursor:grab;
-  background:
-    radial-gradient(var(--dot) 1.2px,transparent 1.7px) var(--px,0px) var(--py,0px)/var(--ps,26px) var(--ps,26px),
-    radial-gradient(900px 600px at 10% 6%,color-mix(in srgb,var(--f4) 60%,transparent),transparent 70%),
-    radial-gradient(900px 700px at 94% 98%,color-mix(in srgb,var(--f2) 55%,transparent),transparent 70%),
-    radial-gradient(760px 520px at 88% 4%,color-mix(in srgb,var(--f1) 55%,transparent),transparent 70%),
-    radial-gradient(760px 560px at 4% 96%,color-mix(in srgb,var(--f5) 55%,transparent),transparent 70%),
-    var(--ground)}
+  background:var(--marks) var(--px,0px) var(--py,0px)/var(--ps,120px) var(--ps,120px),var(--paper)}
 .stage.grabbing{cursor:grabbing}
 .world{position:absolute;left:0;top:0;transform-origin:0 0}
 .world>svg{position:absolute;left:0;top:0;width:1px;height:1px;overflow:visible;pointer-events:none}
-.world path{fill:none;stroke-linecap:round;opacity:.55;stroke-dasharray:1;transition:opacity .25s ease;
-  animation:draw .6s cubic-bezier(.3,.7,.2,1) backwards;animation-delay:var(--delay,0ms)}
-.world path.lit{opacity:1}
+.world path{fill:none;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:1;transition:opacity .2s;
+  animation:rule .55s cubic-bezier(.16,1,.3,1) backwards;animation-delay:var(--delay,0ms)}
+.world path.lit{stroke:var(--ink)!important}
 .world path.leaving{opacity:0}
 .world:not(.measuring) .off{display:none}
 
-/* ---------- nodes ---------- */
+/* ---------- printed matter ---------- */
 .node{position:absolute;left:0;top:0;border:0;background:none;padding:0;margin:0;text-align:left;color:var(--ink);cursor:default;-webkit-tap-highlight-color:transparent}
 .node:focus-visible{outline:none}
-.node:focus-visible .card{outline:3px solid var(--ink);outline-offset:3px}
+.node:focus-visible .card{box-shadow:0 0 0 3px var(--paper),0 0 0 7px var(--ink)}
 .node.has,.node.pics,.node.d0{cursor:pointer}
-.node .card{display:flex;align-items:center;gap:10px;width:max-content;max-width:var(--mw,290px);
-  background:var(--surface);border:1px solid color-mix(in srgb,var(--b) 28%,var(--line));border-radius:14px;padding:8px 12px;
-  box-shadow:0 1px 2px rgb(var(--shadow)/.06),0 8px 18px -8px rgb(var(--shadow)/.16);
-  transform-origin:left center;animation:pop .5s cubic-bezier(.3,1.45,.6,1) backwards;animation-delay:var(--delay,0ms);
-  transition:transform .18s ease,box-shadow .18s ease,border-color .18s ease,opacity .22s ease}
-.node.l .card{flex-direction:row-reverse;transform-origin:right center}
-.node.has:hover .card,.node.pics:hover .card{transform:translateY(-2px);border-color:var(--b);
-  box-shadow:0 2px 4px rgb(var(--shadow)/.06),0 14px 26px -10px color-mix(in srgb,var(--b) 55%,transparent)}
-.node.has:active .card{transform:scale(.97)}
-.node.open .card{border-color:var(--b)}
+.node .card{display:flex;align-items:center;gap:12px;width:max-content;max-width:var(--mw,300px);background:var(--sheet);border:2px solid var(--b);padding:8px 12px;
+  animation:pull .46s cubic-bezier(.16,1,.3,1) backwards;animation-delay:var(--delay,0ms);--from:inset(0 100% 0 0);
+  transition:background-color .14s,color .14s,clip-path .22s cubic-bezier(.5,0,.75,0),opacity .2s}
+.node.l .card{flex-direction:row-reverse;--from:inset(0 0 0 100%)}
 .node.leaving{pointer-events:none}
-.node.leaving .card{opacity:0;transform:scale(.55)}
+.node.leaving .card{clip-path:var(--from)}
 .node .body,.node .body>span{display:block}
 .node .body{min-width:0}
-.node .t{font-weight:700;font-size:14.5px}
-.node .def{color:var(--muted);font-size:13px;margin-top:1px}
-.node .eyebrow{font-size:10.5px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:color-mix(in srgb,var(--b) 65%,var(--ink));margin-bottom:1px}
-.node .count{flex:none;min-width:24px;height:24px;border-radius:12px;padding:0 7px;font-size:12px;font-weight:700;line-height:24px;text-align:center;
-  background:color-mix(in srgb,var(--f) 85%,var(--surface));color:var(--tf);font-variant-numeric:tabular-nums;transition:transform .25s cubic-bezier(.3,1.45,.6,1)}
-.node.open .count{transform:scale(.86)}
-.node.tip .card{border-style:dashed;border-color:var(--b)}
-.node.ask .card{background:color-mix(in srgb,var(--f) 40%,var(--surface))}
+.node .t{font-weight:700;font-size:15.5px;line-height:1.25}
+.node .def{color:var(--muted);font-size:14px;margin-top:2px}
+.node .count{flex:none;min-width:28px;height:28px;padding:0 6px;display:grid;place-items:center;background:var(--b);color:var(--o);font-family:var(--gothic);font-size:21px;line-height:1;font-variant-numeric:tabular-nums}
+.node.has .card{border-width:3px}
+.node.has:hover .card{background:color-mix(in srgb,var(--b) 16%,var(--sheet))}
+.node.pics:not(.has):hover .card{background:color-mix(in srgb,var(--b) 10%,var(--sheet))}
+.node.has:active .card{transform:translateY(1px)}
+/* state is inversion: an open branch prints solid */
+.node.open .card{background:var(--b);color:var(--o)}
+.node.open .def,.node.open .credit{color:var(--o)}
+.node.open .count{background:var(--o);color:var(--b)}
+.node.open:hover .card{background:var(--b)}
+.node.tip .card{border-style:dashed}
+.node.ask:not(.has) .card{border-width:0 0 0 0;border-bottom:2px solid var(--b);background:transparent;padding:6px 4px}
+.node.ask:not(.has) .t{font-weight:400;font-style:italic;font-size:15px}
 
-.node .pic{background:#fff;border:1px solid var(--line);border-radius:9px;margin-top:6px;overflow:hidden;cursor:zoom-in;max-width:100%;transition:transform .18s ease}
-.node .pic:hover{transform:scale(1.03)}
-.node .pic img{display:block;width:100%;height:100%;object-fit:contain}
-.node .credit{font-size:10px;line-height:1.25;margin-top:3px;opacity:.72}
+.node .pic{background:#fff;border:1.5px solid var(--ink);margin-top:7px;overflow:hidden;cursor:zoom-in;max-width:100%}
+.node.open .pic{border-color:var(--o)}
+.node .pic img{display:block;width:100%;height:100%;object-fit:contain;transition:transform .2s cubic-bezier(.2,.8,.2,1)}
+.node .pic:hover img{transform:scale(1.06)}
+.node .credit{font-size:10.5px;line-height:1.25;margin-top:3px;color:var(--muted)}
 
-/* centre */
-.node.d0 .card{position:relative;isolation:isolate;background:var(--ink);color:var(--ground);border:0;border-radius:30px;padding:24px 30px;max-width:270px;gap:0;
-  box-shadow:0 18px 40px -14px rgb(var(--shadow)/.5)}
-.node.d0 .card::before{content:"";position:absolute;inset:-6px;border-radius:36px;z-index:-2;filter:blur(12px);opacity:.85;
-  background:conic-gradient(from var(--ang),var(--c1),var(--c6),var(--c2),var(--c3),var(--c4),var(--c5),var(--c1));animation:spin 14s linear infinite}
-.node.d0 .card::after{content:"";position:absolute;inset:0;border-radius:inherit;z-index:-1;background:var(--ink)}
-.node.d0 .stave{display:flex;flex-direction:column;gap:4px;margin-bottom:12px;opacity:.5}
-.node.d0 .stave i{display:block;height:1.5px;background:currentColor;border-radius:1px}
-.node.d0 .t{font-family:var(--display);font-weight:800;font-size:30px;line-height:1.02;letter-spacing:-.015em}
-.node.d0 .def{color:color-mix(in srgb,var(--ground) 72%,var(--ink));margin-top:8px}
-/* the six elements */
-.node.d1 .card{gap:14px;padding:14px 16px;border-radius:24px;max-width:340px;color:var(--tf);
-  background:linear-gradient(140deg,var(--f),color-mix(in srgb,var(--f) 72%,var(--surface)));
-  border:1.5px solid color-mix(in srgb,var(--b) 45%,var(--f));
-  box-shadow:0 2px 4px rgb(var(--shadow)/.05),0 16px 32px -14px color-mix(in srgb,var(--b) 60%,transparent)}
-.node.d1 .t{font-family:var(--display);font-weight:750;font-size:22px;line-height:1.08;letter-spacing:-.01em}
-.node.d1 .def{color:var(--tf);opacity:.82;margin-top:4px}
-.node.d1 .badge{flex:none;display:grid;place-items:center;width:46px;height:46px;border-radius:50%;background:var(--b);color:var(--on-b);
-  box-shadow:inset 0 -3px 0 rgb(0 0 0/.12)}
-.node.d1 .badge svg{width:26px;height:26px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
-.node.d1 .badge .fill{fill:currentColor;stroke:none}
-.node.d1 .count,.node.d2 .count{background:color-mix(in srgb,var(--tf) 13%,transparent)}
-/* subsections */
-.node.d2 .card{background:color-mix(in srgb,var(--f) 62%,var(--surface));border-color:color-mix(in srgb,var(--b) 40%,var(--f));border-radius:16px;padding:9px 14px;color:var(--tf)}
-.node.d2 .t{font-size:15.5px}
-.node.d2 .def{color:var(--tf);opacity:.78}
+/* the headline block */
+.node.d0 .card{display:block;background:var(--sheet);color:var(--ink);border:6px solid var(--ink);padding:18px 26px 16px;max-width:none;text-align:center;outline:1.5px solid var(--ink);outline-offset:-13px}
+.node.d0 .t{font-family:var(--slab);font-weight:400;font-size:46px;line-height:.98;text-transform:uppercase;letter-spacing:.01em;max-width:7.2em;margin:0 auto}
+.node.d0 .stave{display:flex;flex-direction:column;gap:5px;margin:14px 6px 12px}
+.node.d0 .stave i{display:block;height:2px;background:var(--ink)}
+.node.d0 .def{font-family:var(--gothic);font-size:21px;letter-spacing:.09em;text-transform:uppercase;color:var(--ink);margin:0}
+.node.d0:hover .card{background:var(--ink);color:var(--sheet)}
+.node.d0:hover .stave i{background:var(--sheet)}
+.node.d0:hover .def{color:var(--sheet)}
+.node.d0:hover .card{outline-color:var(--sheet)}
+/* six acts: solid ink slabs */
+.node.d1 .card{background:var(--b);color:var(--o);border:0;padding:14px 18px 14px;max-width:370px;gap:16px}
+.node.d1 .t{font-family:var(--gothic);font-weight:400;font-size:44px;line-height:.92;letter-spacing:.015em;text-transform:uppercase}
+.node.d1 .def{color:var(--o);font-size:14.5px;margin-top:7px;max-width:36ch}
+.node.d1 .count{background:var(--o);color:var(--b);min-width:34px;height:34px;font-size:25px}
+.node.d1:hover .card,.node.d1.open:hover .card{background:var(--ink);color:var(--paper)}
+.node.d1:hover .def{color:var(--paper)}
+.node.d1:hover .count{background:var(--paper);color:var(--ink)}
+/* sections */
+.node.d2 .card{border-width:4px;padding:8px 14px 7px}
+.node.d2 .t{font-family:var(--gothic);font-weight:400;font-size:27px;line-height:1;letter-spacing:.03em;text-transform:uppercase}
+.node.d2 .def{font-size:14px;margin-top:3px}
 
-.searching .node:not(.hit):not(.onpath) .card{opacity:.25}
-.node.hit .card{box-shadow:0 0 0 3px var(--hl),0 10px 22px -8px var(--hl)}
-.quiz .node:not(.shown):not(.ask):not(.d0) .def{filter:blur(5px);user-select:none}
+.searching .node:not(.hit):not(.onpath) .card{opacity:.22}
+.node.hit .card{box-shadow:0 0 0 3px var(--paper),0 0 0 8px var(--ink)}
+/* Test me: definitions are struck out with a redaction bar until clicked */
+.quiz .node:not(.shown):not(.ask):not(.d0) .def{color:transparent;background:currentColor;background:var(--ink);user-select:none}
+.quiz .node.open:not(.shown):not(.ask) .def,.quiz .node.d1:not(.shown) .def{background:var(--o)}
 .quiz .node:not(.shown):not(.ask):not(.d0){cursor:pointer}
 
-@keyframes pop{from{opacity:0;transform:scale(.5)}}
-@keyframes draw{from{stroke-dashoffset:1}to{stroke-dashoffset:0}}
-@keyframes spin{to{--ang:360deg}}
-@keyframes rise{from{opacity:0;transform:translateY(-10px)}}
-@keyframes zoomin{from{opacity:0;transform:scale(.94)}}
+@keyframes pull{from{clip-path:var(--from)}to{clip-path:inset(0)}}
+@keyframes rule{from{stroke-dashoffset:1}to{stroke-dashoffset:0}}
+@keyframes drop{from{transform:translateY(-100%)}}
+@keyframes sheet{from{clip-path:inset(0 0 100% 0)}to{clip-path:inset(0)}}
 @keyframes fade{from{opacity:0}}
+.bill{animation:drop .5s cubic-bezier(.16,1,.3,1) backwards}
 
-/* ---------- floating chrome ---------- */
-.glass{background:var(--glass);-webkit-backdrop-filter:blur(14px) saturate(1.5);backdrop-filter:blur(14px) saturate(1.5);border:1px solid var(--line);
-  box-shadow:0 1px 2px rgb(var(--shadow)/.05),0 12px 30px -12px rgb(var(--shadow)/.25)}
-.bar{position:absolute;z-index:5;top:12px;left:16px;right:16px;display:flex;flex-wrap:wrap;align-items:center;gap:8px 18px;padding:10px 14px;border-radius:20px;animation:rise .5s ease-out backwards}
-.brand{display:flex;align-items:center;gap:10px}
-.brand svg{width:34px;height:34px;flex:none}
-.brand h1{margin:0;font-family:var(--display);font-weight:800;font-size:21px;letter-spacing:-.01em;line-height:1.05}
-.brand p{margin:0;color:var(--muted);font-size:12px}
-.chips{display:flex;gap:6px;overflow-x:auto;max-width:100%;padding:3px;margin:-3px;scrollbar-width:none}
-.chips::-webkit-scrollbar{display:none}
-.chip{flex:none;display:flex;align-items:center;gap:7px;border:1px solid color-mix(in srgb,var(--b) 40%,var(--f));border-radius:999px;padding:5px 12px 5px 8px;background:var(--f);color:var(--tf);
-  font-weight:700;font-size:13px;cursor:pointer;white-space:nowrap;transition:transform .15s ease,box-shadow .15s ease}
-.chip::before{content:"";width:9px;height:9px;border-radius:50%;background:var(--b)}
-.chip:hover{transform:translateY(-1px);box-shadow:0 6px 14px -6px var(--b)}
-.chip:active{transform:scale(.96)}
-.tools{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin-left:auto}
-.search{display:flex;align-items:center;gap:8px;border:1.5px solid var(--line);border-radius:12px;padding:0 10px;background:var(--surface);transition:border-color .15s}
-.search:focus-within{border-color:var(--ink)}
-.search svg{width:15px;height:15px;flex:none;fill:none;stroke:var(--muted);stroke-width:2;stroke-linecap:round}
-.search input{border:0;background:transparent;outline:0;padding:7px 0;width:140px;min-width:0}
-.search output{color:var(--muted);font-size:12px;white-space:nowrap;font-variant-numeric:tabular-nums}
-.btn{border:1.5px solid var(--line);background:var(--surface);border-radius:12px;padding:7px 11px;cursor:pointer;font-weight:700;font-size:13px;transition:transform .12s ease,border-color .15s,background .15s}
-.btn:hover{border-color:var(--ink)}
-.btn:active{transform:scale(.95)}
-.btn[aria-pressed="true"]{background:var(--ink);color:var(--ground);border-color:var(--ink)}
-
-.zoom{position:absolute;z-index:4;right:16px;bottom:16px;display:flex;flex-direction:column;align-items:stretch;gap:2px;padding:5px;border-radius:16px}
-.zoom .btn{width:38px;height:36px;padding:0;font-size:18px;line-height:1;border-color:transparent;background:transparent}
-.zoom .btn:hover{background:color-mix(in srgb,var(--ink) 8%,transparent)}
-.zoom output{font-size:11px;font-weight:700;color:var(--muted);text-align:center;padding:2px 0;font-variant-numeric:tabular-nums}
-.mini{position:absolute;z-index:4;left:16px;bottom:16px;width:210px;height:136px;border-radius:16px;overflow:hidden;cursor:crosshair;touch-action:none}
+/* ---------- furniture ---------- */
+.zoom{position:absolute;z-index:4;right:16px;bottom:16px;display:flex;flex-direction:column;border:3px solid var(--ink);background:var(--sheet)}
+.zoom .zb{width:42px;height:38px;padding:0;border:0;background:transparent;color:var(--ink);cursor:pointer;display:grid;place-items:center;transition:background-color .12s,color .12s}
+.zoom .zb svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:2.6;stroke-linecap:square}
+.zoom .zb:hover{background:var(--ink);color:var(--sheet)}
+.zoom output{font-family:var(--gothic);font-size:19px;letter-spacing:.03em;text-align:center;padding:3px 0 1px;border-block:2px solid var(--ink);font-variant-numeric:tabular-nums}
+.mini{position:absolute;z-index:4;left:16px;bottom:16px;width:216px;height:140px;border:3px solid var(--ink);background:var(--sheet);cursor:crosshair;touch-action:none;
+  transition:clip-path .3s cubic-bezier(.16,1,.3,1);clip-path:inset(0)}
+.mini.idle{clip-path:inset(100% 0 0 0);pointer-events:none}
 .mini canvas{display:block;width:100%;height:100%}
-.mini{transition:opacity .35s ease,transform .35s ease}
-.mini.idle{opacity:0;transform:translateY(8px);pointer-events:none}
-.hint{position:absolute;z-index:4;left:50%;bottom:20px;transform:translateX(-50%);margin:0;padding:8px 14px;border-radius:999px;color:var(--muted);font-size:12.5px;
-  pointer-events:none;white-space:nowrap;transition:opacity .6s ease;animation:fade .6s .5s backwards}
-.hint b{color:var(--ink)}
-.hint.gone{opacity:0}
+.hint{position:absolute;z-index:4;left:50%;bottom:18px;transform:translateX(-50%);margin:0;padding:7px 16px 5px;background:var(--ink);color:var(--paper);
+  font-family:var(--gothic);font-size:19px;letter-spacing:.07em;text-transform:uppercase;white-space:nowrap;pointer-events:none;
+  transition:clip-path .45s cubic-bezier(.5,0,.75,0);clip-path:inset(0);animation:fade .4s .7s backwards}
+.hint b{font-weight:400;color:var(--c1)}
+.hint.gone{clip-path:inset(0 0 0 100%)}
 
-.viewer{border:0;border-radius:18px;padding:0;background:var(--surface);color:var(--ink);width:min(1100px,calc(100vw - 32px));max-height:calc(100% - 32px);box-shadow:0 30px 80px rgba(0,0,0,.4)}
-.viewer[open]{animation:zoomin .25s cubic-bezier(.3,1.2,.6,1)}
-.viewer::backdrop{background:rgba(10,14,22,.62);-webkit-backdrop-filter:blur(4px);backdrop-filter:blur(4px);animation:fade .25s}
-.viewer header{position:sticky;top:0;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 16px;background:var(--surface);border-bottom:1px solid var(--line)}
-.viewer h2{margin:0;font-family:var(--display);font-size:20px;font-weight:700}
-.vbody{display:flex;flex-direction:column;gap:18px;padding:16px}
+.viewer{border:6px solid var(--ink);padding:0;background:var(--sheet);color:var(--ink);width:min(1100px,calc(100vw - 32px));max-height:calc(100% - 32px);scrollbar-width:thin;scrollbar-color:var(--ink) var(--sheet)}
+.viewer[open]{animation:sheet .34s cubic-bezier(.16,1,.3,1)}
+.viewer::backdrop{background:color-mix(in srgb,var(--ink) 78%,transparent);animation:fade .2s}
+.viewer header{position:sticky;top:0;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 16px 8px;background:var(--ink);color:var(--sheet)}
+.viewer h2{margin:0;font-family:var(--gothic);font-weight:400;font-size:32px;letter-spacing:.03em;text-transform:uppercase;line-height:1}
+.viewer .btn{border-color:var(--sheet);color:var(--sheet)}
+.viewer .btn:hover{background:var(--sheet);color:var(--ink)}
+.vbody{display:flex;flex-direction:column;gap:20px;padding:18px}
 .vbody figure{margin:0}
-.vbody img{display:block;width:auto;height:auto;max-width:100%;max-height:70vh;margin:0 auto;background:#fff;border-radius:10px;padding:8px}
-.vbody figcaption{margin-top:8px;color:var(--muted);font-size:14px;text-align:center;text-wrap:balance}
+.vbody img{display:block;width:auto;height:auto;max-width:100%;max-height:70vh;margin:0 auto;background:#fff;border:1.5px solid var(--ink);padding:8px}
+.vbody figcaption{margin:10px auto 0;color:var(--muted);font-size:15px;text-align:center;max-width:70ch;text-wrap:balance}
 
 @media (max-width:720px){
-  .bar{top:8px;gap:8px 12px;padding:9px 12px}
-  .brand h1{font-size:18px}
+  .bill{gap:8px 12px;padding:8px 16px}
+  .brand h1{font-size:28px}
   .brand p{display:none}
   .tools{margin-left:0;width:100%}
   .search{flex:1 1 150px}
-  .tools .btn{padding:7px 9px}
-  .search input{width:100%}
   .mini{display:none}
-  .hint{left:16px;right:76px;transform:none;white-space:normal;border-radius:14px;text-align:left}
+  .hint{left:16px;right:74px;transform:none;white-space:normal;font-size:17px;line-height:1.15}
+  .node.d1 .t{font-size:38px}
 }
 @media (prefers-reduced-motion:reduce){
-  .card,.world path,.bar,.hint,.viewer[open],.viewer::backdrop,.node.d0 .card::before{animation:none}
-  .card,.chip,.btn,.node .pic,.world path{transition:none}
+  .node .card,.world path,.bill,.hint,.viewer[open],.viewer::backdrop{animation:none}
+  .node .card,.chip,.btn,.node .pic img,.world path,.mini,.hint{transition:none}
 }
 </style>
 
-<main class="stage" id="stage"><div class="world" id="world"></div></main>
-
-<header class="bar glass" id="bar">
-  <div class="brand">
-    <svg viewBox="0 0 34 34" aria-hidden="true"><rect width="34" height="34" rx="10" fill="var(--ink)"/><g stroke="var(--ground)" stroke-width="1.2" opacity=".55"><path d="M6 11h22M6 14.5h22M6 18h22M6 21.5h22M6 25h22"/></g><ellipse cx="14.5" cy="21.6" rx="3.6" ry="2.7" transform="rotate(-22 14.5 21.6)" fill="var(--ground)"/><path d="M17.8 20.6V8.5c1 3 5.2 3.4 5.2 7.4" fill="none" stroke="var(--ground)" stroke-width="1.8" stroke-linecap="round"/></svg>
-    <div><h1>Elements of Music</h1><p>Stage 4 mindmap</p></div>
-  </div>
+<!-- DIRECTION CONTRACT (seed 91f0dad7)
+THESIS: the map is printed like a wood-type concert bill, six acts in six flat inks; it refuses the rounded-pastel-node mind-map app and every glass, glow and soft shadow.
+OWN-WORLD: grey poster board, black ink, six Notion-hued inks used as solid slabs; League Gothic caps, Alfa Slab headline, Archivo text; square boxes, thick-thin rules, registration crosses, no radius, no shadow. State is inversion (from the HyperCard hand). One ruling engine draws every connector as square elbows at three weights (from the centre-rail hand).
+STORY: see the six elements as one bill, open an act, read a term and its notation from the back row.
+FIRST VIEWPORT: black bill-head strip with title, six ink swatches, search and tools; centred double-ruled headline block ELEMENTS OF MUSIC; three ink slabs each side joined by 6px square rules; zoom stack bottom right.
+FORM: letterpress concert bill, candidate 7 of 7. Branches pull out on one axis, no bounce (from the cape hand); zoom reads out as plain numerals on a measured grid (from the oscilloscope hand).
+FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, DESIGN.md, and every shipping raster carrying its provenance
+-->
+<header class="bill" id="bar">
+  <div class="brand"><h1>Elements of Music</h1><p>Stage 4 mindmap</p></div>
   <nav class="chips" id="chips" aria-label="Jump to an element"></nav>
   <div class="tools">
     <label class="search">
-      <svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="7" cy="7" r="4.5"/><path d="M10.5 10.5 14 14"/></svg>
-      <input id="q" type="search" placeholder="Find a term…" autocomplete="off" aria-label="Find a term">
+      <svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="6.5" cy="6.5" r="4.5"/><path d="M10 10l4.5 4.5"/></svg>
+      <input id="q" type="search" placeholder="Find a term" autocomplete="off" aria-label="Find a term">
       <output id="qcount" for="q" aria-live="polite"></output>
     </label>
     <button class="btn" id="openAll" type="button">Open all</button>
     <button class="btn" id="closeAll" type="button">Close all</button>
-    <button class="btn" id="quiz" type="button" aria-pressed="false" title="Hide the definitions – click a term to check yourself">Test me</button>
+    <button class="btn" id="quiz" type="button" aria-pressed="false" title="Cover the definitions. Click a term to check yourself">Test me</button>
   </div>
 </header>
 
-<div class="mini glass" id="mini" title="Map overview – click or drag to move"><canvas id="minic"></canvas></div>
-<p class="hint glass" id="hint"><b>Two fingers</b> to move · <b>pinch</b> to zoom · <b>click</b> a branch to open it</p>
-<div class="zoom glass">
-  <button class="btn" id="zin" type="button" aria-label="Zoom in">+</button>
-  <output id="zlabel" aria-label="Zoom level">100%</output>
-  <button class="btn" id="zout" type="button" aria-label="Zoom out">−</button>
-  <button class="btn" id="fit" type="button" aria-label="Fit the map to the screen" title="Fit to screen">⤢</button>
+<div class="floor">
+  <main class="stage" id="stage"><div class="world" id="world"></div></main>
+  <div class="mini" id="mini" title="Whole map. Click or drag to move"><canvas id="minic"></canvas></div>
+  <p class="hint" id="hint"><b>Two fingers</b> move the map · <b>pinch</b> zooms · <b>click</b> opens a branch</p>
+  <div class="zoom">
+    <button class="zb" id="zin" type="button" aria-label="Zoom in"><svg viewBox="0 0 18 18" aria-hidden="true"><path d="M9 3v12M3 9h12"/></svg></button>
+    <output id="zlabel" aria-label="Zoom level">100%</output>
+    <button class="zb" id="zout" type="button" aria-label="Zoom out"><svg viewBox="0 0 18 18" aria-hidden="true"><path d="M3 9h12"/></svg></button>
+    <button class="zb" id="fit" type="button" aria-label="Fit the whole map on screen" title="Fit the whole map"><svg viewBox="0 0 18 18" aria-hidden="true"><path d="M3 7V3h4M11 3h4v4M15 11v4h-4M7 15H3v-4"/></svg></button>
+  </div>
 </div>
 
 <dialog class="viewer" id="viewer" aria-labelledby="vtitle">
@@ -514,14 +514,7 @@ n("Structure","How the sections of the music are organised.",[
 /* ---------- images (files live in images/) ---------- */
 const IMG={"Beat and tempo>Reading a tempo marking":["ex_tempo_mark.png"],"Note values>Semibreve":["nv_semibreve.png"],"Note values>Minim":["nv_minim.png"],"Note values>Crotchet":["nv_crotchet.png"],"Note values>Quaver":["nv_quaver.png","nv_quaverpair.png"],"Note values>Semiquaver":["nv_semiquaver.png","nv_semiquavers.png"],"Note values>Dotted minim":["nv_dotted_minim.png"],"Note values>Dotted crotchet":["nv_dotted_crotchet.png"],"Note values>The note-value pyramid":["ex_note_tree.png"],"Rests (silence)>Semibreve rest":["rest_semibreve.png"],"Rests (silence)>Minim rest":["rest_minim.png"],"Rests (silence)>Crotchet rest":["rest_crotchet.png"],"Rests (silence)>Quaver rest":["rest_quaver.png"],"Simple time>2/4":["ts_24.png"],"Simple time>3/4":["ts_34.png"],"Simple time>4/4":["ts_44.png"],"Compound time>6/8":["ts_68.png","bar_68_group.png"],"Metre and time signatures>3/4 or 6/8?":["ex_34_quavers.png"],"Rhythmic devices>Ostinato":["ex_ostinato.png"],"Rhythmic devices>Syncopation":["ex_syncopation.png"],"Rhythmic devices>Backbeat":["ex_backbeat.png"],"Bar lines>Final (double) bar line":["final_barline.png"],"Bar lines>Repeat sign":["repeat_sign.png"],"Bar lines>Start and end repeat signs":["ex_repeat_both.png"],"The staff and clefs>Treble clef (G clef)":["clef_treble.png"],"The staff and clefs>Bass clef (F clef)":["clef_bass.png"],"The staff and clefs>Ledger lines":["ex_ledger.png"],"The staff and clefs>Grand staff":["ref_grand_staff.png"],"Pitch>Treble clef notes":["ref_treble_notes.png"],"Pitch>Bass clef notes":["ref_bass_notes.png"],"The keyboard>Finding C":["ref_keyboard.png"],"The keyboard>Semitone":["kb_semitone_tone.png"],"The keyboard>Octave":["kb_octave.png","ex_octave.png"],"The keyboard>Interval":["ex_intervals.png"],"Accidentals>Sharp ♯":["acc_sharp.png"],"Accidentals>Flat ♭":["acc_flat.png"],"Accidentals>Natural ♮":["acc_natural.png"],"How melodies move>By step":["mel_steps.png"],"How melodies move>By leap":["mel_leaps.png"],"How melodies move>Repeated notes":["mel_repeat.png"],"Contour>Ascending":["mel_ascending.png"],"Contour>Descending":["mel_descending.png"],"Contour>Arch":["mel_arch.png"],"Contour>Wave-like":["mel_wave.png"],"Major>C major scale":["scale_cmaj.png"],"Major>The major pattern":["scale_cmaj_tts.png"],"Major>G major":["key_g.png"],"Major>D major":["key_d.png"],"Major>F major":["key_f.png"],"Major>B flat major":["key_bb.png"],"Minor>A minor (natural minor)":["scale_amin.png"],"Pentatonic>C major pentatonic":["scale_cpent.png"],"Modal>D Dorian":["scale_ddorian.png"],"Tonality>Chromatic scale":["scale_chromatic.png"],"Harmony and chords>Triad":["triad_c.png"],"Harmony and chords>Primary chords in C major":["ex_chords_c.png"],"Harmony and chords>Major vs minor triad":["ex_major_minor.png"],"Harmony and chords>Chord diagrams":["ex_guitar_chord_c.png","ex_uke_chord_c.png"],"Pitch devices>Riff":["ex_riff.png"],"Pitch devices>Drone":["ex_drone.png"],"Ways of notating pitch>Staff notation":["ex_tab_staff.png"],"Ways of notating pitch>Tablature (TAB)":["tab.png"],"Ways of notating pitch>Graphic notation":["ex_graphic_notation.png"],"Density>Texture graph":["ex_texture_graph.png"],"Texture>Roles of layers":["tex_roles.png"],"Types of texture>Unison":["tex_unison.png"],"Types of texture>Monophonic":["tex_mono.png"],"Types of texture>Homophonic":["tex_homo.png"],"Types of texture>Polyphonic":["tex_poly.png"],"Performing media and timbre>Families of the orchestra":["ex_orchestra_layout.png"],"Strings>Violin":["violin.jpg"],"Strings>Cello":["cello.png"],"Strings>Double bass":["double_bass.jpg"],"Woodwind>Flute":["flute.jpg"],"Woodwind>Clarinet":["clarinet.jpg"],"Woodwind>Saxophone":["saxophone.jpg"],"Brass>Trumpet":["trumpet.jpg"],"Brass>French horn":["french_horn.png"],"Brass>Trombone":["trombone.jpg"],"Brass>Tuba":["tuba.png"],"Percussion>Drum kit":["drum_kit.jpg","ex_drum_key.png"],"Percussion>Maracas":["maracas.jpg"],"Percussion>Guiro":["guiro.jpg"],"Keyboards, guitars and others>Grand piano":["piano.png"],"Keyboards, guitars and others>Synthesiser":["synthesizer.jpg"],"Keyboards, guitars and others>Acoustic guitar":["acoustic_guitar.jpg"],"Keyboards, guitars and others>Electric guitar":["electric_guitar.png"],"Keyboards, guitars and others>Ukulele":["ukulele.jpg"],"Keyboards, guitars and others>Didgeridoo (yidaki)":["didgeridoo.jpg"],"Performing media and timbre>Playing techniques":["ex_pizz_arco.png"],"Voices and ensembles>Voice types (SATB)":["ex_voice_ranges.png"],"Dynamics>pp – pianissimo":["dyn_pp.png"],"Dynamics>p – piano":["dyn_p.png"],"Dynamics>mp – mezzo piano":["dyn_mp.png"],"Dynamics>mf – mezzo forte":["dyn_mf.png"],"Dynamics>f – forte":["dyn_f.png"],"Dynamics>ff – fortissimo":["dyn_ff.png"],"Dynamics>In a real melody":["ex_dynamics_passage.png"],"Gradual changes>Crescendo (cresc.)":["hairpin_cresc.png","ex_cresc_text.png"],"Gradual changes>Diminuendo / decrescendo (dim.)":["hairpin_dim.png"],"Articulation>Staccato (dots)":["art_staccato.png"],"Articulation>Accent":["art_accent.png"],"Articulation>Slur":["art_slur.png"],"Articulation>Tie":["art_tie.png"],"Articulation>Tenuto (lines)":["art_tenuto.png"],"Articulation>Fermata (pause)":["art_fermata.png"],"Expressive techniques and effects>Glissando":["ex_gliss.png"],"Expressive techniques and effects>Trill (tr)":["ex_trill.png"],"Expressive techniques and effects>Why Italian?":["ex_expression_text.png"],"Macrostructure>Binary – A B":["form_binary.png"],"Macrostructure>Ternary – A B A":["form_ternary.png"],"Macrostructure>Rondo – A B A C A":["form_rondo.png"],"Macrostructure>Verse–chorus":["form_verse_chorus.png"],"Macrostructure>12-bar blues":["form_12bar_blues.png"],"Microstructure>Motif":["ex_motif.png"],"Microstructure>Phrase":["ex_phrases.png"],"Microstructure>Call and response":["ex_call_response.png"],"Signs that change the order>1st and 2nd time bars":["ex_volta.png"],"Signs that change the order>Fine":["ex_dc_fine.png"],"Beat and tempo>Tempo":["metronome.jpg"],"Beat and tempo>Changing tempo":["ex_accel_rit.png"],"Note values>The dot rule":["ex_dot_rule.png"],"Metre and time signatures>Top number":["ex_time_sig_count.png"],"The staff and clefs>Staff (stave)":["ref_staff_lines_spaces.png"],"Treble clef notes>Lines: E G B D F":["ref_treble_lines.png"],"Treble clef notes>Spaces: F A C E":["ref_treble_spaces.png"],"Bass clef notes>Lines: G B D F A":["ref_bass_lines.png"],"Bass clef notes>Spaces: A C E G":["ref_bass_spaces.png"],"Key ideas>Melody":["ex_melody_harmony.png"],"Key ideas>Harmony":["ex_melody_harmony.png"],"The keyboard>Tone":["kb_semitone_tone.png"],"Contour>Staying the same":["mel_repeat.png"],"Primary chords in C major>I – Tonic":["triad_c.png"],"Primary chords in C major>IV – Subdominant":["triad_f.png"],"Primary chords in C major>V – Dominant":["triad_g.png"],"Primary chords in C major>V7 – Dominant seventh":["chord_g7.png"],"Pitch devices>Ostinato":["ex_melodic_ostinato.png"],"Strings>Viola":["viola.jpg"],"Strings>Harp":["harp.jpg"],"Woodwind>Oboe":["oboe.jpg"],"Woodwind>Bassoon":["bassoon.jpg"],"Tuned>Xylophone":["xylophone.jpg"],"Tuned>Glockenspiel":["glockenspiel.jpg"],"Tuned>Timpani (kettledrums)":["timpani.jpg"],"Untuned>Snare drum":["snare_drum.png"],"Untuned>Cymbals":["cymbals.jpg"],"Untuned>Tambourine":["tambourine.jpg"],"Keyboards, guitars and others>Bass guitar":["bass_guitar.jpg"],"Expressive techniques and effects>Pizzicato":["ex_pizz_arco.png"],"Expressive techniques and effects>Arco":["ex_pizz_arco.png"],"Macrostructure>Cyclic":["form_cyclic.png"],"Structure>Song sections":["form_verse_chorus.png"],"Signs that change the order>Repeat sign":["repeat_sign.png"],"Signs that change the order>Da Capo (D.C.)":["ex_dc_fine.png"],"Signs that change the order>Coda":["sign_coda.png"]};
 const META={"ex_tempo_mark.png":[1134,555,"A tempo marking sits above the first bar",""],"nv_semibreve.png":[600,380,"Semibreve – 4 beats",""],"nv_minim.png":[600,380,"Minim – 2 beats",""],"nv_crotchet.png":[600,380,"Crotchet – 1 beat",""],"nv_quaver.png":[600,380,"Quaver – half a beat",""],"nv_quaverpair.png":[600,380,"Two beamed quavers – 1 beat altogether",""],"nv_semiquavers.png":[600,380,"Four semiquavers – 1 beat altogether",""],"nv_dotted_minim.png":[600,380,"Dotted minim – 3 beats",""],"nv_dotted_crotchet.png":[600,380,"Dotted crotchet – 1½ beats",""],"ex_note_tree.png":[2008,1732,"The note-value pyramid: every row lasts the same time (4 beats). Each note splits into two of the next kind",""],"rest_semibreve.png":[850,555,"Semibreve rest – 4 beats. HANGS below the line",""],"rest_minim.png":[850,555,"Minim rest – 2 beats. SITS on the line like a hat",""],"rest_crotchet.png":[850,555,"Crotchet rest – 1 beat",""],"rest_quaver.png":[850,555,"Quaver rest – half a beat",""],"ts_44.png":[850,555,"4/4 – four crotchet beats per bar (simple quadruple)",""],"ts_34.png":[850,555,"3/4 – three crotchet beats per bar (simple triple)",""],"ts_68.png":[850,555,"6/8 – compound duple",""],"bar_68_group.png":[1535,555,"6/8: quavers are beamed in two groups of three",""],"ts_24.png":[850,555,"2/4 – two crotchet beats per bar (simple duple), like a march",""],"ex_34_quavers.png":[1535,555,"3/4 also holds six quavers – but grouped in THREE pairs (simple time). Compare with 6/8 above: TWO groups of three (compound time)",""],"ex_ostinato.png":[2008,362,"Ostinato – the same one-bar rhythm repeated over and over",""],"ex_syncopation.png":[2008,547,"Syncopation – bar 2 accents the notes that fall BETWEEN the beats",""],"ex_backbeat.png":[2008,489,"Backbeat on a drum kit – hi-hat quavers on top, bass drum on beats 1 and 3, accented snare on beats 2 and 4",""],"ex_repeat_both.png":[2008,445,"Start and end repeat signs – play the two bars between the dots twice, then go on",""],"final_barline.png":[1134,555,"Final (double) bar line – the end of the piece",""],"repeat_sign.png":[1134,555,"Repeat sign – go back and play the section again",""],"clef_treble.png":[850,555,"Treble clef (G clef) – higher notes. It curls around the G line",""],"clef_bass.png":[850,555,"Bass clef (F clef) – lower notes. The two dots sit either side of the F line",""],"ref_grand_staff.png":[1535,981,"The grand staff (piano music): treble and bass staves joined by a brace. MIDDLE C sits on a ledger line between them – it is the same note in both clefs",""],"ex_ledger.png":[1535,616,"Ledger lines extend the staff below and above",""],"ref_treble_notes.png":[2480,732,"Treble clef: middle C (on a ledger line) up to high A",""],"ref_bass_notes.png":[2480,732,"Bass clef: low E up to middle C (on a ledger line)",""],"ref_keyboard.png":[1600,520,"C is always the white key to the left of the group of TWO black keys (middle C highlighted)",""],"kb_semitone_tone.png":[900,650,"C to D is a TONE (there is a black key in between). E to F is a SEMITONE (no key in between)",""],"kb_octave.png":[900,650,"An octave on the keyboard",""],"ex_octave.png":[1134,542,"An octave on the staff: middle C up to the next C",""],"ex_intervals.png":[2008,542,"Intervals above C – count both notes: C to E is C-D-E = a 3rd",""],"acc_sharp.png":[850,555,"Sharp – raises the note by a semitone (F sharp)",""],"acc_flat.png":[850,555,"Flat – lowers the note by a semitone (B flat)",""],"acc_natural.png":[850,555,"Natural – cancels a sharp or flat",""],"mel_steps.png":[1535,555,"By STEP – to the next-door note",""],"mel_leaps.png":[1535,555,"By LEAP – jumping over notes",""],"mel_repeat.png":[1535,555,"REPEATED notes",""],"mel_ascending.png":[1535,555,"Ascending contour",""],"mel_arch.png":[1535,555,"Arch contour – up, then down",""],"mel_descending.png":[1535,555,"Descending contour",""],"mel_wave.png":[1535,555,"Wave-like contour – up and down, over and over",""],"scale_cmaj.png":[1535,555,"C major scale – eight notes moving by step from C to C",""],"key_g.png":[850,555,"G major – one sharp (F sharp)",""],"key_f.png":[850,555,"F major – one flat (B flat)",""],"scale_cmaj_tts.png":[1535,532,"Every major scale follows the same pattern of steps: Tone, Tone, Semitone, Tone, Tone, Tone, Semitone",""],"scale_amin.png":[1535,555,"A minor scale (natural minor) – same notes as C major but starting on A. Sounds darker",""],"scale_cpent.png":[1535,555,"C major pentatonic – only five different notes: C D E G A (no F or B)",""],"scale_ddorian.png":[1535,555,"D Dorian mode (modal) – the white notes from D to D",""],"scale_chromatic.png":[2008,555,"Chromatic scale – every semitone, all 12 notes",""],"key_d.png":[850,555,"D major – two sharps (F sharp, C sharp)",""],"key_bb.png":[850,555,"B flat major – two flats (B flat, E flat)",""],"triad_c.png":[850,555,"C major triad: C – E – G",""],"ex_chords_c.png":[1535,617,"The primary chords in C major, with chord symbols above and Roman numerals below",""],"ex_major_minor.png":[1134,591,"Major vs minor triad – only the middle note changes (E becomes E flat)",""],"ex_guitar_chord_c.png":[1045,1205,"Chord diagram: C on guitar. Dots = where fingers press, O = open string, X = do not play",""],"ex_uke_chord_c.png":[1165,1190,"Chord diagram: C on ukulele – one finger on the 3rd fret",""],"ex_riff.png":[2008,373,"A bass riff – a short, catchy pattern that keeps repeating (note the repeat sign)",""],"ex_drone.png":[2008,756,"A drone – the bottom staff holds the same two notes (D and A) while the melody moves above",""],"ex_tab_staff.png":[1535,969,"The same notes written in staff notation (top) and guitar TAB (bottom)",""],"ex_graphic_notation.png":[1700,760,"A graphic score – shapes show pitch (height), length (width) and volume (size)",""],"tab.png":[1535,520,"Guitar tablature (TAB)",""],"ex_texture_graph.png":[1740,690,"A texture graph (layer diagram) of a pop song – count the coloured layers in each section to see the texture get thicker and thinner",""],"tex_roles.png":[1772,1150,"Roles of layers: melodic (top), harmonic (middle), bass line (bottom)",""],"tex_unison.png":[1772,818,"Unison – both voices have exactly the same notes",""],"tex_poly.png":[2244,818,"Polyphonic – a round (Frère Jacques): Voice 2 starts the tune two bars later, so two independent melodies overlap",""],"tex_mono.png":[2008,555,"Monophonic – one melody line only",""],"tex_homo.png":[1535,898,"Homophonic – melody (top) supported by chords (bottom)",""],"ex_orchestra_layout.png":[2100,1500,"Where the families sit in a symphony orchestra – quieter strings at the front, louder brass and percussion at the back",""],"violin.jpg":[700,1100,"Violin – highest string instrument","Just plain Bill, public domain, via Wikimedia Commons"],"cello.png":[465,705,"Cello – played sitting down","Georg Feitscher, CC BY 3.0, via Wikimedia Commons"],"double_bass.jpg":[960,1353,"Double bass – lowest string instrument","AndrewKepert, CC BY-SA 3.0, via Wikimedia Commons"],"flute.jpg":[882,771,"Flute – blow across the hole (no reed)","Thea Paraskevaides, CC BY-SA 4.0, via Wikimedia Commons"],"clarinet.jpg":[960,192,"Clarinet – single reed","Yamaha Corporation, CC BY-SA 4.0, via Wikimedia Commons"],"saxophone.jpg":[960,2090,"Alto saxophone – metal body but a single reed, so it is woodwind","muzyczny.pl, CC BY-SA 4.0, via Wikimedia Commons"],"trumpet.jpg":[960,524,"Trumpet – highest brass, three valves","Yamaha Corporation, CC BY-SA 4.0, via Wikimedia Commons"],"french_horn.png":[960,720,"French horn – coiled tubing, mellow sound","BenP, CC BY 2.5, via Wikimedia Commons"],"trombone.jpg":[960,224,"Trombone – uses a slide instead of valves","Yamaha Corporation, CC BY-SA 4.0, via Wikimedia Commons"],"tuba.png":[945,1592,"Tuba – lowest brass","Buffet Crampon, CC BY-SA 4.0, via Wikimedia Commons"],"timpani.jpg":[960,770,"Timpani (kettledrums) – TUNED percussion","Reinhold Möller, CC BY-SA 4.0, via Wikimedia Commons"],"snare_drum.png":[960,960,"Snare drum – UNTUNED percussion","Edrocked, CC BY-SA 4.0, via Wikimedia Commons"],"drum_kit.jpg":[960,640,"Drum kit – bass drum, snare, toms, hi-hat and cymbals","Mostafameraji, CC BY 4.0, via Wikimedia Commons"],"maracas.jpg":[693,768,"Maracas – played by SHAKING","Axel Heymann, CC BY-SA 3.0, via Wikimedia Commons"],"guiro.jpg":[533,800,"Guiro – played by SCRAPING","Miguel Andrade, public domain, via Wikimedia Commons"],"ex_drum_key.png":[2008,502,"How the drum kit is written on a percussion staff",""],"piano.png":[960,925,"Grand piano – hammers strike strings","Steinway and Sons, CC BY-SA 3.0, via Wikimedia Commons"],"synthesizer.jpg":[960,618,"Synthesiser – ELECTRONIC sound source","PerfectCircuit, CC0, via Wikimedia Commons"],"acoustic_guitar.jpg":[960,1431,"Acoustic guitar – strummed or plucked","Tony 1212, CC BY-SA 4.0, via Wikimedia Commons"],"electric_guitar.png":[960,2577,"Electric guitar – needs an amplifier","Spike78, CC BY-SA 4.0, via Wikimedia Commons"],"ukulele.jpg":[960,720,"Ukulele – four strings","Zapyon, CC BY-SA 4.0, via Wikimedia Commons"],"didgeridoo.jpg":[458,800,"Didgeridoo (yidaki) – played with vibrating lips to make a drone","CC BY-SA 3.0, via Wikimedia Commons"],"ex_pizz_arco.png":[1535,512,"Playing techniques are written into the music: pizz. = pluck the strings, arco = go back to the bow",""],"ex_voice_ranges.png":[2008,1000,"Approximate ranges of the four voice types, lowest note to highest note",""],"dyn_pp.png":[600,380,"pianissimo – very soft",""],"dyn_mp.png":[600,380,"mezzo piano – moderately soft",""],"dyn_mf.png":[600,380,"mezzo forte – moderately loud",""],"dyn_ff.png":[600,380,"fortissimo – very loud",""],"dyn_p.png":[600,380,"piano – soft",""],"dyn_f.png":[600,380,"forte – loud",""],"ex_dynamics_passage.png":[2008,546,"Dynamics in a real melody: start soft (p), crescendo to loud (f), diminuendo, end very soft (pp)",""],"hairpin_cresc.png":[1535,555,"Crescendo (cresc.) – gradually getting louder",""],"hairpin_dim.png":[1535,555,"Diminuendo / decrescendo (dim.) – gradually getting softer",""],"ex_cresc_text.png":[1535,546,"A crescendo can also be written as a word (cresc.) with a dashed line instead of a hairpin",""],"art_staccato.png":[1134,555,"Staccato (dots) – short and detached",""],"art_accent.png":[1134,555,"Accent – play the note with emphasis",""],"art_slur.png":[1134,555,"Slur – play legato (smooth and connected)",""],"art_tie.png":[1134,555,"Tie – joins two notes of the SAME pitch into one longer note",""],"art_fermata.png":[850,555,"Fermata (pause) – hold the note longer",""],"art_tenuto.png":[1134,555,"Tenuto (lines) – hold each note for its full length, slightly stressed",""],"ex_gliss.png":[1134,445,"Glissando – slide from one note to the other",""],"ex_trill.png":[850,555,"Trill (tr) – rapidly alternate with the note above",""],"ex_expression_text.png":[2008,477,"Expressive directions in a score: Andante (tempo), rit. (slow down) and a fermata on the last note",""],"form_binary.png":[498,320,"Binary – two contrasting sections",""],"form_ternary.png":[706,320,"Ternary – the A section comes back",""],"form_rondo.png":[1122,320,"Rondo – A keeps returning between new sections",""],"form_verse_chorus.png":[1826,300,"A typical verse–chorus song map",""],"form_12bar_blues.png":[1148,642,"The 12-bar blues chord pattern (shown in C) – this 12-bar cycle repeats for the whole song",""],"ex_motif.png":[2008,966,"Motif – the famous four-note idea from Beethoven's Symphony No. 5, then repeated a step lower",""],"ex_phrases.png":[2008,1040,"Phrases – Beethoven's Ode to Joy: a 'question' phrase that sounds unfinished, then an 'answer' phrase that ends on the home note",""],"ex_call_response.png":[2008,499,"Call and response",""],"ex_volta.png":[2008,502,"1st and 2nd time bars – first time play bracket 1 and repeat; second time skip to bracket 2",""],"ex_dc_fine.png":[2008,461,"D.C. al Fine – go back to the beginning and stop at Fine",""],"metronome.jpg":[960,1434,"Metronome – clicks a steady beat at the BPM you set","Vincent Quach (Invincible), CC BY-SA 3.0, via Wikimedia Commons"],"ex_accel_rit.png":[1752,342,"Tempo changes written into the music: accel. = gradually faster, rit. = gradually slower",""],"nv_semiquaver.png":[600,380,"Semiquaver – quarter of a beat",""],"ex_dot_rule.png":[1335,278,"The dot rule: a dot adds half of the note's value",""],"ex_time_sig_count.png":[968,360,"4/4 – the top 4 means four beats in every bar (count 1 2 3 4); the bottom 4 means crotchet beats",""],"ref_staff_lines_spaces.png":[2298,305,"The staff: 5 lines and 4 spaces, always counted from the bottom up",""],"ref_treble_lines.png":[1033,360,"Treble clef lines: E G B D F",""],"ref_treble_spaces.png":[895,360,"Treble clef spaces: F A C E",""],"ref_bass_lines.png":[1033,328,"Bass clef lines: G B D F A",""],"ref_bass_spaces.png":[895,314,"Bass clef spaces: A C E G",""],"ex_melody_harmony.png":[1619,401,"Melody is one note at a time; harmony is notes sounding together",""],"triad_f.png":[478,346,"Chord IV in C major – F: F A C",""],"triad_g.png":[478,346,"Chord V in C major – G: G B D",""],"chord_g7.png":[478,355,"Chord V7 in C major – G7: G B D F",""],"ex_melodic_ostinato.png":[1871,314,"A melodic ostinato – the same one-bar pattern repeated over and over",""],"sign_coda.png":[336,342,"The coda sign – marks the jump to the ending section",""],"form_cyclic.png":[960,420,"Cyclic – a pattern or loop that repeats around and around",""],"viola.jpg":[960,1440,"Viola – slightly bigger and lower than the violin","Museum für Kunst und Gewerbe Hamburg, CC0, via Wikimedia Commons"],"oboe.jpg":[960,960,"Oboe – double reed","Gebrüder Mönnig, Markneukirchen, CC BY-SA 4.0, via Wikimedia Commons"],"bassoon.jpg":[250,1661,"Bassoon – lowest woodwind, double reed","Yamaha Corporation, CC BY-SA 4.0, via Wikimedia Commons"],"harp.jpg":[960,1757,"Harp – plucked strings","N.S.M. s.p.a., CC BY-SA 4.0, via Wikimedia Commons"],"xylophone.jpg":[960,1363,"Xylophones – wooden bars, TUNED percussion","Ferbr1, CC BY-SA 3.0, via Wikimedia Commons"],"glockenspiel.jpg":[960,501,"Glockenspiel – metal bars, TUNED percussion","flamurai, Public domain, via Wikimedia Commons"],"cymbals.jpg":[604,453,"Cymbals – UNTUNED percussion","Kovac9478, CC BY 3.0, via Wikimedia Commons"],"tambourine.jpg":[960,570,"Tambourine – UNTUNED percussion, struck or shaken","Unknown photographer, CC0, via Wikimedia Commons"],"bass_guitar.jpg":[960,1299,"Bass guitar – four strings, plays the bass line","Niranjan Arminius, CC BY-SA 4.0, via Wikimedia Commons"]};
-const ICONS=[
- '<ellipse class="fill" cx="9.5" cy="18" rx="4.2" ry="3.1" transform="rotate(-22 9.5 18)"/><path d="M13.4 16.8V4c1.2 3.4 5.6 3.8 5.6 8.2"/>',
- '<path d="M3 8h18M3 13h18M3 18h18" opacity=".45"/><circle class="fill" cx="6" cy="18" r="2.6"/><circle class="fill" cx="12" cy="13" r="2.6"/><circle class="fill" cx="18" cy="8" r="2.6"/>',
- '<path d="M3 7c3-3 6 3 9 0s6-3 9 0M3 12.5c3-3 6 3 9 0s6-3 9 0M3 18c3-3 6 3 9 0s6-3 9 0"/>',
- '<ellipse cx="12" cy="10" rx="8" ry="3.4"/><path d="M4 10v6.5c0 1.9 3.6 3.4 8 3.4s8-1.5 8-3.4V10M8 3l5 6M17 3l-4 6"/>',
- '<path d="M3 12 21 5.5M3 12l18 6.5"/>',
- '<rect x="2.5" y="7" width="5.5" height="10" rx="1.5"/><rect class="fill" x="9.25" y="7" width="5.5" height="10" rx="1.5"/><rect x="16" y="7" width="5.5" height="10" rx="1.5"/>'
-];
+
 
 /* ---------- build ---------- */
 const stage=document.getElementById("stage"), world=document.getElementById("world"), bar=document.getElementById("bar");
@@ -539,12 +532,10 @@ function build(src,parent,depth,branch){
   const el=mk("button","node d"+Math.min(depth,3)+(src.k?" "+src.k:"")+(src.c.length?" has":""));
   el.type="button";
   el.style.setProperty("--b",depth?"var(--c"+(branch+1)+")":"var(--ink)");
-  if(depth){ el.style.setProperty("--f","var(--f"+(branch+1)+")"); el.style.setProperty("--tf","var(--t"+(branch+1)+")") }
+  el.style.setProperty("--o",depth?"var(--o"+(branch+1)+")":"var(--paper)");
   const card=mk("span","card"), body=mk("span","body");
-  if(depth===0){ const st=mk("span","stave"); for(let i=0;i<5;i++) st.appendChild(mk("i")); body.appendChild(st) }
-  if(depth===1){ const b=mk("span","badge"); b.innerHTML='<svg viewBox="0 0 24 24" aria-hidden="true">'+ICONS[branch]+"</svg>"; card.appendChild(b) }
-  if(src.k==="tip"||(src.k==="ask"&&src.c.length)) body.appendChild(mk("span","eyebrow",src.k==="tip"?"Tip":"Listening"));
   body.appendChild(mk("span","t",src.t));
+  if(depth===0){ const st=mk("span","stave"); for(let i=0;i<5;i++) st.appendChild(mk("i")); body.appendChild(st) }
   if(src.d) body.appendChild(mk("span","def",src.d));
   const files=parent?IMG[parent.t+">"+src.t]:null;
   if(files){
@@ -559,7 +550,7 @@ function build(src,parent,depth,branch){
       pic.addEventListener("click",e=>{ e.stopPropagation(); if(!dragged) openPics(o,file) });
       if(m[3]){ const c=mk("span","credit",m[3]); c.style.maxWidth=Math.max(w,150)+"px"; body.appendChild(c) }
     });
-    el.style.setProperty("--mw",Math.max(290,maxW+60)+"px");
+    el.style.setProperty("--mw",Math.max(300,maxW+64)+"px");
   }
   card.appendChild(body);
   if(src.c.length&&depth){ o.countEl=mk("span","count"); card.appendChild(o.countEl) }
@@ -568,7 +559,7 @@ function build(src,parent,depth,branch){
     o.link=document.createElementNS(SVGNS,"path");
     o.link.setAttribute("pathLength","1");
     o.link.style.stroke="var(--c"+(branch+1)+")";
-    o.link.style.strokeWidth=depth===1?6:depth===2?3.2:2;
+    o.link.style.strokeWidth=depth===1?7:depth===2?4:2.5;
     svg.appendChild(o.link);
   }
   el.addEventListener("click",e=>onNodeClick(o,e));
@@ -594,8 +585,8 @@ function measure(){
 }
 
 /* ---------- layout ---------- */
-const vgap=d=>d<=1?34:d===2?16:8;
-const hgap=d=>d===0?84:d===1?56:40;
+const vgap=d=>d<=1?30:d===2?14:8;
+const hgap=d=>d===0?96:d===1?64:44;
 function sub(o){
   if(!o.open||!o.children.length){o.ch=0;return o.sh=o.h}
   let s=0; o.children.forEach((c,i)=>{s+=sub(c)+(i?vgap(c.depth):0)});
@@ -628,7 +619,7 @@ function layout(){
       if(leaving.has(o)) leaving.delete(o);
       else if(first||!p){ o.cx=o.tx; o.cy=o.ty }
       else { o.cx=p.cx+(p.w-o.w)/2; o.cy=p.cy+(p.h-o.h)/2 }
-      const delay=(first?o.depth*130:40)+Math.min(idx,12)*28;
+      const delay=(first?120+o.depth*140:30)+Math.min(idx,14)*24;
       o.el.style.setProperty("--delay",delay+"ms"); if(o.link) o.link.style.setProperty("--delay",delay+"ms");
       o.el.classList.remove("off","leaving"); if(o.link) o.link.classList.remove("off","leaving");
       if(o.files&&!o.eager){ o.eager=true; o.el.querySelectorAll("img").forEach(im=>im.loading="eager") }
@@ -654,7 +645,7 @@ let vc={x:0,y:0,k:1}, vs={x:0,y:0,k:1}, vt={x:0,y:0,k:1}, raf=0, t0=0;
 const KMIN=.08, KMAX=2.4, zlabel=document.getElementById("zlabel");
 function applyView(){
   world.style.transform="translate("+vc.x+"px,"+vc.y+"px) scale("+vc.k+")";
-  let s=26*vc.k; while(s<18) s*=2;
+  let s=120*vc.k; while(s<70) s*=2; while(s>260) s/=2;
   stage.style.setProperty("--ps",s+"px"); stage.style.setProperty("--px",vc.x+"px"); stage.style.setProperty("--py",vc.y+"px");
   zlabel.textContent=Math.round(vc.k*100)+"%";
   drawMini();
@@ -663,8 +654,8 @@ function drawNode(o){
   o.el.style.transform="translate("+o.cx+"px,"+o.cy+"px)";
   if(o.link){
     const p=o.parent, dir=o.side;
-    const x1=dir>0?p.cx+p.w:p.cx, y1=p.cy+p.h/2, x2=dir>0?o.cx:o.cx+o.w, y2=o.cy+o.h/2, m=(x2-x1)*.55;
-    o.link.setAttribute("d","M"+x1+" "+y1+"C"+(x1+m)+" "+y1+" "+(x2-m)+" "+y2+" "+x2+" "+y2);
+    const x1=dir>0?p.cx+p.w:p.cx, y1=p.cy+p.h/2, x2=dir>0?o.cx:o.cx+o.w, y2=o.cy+o.h/2, mx=x1+dir*hgap(p.depth)/2;
+    o.link.setAttribute("d","M"+x1+" "+y1+"H"+mx+"V"+y2+"H"+x2);
   }
 }
 function draw(){ vis.forEach(drawNode); leaving.forEach(drawNode); applyView() }
@@ -695,7 +686,7 @@ function bbox(list){
   list.forEach(o=>{x0=Math.min(x0,o.tx);y0=Math.min(y0,o.ty);x1=Math.max(x1,o.tx+o.w);y1=Math.max(y1,o.ty+o.h)});
   return {x:x0,y:y0,w:x1-x0,h:y1-y0};
 }
-const topInset=()=>bar.getBoundingClientRect().bottom-stage.getBoundingClientRect().top+14;
+const topInset=()=>22;
 function fit(list,instant){
   const W=stage.clientWidth,H=stage.clientHeight,pad=narrow?16:40,top=topInset(),bot=narrow?70:30,b=bbox(list||vis);
   let k=Math.min((W-2*pad)/b.w,(H-top-bot)/b.h,1.15);
@@ -743,7 +734,7 @@ const mini=document.getElementById("mini"), minic=document.getElementById("minic
 let palette=null, miniT=null;
 function readPalette(){
   const cs=getComputedStyle(document.documentElement), g=n=>cs.getPropertyValue(n).trim();
-  palette={c:[1,2,3,4,5,6].map(i=>g("--c"+i)),ink:g("--ink"),muted:g("--muted")};
+  palette={c:[1,2,3,4,5,6].map(i=>g("--c"+i)),ink:g("--ink")};
 }
 window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change",()=>{palette=null;drawMini()});
 new MutationObserver(()=>{palette=null;drawMini()}).observe(document.documentElement,{attributes:true,attributeFilter:["data-theme"]});
@@ -768,7 +759,7 @@ function drawMini(){
   mctx.globalAlpha=1;
   const vx=ox+(-vc.x/vc.k)*s, vy=oy+(-vc.y/vc.k)*s, vw=stage.clientWidth/vc.k*s, vh=stage.clientHeight/vc.k*s;
   mctx.fillStyle=palette.ink; mctx.globalAlpha=.08; mctx.fillRect(vx,vy,vw,vh);
-  mctx.globalAlpha=1; mctx.strokeStyle=palette.ink; mctx.lineWidth=1.5; mctx.strokeRect(vx,vy,vw,vh);
+  mctx.globalAlpha=1; mctx.strokeStyle=palette.ink; mctx.lineWidth=2.5; mctx.strokeRect(vx,vy,vw,vh);
 }
 function miniGo(e){
   if(!miniT) return;
@@ -783,8 +774,9 @@ mini.addEventListener("pointerup",()=>miniDown=false); mini.addEventListener("po
 /* ---------- interaction ---------- */
 let quiz=false, dragged=false;
 const hint=document.getElementById("hint");
-function hideHint(){ hint.classList.add("gone") }
-setTimeout(hideHint,9000);
+let touched=false;
+function hideHint(){ touched=true; hint.classList.add("gone") }
+setTimeout(()=>hint.classList.add("gone"),10000);
 function onNodeClick(o,e){
   if(dragged&&e.detail>0) return;
   hideHint();
@@ -908,7 +900,7 @@ quizBtn.onclick=()=>{
 const chips=document.getElementById("chips");
 root.children.forEach((c,i)=>{
   const b=mk("button","chip",c.t); b.type="button";
-  b.style.setProperty("--b","var(--c"+(i+1)+")"); b.style.setProperty("--f","var(--f"+(i+1)+")"); b.style.setProperty("--tf","var(--t"+(i+1)+")");
+  b.style.setProperty("--b","var(--c"+(i+1)+")"); b.style.setProperty("--o","var(--o"+(i+1)+")");
   b.onclick=()=>{
     clearSearch(true); hideHint();
     const solo=c.open&&root.children.every(x=>x===c||!x.open);
@@ -959,10 +951,15 @@ function boot(){
 }
 boot();
 if(document.fonts&&document.fonts.ready) document.fonts.ready.then(boot);
-let rz=0;
-window.addEventListener("resize",()=>{ clearTimeout(rz); rz=setTimeout(()=>{
-  const n=window.innerWidth<720;
-  if(n!==narrow){ narrow=n; applySides(); finish(); layout() }
-  fit();
-},150) });
+/* refit whenever the press bed changes size (also catches a pane that opens small and then grows) */
+let rz=0, lastW=stage.clientWidth, lastH=stage.clientHeight;
+new ResizeObserver(()=>{
+  if(stage.clientWidth===lastW&&stage.clientHeight===lastH) return;
+  lastW=stage.clientWidth; lastH=stage.clientHeight;
+  clearTimeout(rz); rz=setTimeout(()=>{
+    const n=window.innerWidth<720;
+    if(n!==narrow){ narrow=n; applySides(); finish(); layout() }
+    fit(null,!touched);
+  },120);
+}).observe(stage);
 </script>
