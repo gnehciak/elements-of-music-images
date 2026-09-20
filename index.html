@@ -1,0 +1,764 @@
+<!doctype html>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Elements of Music Mindmap</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Bricolage+Grotesque:opsz,wght@12..96,500..800&display=swap">
+<style>
+:root{
+  --ground:#EDF0F5; --surface:#FFFFFF; --ink:#141C2B; --muted:#55607A; --line:#C9D0DD; --dot:#CFD5E0;
+  --c1:#C8451F; --c2:#2460C8; --c3:#12806A; --c4:#7A45C4; --c5:#C02A6E; --c6:#94690A;
+  --on-c:#FFFFFF; --hl:#F5B800;
+  --display:"Bricolage Grotesque","Avenir Next","Segoe UI",sans-serif;
+  --body:"Atkinson Hyperlegible","Verdana","Segoe UI",sans-serif;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --ground:#0F141D; --surface:#19202D; --ink:#E8ECF4; --muted:#9AA5BC; --line:#2E3849; --dot:#252E3D;
+    --c1:#FF8A5C; --c2:#7FB0FF; --c3:#4FD1B0; --c4:#B794F6; --c5:#FF7EB6; --c6:#E5B94A;
+    --on-c:#0F141D; --hl:#FFD24A;
+  }
+}
+:root[data-theme="dark"]{
+  --ground:#0F141D; --surface:#19202D; --ink:#E8ECF4; --muted:#9AA5BC; --line:#2E3849; --dot:#252E3D;
+  --c1:#FF8A5C; --c2:#7FB0FF; --c3:#4FD1B0; --c4:#B794F6; --c5:#FF7EB6; --c6:#E5B94A;
+  --on-c:#0F141D; --hl:#FFD24A;
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{margin:0;background:var(--ground);color:var(--ink);font-family:var(--body);font-size:15px;line-height:1.35;display:flex;flex-direction:column;overflow:hidden}
+button,input{font:inherit;color:inherit}
+:focus-visible{outline:3px solid var(--ink);outline-offset:2px}
+
+/* ---------- top bar ---------- */
+.bar{display:flex;flex-wrap:wrap;align-items:center;gap:10px 20px;padding:12px 16px 10px;background:var(--surface)}
+.brand{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+.brand h1{margin:0;font-family:var(--display);font-weight:800;font-size:24px;letter-spacing:-.01em;line-height:1.1}
+.brand p{margin:0;color:var(--muted);font-size:13px}
+.chips{display:flex;gap:6px;overflow-x:auto;max-width:100%;padding:3px;margin:-3px;scrollbar-width:none}
+.chips::-webkit-scrollbar{display:none}
+.chip{flex:none;border:0;border-radius:999px;padding:6px 12px;background:var(--b);color:var(--on-c);font-weight:700;font-size:13px;cursor:pointer;white-space:nowrap}
+.chip:hover{filter:brightness(1.08)}
+.tools{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin-left:auto}
+.search{display:flex;align-items:center;gap:8px;border:1.5px solid var(--line);border-radius:10px;padding:0 10px;background:var(--ground)}
+.search:focus-within{border-color:var(--ink)}
+.search input{border:0;background:transparent;outline:0;padding:7px 0;width:150px;min-width:0}
+.search output{color:var(--muted);font-size:12px;white-space:nowrap;font-variant-numeric:tabular-nums}
+.btn{border:1.5px solid var(--line);background:var(--surface);border-radius:10px;padding:7px 11px;cursor:pointer;font-weight:700;font-size:13px}
+.btn:hover{border-color:var(--ink)}
+.btn[aria-pressed="true"]{background:var(--ink);color:var(--ground);border-color:var(--ink)}
+/* a five-line stave closes the bar */
+.stave{flex:none;height:25px;background:var(--surface);border-bottom:1px solid var(--line);
+  background-image:repeating-linear-gradient(to bottom,transparent 0 4px,var(--line) 4px 5px);background-size:100% 25px;background-position:0 -2px;
+  -webkit-mask-image:linear-gradient(to bottom,#000 0 22px,transparent 22px);mask-image:linear-gradient(to bottom,#000 0 22px,transparent 22px)}
+
+/* ---------- canvas ---------- */
+.stage{position:relative;flex:1;min-height:0;overflow:hidden;touch-action:none;cursor:grab;
+  background-image:radial-gradient(var(--dot) 1.2px,transparent 1.6px)}
+.stage.grabbing{cursor:grabbing}
+.world{position:absolute;left:0;top:0;transform-origin:0 0}
+.world svg{position:absolute;left:0;top:0;width:1px;height:1px;overflow:visible;pointer-events:none}
+.world path{fill:none;stroke-linecap:round;opacity:.85}
+.world:not(.measuring) .off{display:none}
+
+.node{position:absolute;left:0;top:0;display:flex;align-items:center;gap:10px;width:max-content;max-width:290px;
+  text-align:left;background:var(--surface);border:1.5px solid color-mix(in srgb,var(--b) 50%,var(--line));border-radius:12px;
+  padding:7px 11px;cursor:default;animation:appear .3s ease-out;transition:opacity .2s}
+.node.has{cursor:pointer}
+.node.has:hover{border-color:var(--b)}
+.node.l{flex-direction:row-reverse}
+.node span{display:block}
+.node .t{font-weight:700;font-size:14.5px}
+.node .def{color:var(--muted);font-size:13px;margin-top:1px}
+.node .eyebrow{font-size:10.5px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--b);margin-bottom:1px}
+.node .count{flex:none;min-width:22px;height:22px;border-radius:11px;padding:0 6px;font-size:12px;font-weight:700;line-height:22px;text-align:center;
+  background:color-mix(in srgb,var(--b) 18%,var(--surface));font-variant-numeric:tabular-nums}
+.node .pic{background:#fff;border:1px solid var(--line);border-radius:8px;margin-top:6px;overflow:hidden;cursor:zoom-in;max-width:100%}
+.node .pic img{display:block;width:100%;height:100%;object-fit:contain}
+.node .credit{font-size:10px;line-height:1.25;margin-top:3px;opacity:.75}
+.node.d1 .pic,.node.d2 .pic{margin-top:8px}
+.viewer{border:0;border-radius:16px;padding:0;background:var(--surface);color:var(--ink);width:min(1100px,calc(100vw - 32px));max-height:calc(100% - 32px);box-shadow:0 20px 60px rgba(0,0,0,.35)}
+.viewer::backdrop{background:rgba(10,14,22,.6)}
+.viewer header{position:sticky;top:0;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 16px;background:var(--surface);border-bottom:1px solid var(--line)}
+.viewer h2{margin:0;font-family:var(--display);font-size:20px;font-weight:700}
+.vbody{display:flex;flex-direction:column;gap:18px;padding:16px}
+.vbody figure{margin:0}
+.vbody img{display:block;width:auto;height:auto;max-width:100%;max-height:70vh;margin:0 auto;background:#fff;border-radius:10px;padding:8px}
+.vbody figcaption{margin-top:8px;color:var(--muted);font-size:14px;text-align:center;text-wrap:balance}
+.node.tip{border-style:dashed;border-color:var(--b)}
+.node.ask{background:color-mix(in srgb,var(--b) 9%,var(--surface))}
+
+.node.d0{background:var(--ink);border-color:var(--ink);color:var(--ground);border-radius:26px;padding:18px 24px;cursor:pointer;max-width:250px}
+.node.d0 .t{font-family:var(--display);font-weight:800;font-size:27px;line-height:1.05;letter-spacing:-.01em}
+.node.d0 .def{color:color-mix(in srgb,var(--ground) 72%,var(--ink));margin-top:6px}
+.node.d1{background:var(--b);border-color:var(--b);color:var(--on-c);border-radius:20px;padding:12px 16px;max-width:310px}
+.node.d1 .t{font-family:var(--display);font-weight:700;font-size:21px;line-height:1.1}
+.node.d1 .def{color:var(--on-c);opacity:.92;margin-top:4px}
+.node.d1 .count{background:color-mix(in srgb,var(--on-c) 24%,transparent)}
+.node.d1:hover{filter:brightness(1.06)}
+.node.d2{border-width:2px;border-color:var(--b);max-width:250px}
+.node.d2 .t{font-size:15.5px}
+
+.searching .node:not(.hit):not(.onpath){opacity:.28}
+.node.hit{box-shadow:0 0 0 3px var(--hl)}
+.quiz .node:not(.shown):not(.ask):not(.d0) .def{filter:blur(5px);user-select:none}
+.quiz .node:not(.shown):not(.ask):not(.d0){cursor:pointer}
+@keyframes appear{from{opacity:0}}
+
+.zoom{position:absolute;right:16px;bottom:16px;display:flex;flex-direction:column;gap:6px}
+.zoom .btn{width:40px;height:40px;padding:0;font-size:18px;line-height:1}
+.hint{position:absolute;left:12px;bottom:12px;margin:0;padding:6px 10px;border-radius:10px;background:color-mix(in srgb,var(--ground) 88%,transparent);width:fit-content;max-width:min(60ch,calc(100% - 84px));color:var(--muted);font-size:12.5px;pointer-events:none;text-wrap:balance}
+
+@media (max-width:720px){
+  .brand h1{font-size:20px}
+  .tools{margin-left:0;width:100%}
+  .search{flex:1}
+  .search input{width:100%}
+  .hint .extra{display:none}
+}
+@media (prefers-reduced-motion:reduce){.node{animation:none;transition:none}}
+</style>
+
+<header class="bar">
+  <div class="brand">
+    <h1>Elements of Music</h1>
+    <p>Stage 4 mindmap</p>
+  </div>
+  <nav class="chips" id="chips" aria-label="Jump to an element"></nav>
+  <div class="tools">
+    <label class="search">
+      <input id="q" type="search" placeholder="Find a term…" autocomplete="off" aria-label="Find a term">
+      <output id="qcount" for="q" aria-live="polite"></output>
+    </label>
+    <button class="btn" id="openAll" type="button">Open all</button>
+    <button class="btn" id="closeAll" type="button">Close all</button>
+    <button class="btn" id="quiz" type="button" aria-pressed="false" title="Hide the definitions – click a term to check yourself">Test me</button>
+  </div>
+</header>
+<div class="stave" aria-hidden="true"></div>
+
+<main class="stage" id="stage">
+  <div class="world" id="world"></div>
+  <p class="hint">Drag to pan · scroll or pinch to zoom · click a branch to open it, a picture to enlarge it. <span class="extra">Revision: the Gimkit kit “Year 7 Music – End of Year Revision” (193 questions) covers everything here.</span></p>
+  <div class="zoom">
+    <button class="btn" id="zin" type="button" aria-label="Zoom in">+</button>
+    <button class="btn" id="zout" type="button" aria-label="Zoom out">−</button>
+    <button class="btn" id="fit" type="button" aria-label="Fit the map to the screen" title="Fit to screen">⤢</button>
+  </div>
+</main>
+<dialog class="viewer" id="viewer" aria-labelledby="vtitle">
+  <header><h2 id="vtitle"></h2><button class="btn" id="vclose" type="button">Close</button></header>
+  <div class="vbody" id="vbody"></div>
+</dialog>
+
+<script>
+/* ---------- content (from the Notion page "Content") ---------- */
+function n(t,d,c,k){ if(Array.isArray(d)){k=c;c=d;d=""} return {t:t,d:d||"",c:c||[],k:k||""} }
+const ask=(...qs)=>n("Ask the class","Questions for listening",qs.map(q=>n(q,"",[],"ask")),"ask");
+const tip=(t,d)=>n(t,d,[],"tip");
+
+const DATA=n("Elements of Music","Stage 4 · NSW Music 7–10 Syllabus (2024)",[
+
+n("Duration","The length of sounds and silences in music – beat, tempo, note and rest values, metre and rhythmic devices.",[
+  n("Beat and tempo",[
+    n("Beat","The steady pulse you tap your foot to. Some music has no beat (free rhythm)."),
+    n("Tempo","The speed of the beat, measured in BPM (beats per minute). A metronome clicks the beat."),
+    n("Italian tempo terms","Slowest to fastest",[
+      n("Largo","Very slow and broad"),n("Adagio","Slow"),n("Andante","At a walking pace"),
+      n("Moderato","Moderate speed"),n("Allegro","Fast and lively"),n("Presto","Very fast")]),
+    n("Changing tempo",[
+      n("Accelerando (accel.)","Gradually getting faster"),
+      n("Ritardando (rit.) / Rallentando (rall.)","Gradually getting slower")]),
+    n("Reading a tempo marking","Sits above the first bar, e.g. Allegro ♩ = 120",[
+      n("Allegro","The Italian term – fast and lively"),
+      n("♩ = 120","120 crotchet beats per minute (120 BPM) – two beats every second")])
+  ]),
+  n("Note values",[
+    n("Semibreve","4 beats · American name: whole note"),
+    n("Minim","2 beats · 2 in a semibreve · half note"),
+    n("Crotchet","1 beat · 4 in a semibreve · quarter note"),
+    n("Quaver","½ beat · 8 in a semibreve · eighth note. Two beamed quavers = 1 beat altogether."),
+    n("Semiquaver","¼ beat · 16 in a semibreve · sixteenth note. Four semiquavers = 1 beat altogether."),
+    n("Dotted minim","3 beats"),
+    n("Dotted crotchet","1½ beats"),
+    tip("The dot rule","A dot adds half of the note's value. Minim (2) + dot (1) = 3 beats. Crotchet (1) + dot (½) = 1½ beats."),
+    n("The note-value pyramid","Every row lasts the same time (4 beats). Each note splits into two of the next kind.")
+  ]),
+  n("Rests (silence)",[
+    n("Semibreve rest","4 beats. HANGS below the line."),
+    n("Minim rest","2 beats. SITS on the line like a hat."),
+    n("Crotchet rest","1 beat"),
+    n("Quaver rest","Half a beat")
+  ]),
+  n("Metre and time signatures",[
+    n("Top number","How many beats in each bar"),
+    n("Bottom number","What kind of note gets the beat (4 = crotchet, 8 = quaver)"),
+    n("Simple time","Each beat divides into two",[
+      n("2/4","Two crotchet beats per bar (simple duple), like a march"),
+      n("3/4","Three crotchet beats per bar (simple triple)"),
+      n("4/4","Four crotchet beats per bar (simple quadruple)")]),
+    n("Compound time","Each beat divides into three",[
+      n("6/8","Compound duple – two dotted-crotchet beats, quavers beamed in two groups of three")]),
+    tip("3/4 or 6/8?","Both hold six quavers. 3/4 groups them in THREE pairs (simple time); 6/8 in TWO groups of three (compound time).")
+  ]),
+  n("Rhythmic devices",[
+    n("Ostinato","A rhythmic (or melodic) pattern that repeats over and over"),
+    n("Syncopation","Accents placed on weak beats or off-beats – the notes that fall BETWEEN the beats"),
+    n("Backbeat","Emphasis on beats 2 and 4, usually on the snare drum (rock and pop). On a kit: hi-hat quavers on top, bass drum on 1 and 3, accented snare on 2 and 4."),
+    n("Free rhythm","No steady beat or regular metre"),
+    n("Cycles","Repeating rhythmic cycles, common in many global music cultures")
+  ]),
+  n("Bar lines",[
+    n("Final (double) bar line","The end of the piece"),
+    n("Repeat sign","Go back and play the section again"),
+    n("Start and end repeat signs","Play the bars between the dots twice, then go on")
+  ]),
+  ask("Is there a steady beat?","Fast or slow – does the tempo change?","How many beats in a bar?","Are the rhythms long and smooth or short and busy?","Can you hear an ostinato, syncopation or a backbeat?")
+]),
+
+n("Pitch","How high or low a sound is – melody, harmony and tonality.",[
+  n("Key ideas",[
+    n("Definite pitch","A clear note you can sing back (flute, violin, xylophone)"),
+    n("Indefinite pitch","No clear note (snare drum, cymbal)"),
+    n("Melody","The main tune – pitches one after another"),
+    n("Harmony","Two or more different notes sounding together")
+  ]),
+  n("The staff and clefs",[
+    n("Staff (stave)","5 lines and 4 spaces"),
+    n("Clef","Tells you which notes the lines and spaces stand for"),
+    n("Treble clef (G clef)","Higher notes. It curls around the G line."),
+    n("Bass clef (F clef)","Lower notes. The two dots sit either side of the F line."),
+    n("Ledger lines","Short extra lines for notes above or below the staff"),
+    n("Grand staff","Piano music: treble and bass staves joined by a brace. MIDDLE C sits on a ledger line between them – the same note in both clefs.")
+  ]),
+  n("Treble clef notes","Middle C (on a ledger line) up to high A",[
+    n("Lines: E G B D F","Bottom to top – Every Good Boy Deserves Fruit"),
+    n("Spaces: F A C E","Bottom to top – spells FACE")
+  ]),
+  n("Bass clef notes","Low E up to middle C (on a ledger line)",[
+    n("Lines: G B D F A","Bottom to top – Good Boys Do Fine Always"),
+    n("Spaces: A C E G","Bottom to top – All Cows Eat Grass")
+  ]),
+  n("The keyboard",[
+    tip("Finding C","C is always the white key to the left of the group of TWO black keys."),
+    n("Semitone","The smallest step, from one key to the very next key (E to F, or C to C sharp)"),
+    n("Tone","Two semitones (C to D – there is a black key in between)"),
+    n("Octave","From one note to the next note with the same letter name (8 letter names apart)"),
+    n("Interval","The distance between any two pitches. Count both notes: C to E is C-D-E = a 3rd.")
+  ]),
+  n("Accidentals",[
+    n("Sharp ♯","Raises the note by a semitone (F sharp)"),
+    n("Flat ♭","Lowers the note by a semitone (B flat)"),
+    n("Natural ♮","Cancels a sharp or flat")
+  ]),
+  n("How melodies move",[
+    n("By step","To the next-door note"),
+    n("By leap","Jumping over notes"),
+    n("Repeated notes","Staying on the same pitch"),
+    n("Contour","The shape of the melody",[
+      n("Ascending","Going up"),n("Descending","Going down"),n("Arch","Up, then down"),
+      n("Wave-like","Up and down, over and over"),n("Staying the same","")])
+  ]),
+  n("Tonality",[
+    n("Major","Usually sounds bright and happy",[
+      n("C major scale","Eight notes moving by step from C to C – no sharps or flats"),
+      n("The major pattern","Tone, Tone, Semitone, Tone, Tone, Tone, Semitone – every major scale follows it"),
+      n("G major","One sharp (F sharp)"),
+      n("D major","Two sharps (F sharp, C sharp)"),
+      n("F major","One flat (B flat)"),
+      n("B flat major","Two flats (B flat, E flat)")]),
+    n("Minor","Usually sounds darker or sadder",[
+      n("A minor (natural minor)","Same notes as C major but starting on A")]),
+    n("Pentatonic","A five-note scale, common in folk music from many cultures",[
+      n("C major pentatonic","C D E G A (no F or B)")]),
+    n("Modal","Based on modes such as Dorian or Mixolydian",[
+      n("D Dorian","The white notes from D to D")]),
+    n("Chromatic scale","Every semitone – all 12 notes")
+  ]),
+  n("Harmony and chords",[
+    n("Chord","Three or more notes sounded together"),
+    n("Triad","A three-note chord, e.g. C major: C – E – G"),
+    n("Primary chords in C major","Chord symbols above, Roman numerals below",[
+      n("I – Tonic","C: C E G"),
+      n("IV – Subdominant","F: F A C"),
+      n("V – Dominant","G: G B D"),
+      n("V7 – Dominant seventh","G7: G B D F")]),
+    n("Major vs minor triad","Only the middle note changes (E becomes E flat)"),
+    n("Chord diagrams","Dots = where fingers press, O = open string, X = do not play. C on ukulele is one finger on the 3rd fret.")
+  ]),
+  n("Pitch devices",[
+    n("Riff","A short, catchy repeated pattern (rock, pop, jazz – often guitar or bass)"),
+    n("Ostinato","A repeated melodic pattern"),
+    n("Drone","A long sustained note held underneath the music (bagpipes, didgeridoo)")
+  ]),
+  n("Ways of notating pitch",[
+    n("Staff notation","Treble and bass clef"),
+    n("Tablature (TAB)","Lines are the strings, numbers are the frets to press"),
+    n("Graphic notation","Shapes, lines and pictures instead of notes – height shows pitch, width shows length, size shows volume")
+  ]),
+  ask("Is the melody high or low?","Does it move by step, leap or repeated notes?","What is its contour?","Does it sound major or minor?","Can you hear a riff, ostinato or drone?","Do the chords change often?")
+]),
+
+n("Texture","The layers of sound and how they combine.",[
+  n("Density",[
+    n("Thin","Few layers, e.g. a solo flute"),
+    n("Thick","Many layers, e.g. full orchestra. Adding instruments makes the texture thicker."),
+    n("Texture graph","A layer diagram – count the coloured layers in each section to see the texture get thicker and thinner")
+  ]),
+  n("Roles of layers",[
+    n("Melodic","The tune"),
+    n("Harmonic","Chords and accompaniment"),
+    n("Rhythmic","Drums and percussion, bass line")
+  ]),
+  n("Types of texture",[
+    n("Unison","Everyone sings or plays exactly the same notes together"),
+    n("Monophonic","A single melody line with no accompaniment – one person singing alone; a solo flute"),
+    n("Homophonic","A melody supported by chords or accompaniment – a singer with strummed guitar; most pop songs"),
+    n("Polyphonic","Two or more independent melodies at the same time – a round such as Row, Row, Row Your Boat or Frère Jacques")
+  ]),
+  ask("How many layers can you hear?","Is it thick or thin – does that change?","Which instrument has the melody?","What is each other layer doing – harmonic or rhythmic role?")
+]),
+
+n("Performing media and timbre","Performing media are the instruments and voices that perform the music. Timbre (tone colour) is the unique quality of a sound – how you tell a trumpet from a violin on the same note.",[
+  n("Sound sources",[
+    n("Voices",""),n("Instruments",""),
+    n("Electronic","Synthesiser, drum machine, samples"),
+    n("Natural / environmental","Body percussion, found sounds")
+  ]),
+  n("Families of the orchestra","Quieter strings sit at the front, louder brass and percussion at the back",[
+    n("Strings","Strings vibrate – bowed (arco) or plucked (pizzicato)",[
+      n("Violin","Highest string instrument"),n("Viola",""),n("Cello","Played sitting down"),
+      n("Double bass","Lowest string instrument"),n("Also","Harp, guitar")]),
+    n("Woodwind","Blowing across a hole (flute) or through a reed",[
+      n("Flute","Blow across the hole (no reed)"),n("Oboe",""),n("Clarinet","Single reed"),n("Bassoon",""),
+      n("Saxophone","Metal body but a single reed, so it is woodwind")]),
+    n("Brass","Buzzing the lips into a mouthpiece",[
+      n("Trumpet","Highest brass, three valves"),n("French horn","Coiled tubing, mellow sound"),
+      n("Trombone","Uses a slide instead of valves"),n("Tuba","Lowest brass")]),
+    n("Percussion","Striking, shaking or scraping",[
+      n("Tuned","Xylophone, glockenspiel, timpani (kettledrums)"),
+      n("Untuned","Snare drum, cymbals, tambourine"),
+      n("Drum kit","Bass drum, snare, toms, hi-hat and cymbals – written on a percussion staff"),
+      n("Maracas","Played by SHAKING"),n("Guiro","Played by SCRAPING")]),
+    tip("Tricky ones","The saxophone is metal but it is WOODWIND because it uses a reed. Inside a piano, hammers strike strings.")
+  ]),
+  n("Keyboards, guitars and others",[
+    n("Grand piano","Hammers strike strings"),
+    n("Synthesiser","ELECTRONIC sound source"),
+    n("Acoustic guitar","Strummed or plucked"),
+    n("Electric guitar","Needs an amplifier"),
+    n("Ukulele","Four strings"),
+    n("Didgeridoo (yidaki)","Played with vibrating lips to make a drone")
+  ]),
+  n("Playing techniques","Written into the music: pizz. = pluck the strings, arco = go back to the bow",[
+    n("Blowing",""),n("Bowing",""),n("Plucking",""),n("Strumming",""),n("Striking",""),
+    n("Shaking","Maracas"),n("Scraping","Guiro")
+  ]),
+  n("Voices and ensembles",[
+    n("Voice types (SATB)","Highest to lowest: Soprano, Alto, Tenor, Bass"),
+    n("A cappella","Singing with no instruments"),
+    n("Ensemble sizes","Solo (1) · Duet (2) · Trio (3) · Quartet (4) · band · choir · orchestra (led by a conductor)"),
+    n("Typical rock band","Electric guitar, bass guitar, drum kit, vocals (often keyboard)")
+  ]),
+  n("Words to describe timbre",[
+    n("bright · dark · warm · mellow",""),n("harsh · nasal · reedy · metallic",""),
+    n("breathy · hollow · rich · thin",""),n("piercing · booming · smooth · raspy","")
+  ]),
+  ask("Which instruments or voices can you hear?","Which family?","How is each one being played?","Choose two words to describe the timbre.")
+]),
+
+n("Dynamics and expression","Dynamics is how loud or soft the music is. Expression is how the notes are played – articulation, expressive techniques and effects.",[
+  n("Dynamics","Softest to loudest",[
+    n("pp – pianissimo","Very soft"),n("p – piano","Soft"),n("mp – mezzo piano","Moderately soft"),
+    n("mf – mezzo forte","Moderately loud"),n("f – forte","Loud"),n("ff – fortissimo","Very loud"),
+    n("In a real melody","Start soft (p), crescendo to loud (f), diminuendo, end very soft (pp)")
+  ]),
+  n("Gradual changes",[
+    n("Crescendo (cresc.)","Gradually getting louder – a hairpin opening out, or the word cresc. with a dashed line"),
+    n("Diminuendo / decrescendo (dim.)","Gradually getting softer")
+  ]),
+  n("Articulation",[
+    n("Staccato (dots)","Short and detached"),
+    n("Accent","Play the note with emphasis"),
+    n("Slur","Play legato – smooth and connected"),
+    n("Tie","Joins two notes of the SAME pitch into one longer note"),
+    n("Tenuto (lines)","Hold each note for its full length, slightly stressed"),
+    n("Fermata (pause)","Hold the note longer"),
+    tip("Tie or slur?","Same pitch = tie (add the values together). Different pitches = slur (play smoothly).")
+  ]),
+  n("Expressive techniques and effects",[
+    n("Pizzicato","Plucking the strings of a bowed instrument"),
+    n("Arco","With the bow"),
+    n("Vibrato","A slight, rapid wobble in pitch that warms up the sound"),
+    n("Glissando","Sliding from one note to the other"),
+    n("Trill (tr)","Rapidly alternate with the note above"),
+    n("Distortion","Electronic effect that makes a guitar sound fuzzy and gritty"),
+    n("Delay","Electronic effect that repeats the sound like an echo"),
+    n("Reverb","Makes it sound like a large space"),
+    tip("Why Italian?","Most musical terms are Italian – e.g. Andante (tempo), rit. (slow down).")
+  ]),
+  ask("Is it loud or soft overall?","Do the dynamics change suddenly or gradually?","Are the notes smooth (legato) or detached (staccato)?","Can you hear accents or any effects?")
+]),
+
+n("Structure","How the sections of the music are organised.",[
+  n("Macrostructure","The big sections",[
+    n("Binary – A B","Two contrasting sections"),
+    n("Ternary – A B A","Three sections – the first one returns"),
+    n("Rondo – A B A C A","The main section keeps returning between new sections"),
+    n("Verse–chorus","Intro, verse, chorus, verse, chorus, bridge, chorus, outro – most pop and rock songs"),
+    n("12-bar blues","A 12-bar chord pattern built on chords I, IV and V, repeated for the whole song"),
+    n("Cyclic","A pattern or loop that repeats around and around – chord loops, ostinato-based and much global music")
+  ]),
+  n("Song sections",[
+    n("Intro","Opening section"),
+    n("Verse","Same melody, DIFFERENT words each time (tells the story)"),
+    n("Chorus","Same melody AND same words each time (the hook)"),
+    n("Bridge","A contrasting section, usually heard once"),
+    n("Outro (coda)","Closing section")
+  ]),
+  n("Microstructure","The small building blocks",[
+    n("Motif","A short musical idea that is used and developed – like the four-note idea from Beethoven's Symphony No. 5, repeated a step lower"),
+    n("Phrase","A musical sentence. Ode to Joy: a question phrase that sounds unfinished, then an answer phrase that ends on the home note."),
+    n("Riff / ostinato","Short repeated patterns"),
+    n("Call and response","A leader sings or plays, the group answers")
+  ]),
+  n("Signs that change the order",[
+    n("Repeat sign","Play the section again"),
+    n("1st and 2nd time bars","First time play bracket 1 and repeat; second time skip to bracket 2"),
+    n("Da Capo (D.C.)","Go back to the beginning"),
+    n("Fine","The end. D.C. al Fine = go back to the beginning and stop at Fine."),
+    n("Coda","The ending section")
+  ]),
+  ask("How many different sections can you hear?","Which ones repeat?","Label them with letters (A, B…).","What tells you a new section has started – a change of instruments, dynamics, melody?")
+])
+]);
+
+/* ---------- images (files live in images/) ---------- */
+const IMG={"Beat and tempo>Reading a tempo marking":["ex_tempo_mark.png"],"Note values>Semibreve":["nv_semibreve.png"],"Note values>Minim":["nv_minim.png"],"Note values>Crotchet":["nv_crotchet.png"],"Note values>Quaver":["nv_quaver.png","nv_quaverpair.png"],"Note values>Semiquaver":["nv_semiquavers.png"],"Note values>Dotted minim":["nv_dotted_minim.png"],"Note values>Dotted crotchet":["nv_dotted_crotchet.png"],"Note values>The note-value pyramid":["ex_note_tree.png"],"Rests (silence)>Semibreve rest":["rest_semibreve.png"],"Rests (silence)>Minim rest":["rest_minim.png"],"Rests (silence)>Crotchet rest":["rest_crotchet.png"],"Rests (silence)>Quaver rest":["rest_quaver.png"],"Simple time>2/4":["ts_24.png"],"Simple time>3/4":["ts_34.png"],"Simple time>4/4":["ts_44.png"],"Compound time>6/8":["ts_68.png","bar_68_group.png"],"Metre and time signatures>3/4 or 6/8?":["ex_34_quavers.png"],"Rhythmic devices>Ostinato":["ex_ostinato.png"],"Rhythmic devices>Syncopation":["ex_syncopation.png"],"Rhythmic devices>Backbeat":["ex_backbeat.png"],"Bar lines>Final (double) bar line":["final_barline.png"],"Bar lines>Repeat sign":["repeat_sign.png"],"Bar lines>Start and end repeat signs":["ex_repeat_both.png"],"The staff and clefs>Treble clef (G clef)":["clef_treble.png"],"The staff and clefs>Bass clef (F clef)":["clef_bass.png"],"The staff and clefs>Ledger lines":["ex_ledger.png"],"The staff and clefs>Grand staff":["ref_grand_staff.png"],"Pitch>Treble clef notes":["ref_treble_notes.png"],"Pitch>Bass clef notes":["ref_bass_notes.png"],"The keyboard>Finding C":["ref_keyboard.png"],"The keyboard>Semitone":["kb_semitone_tone.png"],"The keyboard>Octave":["kb_octave.png","ex_octave.png"],"The keyboard>Interval":["ex_intervals.png"],"Accidentals>Sharp ♯":["acc_sharp.png"],"Accidentals>Flat ♭":["acc_flat.png"],"Accidentals>Natural ♮":["acc_natural.png"],"How melodies move>By step":["mel_steps.png"],"How melodies move>By leap":["mel_leaps.png"],"How melodies move>Repeated notes":["mel_repeat.png"],"Contour>Ascending":["mel_ascending.png"],"Contour>Descending":["mel_descending.png"],"Contour>Arch":["mel_arch.png"],"Contour>Wave-like":["mel_wave.png"],"Major>C major scale":["scale_cmaj.png"],"Major>The major pattern":["scale_cmaj_tts.png"],"Major>G major":["key_g.png"],"Major>D major":["key_d.png"],"Major>F major":["key_f.png"],"Major>B flat major":["key_bb.png"],"Minor>A minor (natural minor)":["scale_amin.png"],"Pentatonic>C major pentatonic":["scale_cpent.png"],"Modal>D Dorian":["scale_ddorian.png"],"Tonality>Chromatic scale":["scale_chromatic.png"],"Harmony and chords>Triad":["triad_c.png"],"Harmony and chords>Primary chords in C major":["ex_chords_c.png"],"Harmony and chords>Major vs minor triad":["ex_major_minor.png"],"Harmony and chords>Chord diagrams":["ex_guitar_chord_c.png","ex_uke_chord_c.png"],"Pitch devices>Riff":["ex_riff.png"],"Pitch devices>Drone":["ex_drone.png"],"Ways of notating pitch>Staff notation":["ex_tab_staff.png"],"Ways of notating pitch>Tablature (TAB)":["tab.png"],"Ways of notating pitch>Graphic notation":["ex_graphic_notation.png"],"Density>Texture graph":["ex_texture_graph.png"],"Texture>Roles of layers":["tex_roles.png"],"Types of texture>Unison":["tex_unison.png"],"Types of texture>Monophonic":["tex_mono.png"],"Types of texture>Homophonic":["tex_homo.png"],"Types of texture>Polyphonic":["tex_poly.png"],"Performing media and timbre>Families of the orchestra":["ex_orchestra_layout.png"],"Strings>Violin":["violin.jpg"],"Strings>Cello":["cello.png"],"Strings>Double bass":["double_bass.jpg"],"Woodwind>Flute":["flute.jpg"],"Woodwind>Clarinet":["clarinet.jpg"],"Woodwind>Saxophone":["saxophone.jpg"],"Brass>Trumpet":["trumpet.jpg"],"Brass>French horn":["french_horn.png"],"Brass>Trombone":["trombone.jpg"],"Brass>Tuba":["tuba.png"],"Percussion>Tuned":["timpani.jpg"],"Percussion>Untuned":["snare_drum.png"],"Percussion>Drum kit":["drum_kit.jpg","ex_drum_key.png"],"Percussion>Maracas":["maracas.jpg"],"Percussion>Guiro":["guiro.jpg"],"Keyboards, guitars and others>Grand piano":["piano.png"],"Keyboards, guitars and others>Synthesiser":["synthesizer.jpg"],"Keyboards, guitars and others>Acoustic guitar":["acoustic_guitar.jpg"],"Keyboards, guitars and others>Electric guitar":["electric_guitar.png"],"Keyboards, guitars and others>Ukulele":["ukulele.jpg"],"Keyboards, guitars and others>Didgeridoo (yidaki)":["didgeridoo.jpg"],"Performing media and timbre>Playing techniques":["ex_pizz_arco.png"],"Voices and ensembles>Voice types (SATB)":["ex_voice_ranges.png"],"Dynamics>pp – pianissimo":["dyn_pp.png"],"Dynamics>p – piano":["dyn_p.png"],"Dynamics>mp – mezzo piano":["dyn_mp.png"],"Dynamics>mf – mezzo forte":["dyn_mf.png"],"Dynamics>f – forte":["dyn_f.png"],"Dynamics>ff – fortissimo":["dyn_ff.png"],"Dynamics>In a real melody":["ex_dynamics_passage.png"],"Gradual changes>Crescendo (cresc.)":["hairpin_cresc.png","ex_cresc_text.png"],"Gradual changes>Diminuendo / decrescendo (dim.)":["hairpin_dim.png"],"Articulation>Staccato (dots)":["art_staccato.png"],"Articulation>Accent":["art_accent.png"],"Articulation>Slur":["art_slur.png"],"Articulation>Tie":["art_tie.png"],"Articulation>Tenuto (lines)":["art_tenuto.png"],"Articulation>Fermata (pause)":["art_fermata.png"],"Expressive techniques and effects>Glissando":["ex_gliss.png"],"Expressive techniques and effects>Trill (tr)":["ex_trill.png"],"Expressive techniques and effects>Why Italian?":["ex_expression_text.png"],"Macrostructure>Binary – A B":["form_binary.png"],"Macrostructure>Ternary – A B A":["form_ternary.png"],"Macrostructure>Rondo – A B A C A":["form_rondo.png"],"Macrostructure>Verse–chorus":["form_verse_chorus.png"],"Macrostructure>12-bar blues":["form_12bar_blues.png"],"Microstructure>Motif":["ex_motif.png"],"Microstructure>Phrase":["ex_phrases.png"],"Microstructure>Call and response":["ex_call_response.png"],"Signs that change the order>1st and 2nd time bars":["ex_volta.png"],"Signs that change the order>Fine":["ex_dc_fine.png"]};
+const META={"ex_tempo_mark.png":[1134,555,"A tempo marking sits above the first bar",""],"nv_semibreve.png":[600,380,"Semibreve – 4 beats",""],"nv_minim.png":[600,380,"Minim – 2 beats",""],"nv_crotchet.png":[600,380,"Crotchet – 1 beat",""],"nv_quaver.png":[600,380,"Quaver – half a beat",""],"nv_quaverpair.png":[600,380,"Two beamed quavers – 1 beat altogether",""],"nv_semiquavers.png":[600,380,"Four semiquavers – 1 beat altogether",""],"nv_dotted_minim.png":[600,380,"Dotted minim – 3 beats",""],"nv_dotted_crotchet.png":[600,380,"Dotted crotchet – 1½ beats",""],"ex_note_tree.png":[2008,1732,"The note-value pyramid: every row lasts the same time (4 beats). Each note splits into two of the next kind",""],"rest_semibreve.png":[850,555,"Semibreve rest – 4 beats. HANGS below the line",""],"rest_minim.png":[850,555,"Minim rest – 2 beats. SITS on the line like a hat",""],"rest_crotchet.png":[850,555,"Crotchet rest – 1 beat",""],"rest_quaver.png":[850,555,"Quaver rest – half a beat",""],"ts_44.png":[850,555,"4/4 – four crotchet beats per bar (simple quadruple)",""],"ts_34.png":[850,555,"3/4 – three crotchet beats per bar (simple triple)",""],"ts_68.png":[850,555,"6/8 – compound duple",""],"bar_68_group.png":[1535,555,"6/8: quavers are beamed in two groups of three",""],"ts_24.png":[850,555,"2/4 – two crotchet beats per bar (simple duple), like a march",""],"ex_34_quavers.png":[1535,555,"3/4 also holds six quavers – but grouped in THREE pairs (simple time). Compare with 6/8 above: TWO groups of three (compound time)",""],"ex_ostinato.png":[2008,362,"Ostinato – the same one-bar rhythm repeated over and over",""],"ex_syncopation.png":[2008,547,"Syncopation – bar 2 accents the notes that fall BETWEEN the beats",""],"ex_backbeat.png":[2008,489,"Backbeat on a drum kit – hi-hat quavers on top, bass drum on beats 1 and 3, accented snare on beats 2 and 4",""],"ex_repeat_both.png":[2008,445,"Start and end repeat signs – play the two bars between the dots twice, then go on",""],"final_barline.png":[1134,555,"Final (double) bar line – the end of the piece",""],"repeat_sign.png":[1134,555,"Repeat sign – go back and play the section again",""],"clef_treble.png":[850,555,"Treble clef (G clef) – higher notes. It curls around the G line",""],"clef_bass.png":[850,555,"Bass clef (F clef) – lower notes. The two dots sit either side of the F line",""],"ref_grand_staff.png":[1535,981,"The grand staff (piano music): treble and bass staves joined by a brace. MIDDLE C sits on a ledger line between them – it is the same note in both clefs",""],"ex_ledger.png":[1535,616,"Ledger lines extend the staff below and above",""],"ref_treble_notes.png":[2480,732,"Treble clef: middle C (on a ledger line) up to high A",""],"ref_bass_notes.png":[2480,732,"Bass clef: low E up to middle C (on a ledger line)",""],"ref_keyboard.png":[1600,520,"C is always the white key to the left of the group of TWO black keys (middle C highlighted)",""],"kb_semitone_tone.png":[900,650,"C to D is a TONE (there is a black key in between). E to F is a SEMITONE (no key in between)",""],"kb_octave.png":[900,650,"An octave on the keyboard",""],"ex_octave.png":[1134,542,"An octave on the staff: middle C up to the next C",""],"ex_intervals.png":[2008,542,"Intervals above C – count both notes: C to E is C-D-E = a 3rd",""],"acc_sharp.png":[850,555,"Sharp – raises the note by a semitone (F sharp)",""],"acc_flat.png":[850,555,"Flat – lowers the note by a semitone (B flat)",""],"acc_natural.png":[850,555,"Natural – cancels a sharp or flat",""],"mel_steps.png":[1535,555,"By STEP – to the next-door note",""],"mel_leaps.png":[1535,555,"By LEAP – jumping over notes",""],"mel_repeat.png":[1535,555,"REPEATED notes",""],"mel_ascending.png":[1535,555,"Ascending contour",""],"mel_arch.png":[1535,555,"Arch contour – up, then down",""],"mel_descending.png":[1535,555,"Descending contour",""],"mel_wave.png":[1535,555,"Wave-like contour – up and down, over and over",""],"scale_cmaj.png":[1535,555,"C major scale – eight notes moving by step from C to C",""],"key_g.png":[850,555,"G major – one sharp (F sharp)",""],"key_f.png":[850,555,"F major – one flat (B flat)",""],"scale_cmaj_tts.png":[1535,532,"Every major scale follows the same pattern of steps: Tone, Tone, Semitone, Tone, Tone, Tone, Semitone",""],"scale_amin.png":[1535,555,"A minor scale (natural minor) – same notes as C major but starting on A. Sounds darker",""],"scale_cpent.png":[1535,555,"C major pentatonic – only five different notes: C D E G A (no F or B)",""],"scale_ddorian.png":[1535,555,"D Dorian mode (modal) – the white notes from D to D",""],"scale_chromatic.png":[2008,555,"Chromatic scale – every semitone, all 12 notes",""],"key_d.png":[850,555,"D major – two sharps (F sharp, C sharp)",""],"key_bb.png":[850,555,"B flat major – two flats (B flat, E flat)",""],"triad_c.png":[850,555,"C major triad: C – E – G",""],"ex_chords_c.png":[1535,617,"The primary chords in C major, with chord symbols above and Roman numerals below",""],"ex_major_minor.png":[1134,591,"Major vs minor triad – only the middle note changes (E becomes E flat)",""],"ex_guitar_chord_c.png":[1045,1205,"Chord diagram: C on guitar. Dots = where fingers press, O = open string, X = do not play",""],"ex_uke_chord_c.png":[1165,1190,"Chord diagram: C on ukulele – one finger on the 3rd fret",""],"ex_riff.png":[2008,373,"A bass riff – a short, catchy pattern that keeps repeating (note the repeat sign)",""],"ex_drone.png":[2008,756,"A drone – the bottom staff holds the same two notes (D and A) while the melody moves above",""],"ex_tab_staff.png":[1535,969,"The same notes written in staff notation (top) and guitar TAB (bottom)",""],"ex_graphic_notation.png":[1700,760,"A graphic score – shapes show pitch (height), length (width) and volume (size)",""],"tab.png":[1535,520,"Guitar tablature (TAB)",""],"ex_texture_graph.png":[1740,690,"A texture graph (layer diagram) of a pop song – count the coloured layers in each section to see the texture get thicker and thinner",""],"tex_roles.png":[1772,1150,"Roles of layers: melodic (top), harmonic (middle), bass line (bottom)",""],"tex_unison.png":[1772,818,"Unison – both voices have exactly the same notes",""],"tex_poly.png":[2244,818,"Polyphonic – a round (Frère Jacques): Voice 2 starts the tune two bars later, so two independent melodies overlap",""],"tex_mono.png":[2008,555,"Monophonic – one melody line only",""],"tex_homo.png":[1535,898,"Homophonic – melody (top) supported by chords (bottom)",""],"ex_orchestra_layout.png":[2100,1500,"Where the families sit in a symphony orchestra – quieter strings at the front, louder brass and percussion at the back",""],"violin.jpg":[700,1100,"Violin – highest string instrument","Just plain Bill, public domain, via Wikimedia Commons"],"cello.png":[465,705,"Cello – played sitting down","Georg Feitscher, CC BY 3.0, via Wikimedia Commons"],"double_bass.jpg":[960,1353,"Double bass – lowest string instrument","AndrewKepert, CC BY-SA 3.0, via Wikimedia Commons"],"flute.jpg":[882,771,"Flute – blow across the hole (no reed)","Thea Paraskevaides, CC BY-SA 4.0, via Wikimedia Commons"],"clarinet.jpg":[960,192,"Clarinet – single reed","Yamaha Corporation, CC BY-SA 4.0, via Wikimedia Commons"],"saxophone.jpg":[960,2090,"Alto saxophone – metal body but a single reed, so it is woodwind","muzyczny.pl, CC BY-SA 4.0, via Wikimedia Commons"],"trumpet.jpg":[960,524,"Trumpet – highest brass, three valves","Yamaha Corporation, CC BY-SA 4.0, via Wikimedia Commons"],"french_horn.png":[960,720,"French horn – coiled tubing, mellow sound","BenP, CC BY 2.5, via Wikimedia Commons"],"trombone.jpg":[960,224,"Trombone – uses a slide instead of valves","Yamaha Corporation, CC BY-SA 4.0, via Wikimedia Commons"],"tuba.png":[945,1592,"Tuba – lowest brass","Buffet Crampon, CC BY-SA 4.0, via Wikimedia Commons"],"timpani.jpg":[960,770,"Timpani (kettledrums) – TUNED percussion","Reinhold Möller, CC BY-SA 4.0, via Wikimedia Commons"],"snare_drum.png":[960,960,"Snare drum – UNTUNED percussion","Edrocked, CC BY-SA 4.0, via Wikimedia Commons"],"drum_kit.jpg":[960,640,"Drum kit – bass drum, snare, toms, hi-hat and cymbals","Mostafameraji, CC BY 4.0, via Wikimedia Commons"],"maracas.jpg":[693,768,"Maracas – played by SHAKING","Axel Heymann, CC BY-SA 3.0, via Wikimedia Commons"],"guiro.jpg":[533,800,"Guiro – played by SCRAPING","Miguel Andrade, public domain, via Wikimedia Commons"],"ex_drum_key.png":[2008,502,"How the drum kit is written on a percussion staff",""],"piano.png":[960,925,"Grand piano – hammers strike strings","Steinway and Sons, CC BY-SA 3.0, via Wikimedia Commons"],"synthesizer.jpg":[960,618,"Synthesiser – ELECTRONIC sound source","PerfectCircuit, CC0, via Wikimedia Commons"],"acoustic_guitar.jpg":[960,1431,"Acoustic guitar – strummed or plucked","Tony 1212, CC BY-SA 4.0, via Wikimedia Commons"],"electric_guitar.png":[960,2577,"Electric guitar – needs an amplifier","Spike78, CC BY-SA 4.0, via Wikimedia Commons"],"ukulele.jpg":[960,720,"Ukulele – four strings","Zapyon, CC BY-SA 4.0, via Wikimedia Commons"],"didgeridoo.jpg":[458,800,"Didgeridoo (yidaki) – played with vibrating lips to make a drone","CC BY-SA 3.0, via Wikimedia Commons"],"ex_pizz_arco.png":[1535,512,"Playing techniques are written into the music: pizz. = pluck the strings, arco = go back to the bow",""],"ex_voice_ranges.png":[2008,1000,"Approximate ranges of the four voice types, lowest note to highest note",""],"dyn_pp.png":[600,380,"pianissimo – very soft",""],"dyn_mp.png":[600,380,"mezzo piano – moderately soft",""],"dyn_mf.png":[600,380,"mezzo forte – moderately loud",""],"dyn_ff.png":[600,380,"fortissimo – very loud",""],"dyn_p.png":[600,380,"piano – soft",""],"dyn_f.png":[600,380,"forte – loud",""],"ex_dynamics_passage.png":[2008,546,"Dynamics in a real melody: start soft (p), crescendo to loud (f), diminuendo, end very soft (pp)",""],"hairpin_cresc.png":[1535,555,"Crescendo (cresc.) – gradually getting louder",""],"hairpin_dim.png":[1535,555,"Diminuendo / decrescendo (dim.) – gradually getting softer",""],"ex_cresc_text.png":[1535,546,"A crescendo can also be written as a word (cresc.) with a dashed line instead of a hairpin",""],"art_staccato.png":[1134,555,"Staccato (dots) – short and detached",""],"art_accent.png":[1134,555,"Accent – play the note with emphasis",""],"art_slur.png":[1134,555,"Slur – play legato (smooth and connected)",""],"art_tie.png":[1134,555,"Tie – joins two notes of the SAME pitch into one longer note",""],"art_fermata.png":[850,555,"Fermata (pause) – hold the note longer",""],"art_tenuto.png":[1134,555,"Tenuto (lines) – hold each note for its full length, slightly stressed",""],"ex_gliss.png":[1134,445,"Glissando – slide from one note to the other",""],"ex_trill.png":[850,555,"Trill (tr) – rapidly alternate with the note above",""],"ex_expression_text.png":[2008,477,"Expressive directions in a score: Andante (tempo), rit. (slow down) and a fermata on the last note",""],"form_binary.png":[498,320,"Binary – two contrasting sections",""],"form_ternary.png":[706,320,"Ternary – the A section comes back",""],"form_rondo.png":[1122,320,"Rondo – A keeps returning between new sections",""],"form_verse_chorus.png":[1826,300,"A typical verse–chorus song map",""],"form_12bar_blues.png":[1148,642,"The 12-bar blues chord pattern (shown in C) – this 12-bar cycle repeats for the whole song",""],"ex_motif.png":[2008,966,"Motif – the famous four-note idea from Beethoven's Symphony No. 5, then repeated a step lower",""],"ex_phrases.png":[2008,1040,"Phrases – Beethoven's Ode to Joy: a 'question' phrase that sounds unfinished, then an 'answer' phrase that ends on the home note",""],"ex_call_response.png":[2008,499,"Call and response",""],"ex_volta.png":[2008,502,"1st and 2nd time bars – first time play bracket 1 and repeat; second time skip to bracket 2",""],"ex_dc_fine.png":[2008,461,"D.C. al Fine – go back to the beginning and stop at Fine",""]};
+
+/* ---------- build ---------- */
+const stage=document.getElementById("stage"), world=document.getElementById("world");
+const SVGNS="http://www.w3.org/2000/svg";
+const svg=document.createElementNS(SVGNS,"svg"); world.appendChild(svg);
+const narrow=window.innerWidth<720;
+const reduce=window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+const DUR=reduce?0:340;
+const nodes=[];
+let root;
+
+function build(src,parent,depth,branch,side){
+  const o={t:src.t,d:src.d,k:src.k,parent:parent,depth:depth,branch:branch,side:side,children:[],open:false,vis:false,cx:0,cy:0,tx:0,ty:0};
+  nodes.push(o);
+  const el=document.createElement("button");
+  el.type="button";
+  el.className="node d"+Math.min(depth,3)+(side<0?" l":"")+(src.k?" "+src.k:"")+(src.c.length?" has":"");
+  el.style.setProperty("--b",depth?"var(--c"+(branch+1)+")":"var(--ink)");
+  const body=document.createElement("span"); body.className="body";
+  if(src.k==="tip"||(src.k==="ask"&&src.c.length)){const e=document.createElement("span");e.className="eyebrow";e.textContent=src.k==="tip"?"Tip":"Listening";body.appendChild(e)}
+  const t=document.createElement("span"); t.className="t"; t.textContent=src.t; body.appendChild(t);
+  if(src.d){const d=document.createElement("span"); d.className="def"; d.textContent=src.d; body.appendChild(d)}
+  const files=parent?IMG[parent.t+">"+src.t]:null;
+  if(files){
+    o.files=files; el.classList.add("pics"); let maxW=0;
+    files.forEach(file=>{
+      const m=META[file], r=m[0]/m[1];
+      let w=Math.max(100,Math.min(300,Math.sqrt(17000*r))); w=Math.round(Math.min(w,150*r)); const hh=Math.round(w/r);
+      maxW=Math.max(maxW,w);
+      const pic=document.createElement("span"); pic.className="pic"; pic.style.width=w+"px"; pic.style.height=hh+"px";
+      const im=document.createElement("img"); im.src="images/"+file; im.alt=m[2]; im.loading="lazy"; im.decoding="async"; im.draggable=false;
+      pic.appendChild(im); body.appendChild(pic);
+      pic.addEventListener("click",e=>{ e.stopPropagation(); if(!dragged) openPics(o,file) });
+      if(m[3]){const c=document.createElement("span"); c.className="credit"; c.style.maxWidth=Math.max(w,150)+"px"; c.textContent=m[3]; body.appendChild(c)}
+    });
+    el.style.maxWidth=Math.max(depth===2?250:290,maxW+60)+"px";
+  }
+  el.appendChild(body);
+  if(src.c.length&&depth){o.countEl=document.createElement("span"); o.countEl.className="count"; el.appendChild(o.countEl)}
+  world.appendChild(el); o.el=el;
+  if(parent){
+    o.link=document.createElementNS(SVGNS,"path");
+    o.link.style.stroke="var(--c"+(branch+1)+")";
+    o.link.style.strokeWidth=depth===1?4:depth===2?2.5:1.5;
+    svg.appendChild(o.link);
+  }
+  el.addEventListener("click",e=>onNodeClick(o,e));
+  el.addEventListener("keydown",e=>onNodeKey(o,e));
+  el.addEventListener("focus",()=>{ if(el.matches(":focus-visible")) reveal(o) });
+  src.c.forEach((c,i)=>{
+    const b=depth===0?i:branch;
+    const s=depth===0?(narrow||i<3?1:-1):side;
+    o.children.push(build(c,o,depth+1,b,s));
+  });
+  return o;
+}
+root=build(DATA,null,0,0,1);
+root.open=true;
+if(!narrow) root.children.forEach(c=>c.open=true);
+
+function measure(){
+  world.classList.add("measuring");
+  nodes.forEach(o=>{o.w=o.el.offsetWidth;o.h=o.el.offsetHeight});
+  world.classList.remove("measuring");
+}
+
+/* ---------- layout ---------- */
+const vgap=d=>d<=1?30:d===2?14:7;
+const hgap=d=>d===0?64:d===1?46:36;
+function sub(o){
+  if(!o.open||!o.children.length){o.ch=0;return o.sh=o.h}
+  let s=0; o.children.forEach((c,i)=>{s+=sub(c)+(i?vgap(c.depth):0)});
+  o.ch=s; return o.sh=Math.max(o.h,s);
+}
+function place(o,edge,top,dir,list){
+  o.tx=dir>0?edge:edge-o.w; o.ty=top+(o.sh-o.h)/2; list.push(o);
+  if(o.open&&o.children.length){
+    let y=top+(o.sh-o.ch)/2;
+    const far=(dir>0?edge+o.w:edge-o.w)+dir*hgap(o.depth);
+    o.children.forEach((c,i)=>{ if(i) y+=vgap(c.depth); place(c,far,y,dir,list); y+=c.sh });
+  }
+}
+let vis=[], first=true;
+function layout(){
+  const list=[root];
+  root.tx=-root.w/2; root.ty=-root.h/2;
+  [1,-1].forEach(dir=>{
+    const kids=root.open?root.children.filter(c=>c.side===dir):[];
+    let total=0; kids.forEach((c,i)=>{total+=sub(c)+(i?vgap(1):0)});
+    let y=-total/2;
+    kids.forEach((c,i)=>{ if(i) y+=vgap(1); place(c,dir*(root.w/2+hgap(0)),y,dir,list); y+=c.sh });
+  });
+  const now=new Set(list);
+  nodes.forEach(o=>{
+    const v=now.has(o);
+    if(v&&!o.vis){ const p=o.parent; if(first||!p){o.cx=o.tx;o.cy=o.ty} else {o.cx=p.cx+(p.w-o.w)/2;o.cy=p.cy+(p.h-o.h)/2} }
+    if(v!==o.vis||first){ o.el.classList.toggle("off",!v); if(o.link) o.link.style.display=v?"":"none" }
+    o.vis=v;
+    if(o.countEl) o.countEl.textContent=o.open?"–":o.children.length;
+    if(o.children.length) o.el.setAttribute("aria-expanded",o.open?"true":"false");
+  });
+  vis=list; first=false;
+}
+
+/* ---------- view + animation ---------- */
+let vc={x:0,y:0,k:1}, vs={x:0,y:0,k:1}, vt={x:0,y:0,k:1}, raf=0, t0=0;
+const KMIN=.1, KMAX=2.2;
+function applyView(){
+  world.style.transform="translate("+vc.x+"px,"+vc.y+"px) scale("+vc.k+")";
+  let s=26*vc.k; while(s<18) s*=2;
+  stage.style.backgroundSize=s+"px "+s+"px";
+  stage.style.backgroundPosition=vc.x+"px "+vc.y+"px";
+}
+function draw(){
+  for(const o of vis){
+    o.el.style.transform="translate("+o.cx+"px,"+o.cy+"px)";
+    if(o.link){
+      const p=o.parent, dir=o.side;
+      const x1=dir>0?p.cx+p.w:p.cx, y1=p.cy+p.h/2, x2=dir>0?o.cx:o.cx+o.w, y2=o.cy+o.h/2, m=(x2-x1)/2;
+      o.link.setAttribute("d","M"+x1+" "+y1+"C"+(x1+m)+" "+y1+" "+(x2-m)+" "+y2+" "+x2+" "+y2);
+    }
+  }
+  applyView();
+}
+function startAnim(){
+  vis.forEach(o=>{o.sx=o.cx;o.sy=o.cy});
+  vs={x:vc.x,y:vc.y,k:vc.k}; t0=performance.now();
+  if(!raf) raf=requestAnimationFrame(frame);
+}
+function frame(now){
+  raf=0;
+  const p=DUR?Math.min(1,(now-t0)/DUR):1, e=1-Math.pow(1-p,3);
+  for(const o of vis){o.cx=o.sx+(o.tx-o.sx)*e;o.cy=o.sy+(o.ty-o.sy)*e}
+  vc.x=vs.x+(vt.x-vs.x)*e; vc.y=vs.y+(vt.y-vs.y)*e; vc.k=vs.k+(vt.k-vs.k)*e;
+  if(p>=1){ for(const o of vis){o.cx=o.tx;o.cy=o.ty} vc={x:vt.x,y:vt.y,k:vt.k} }
+  draw();
+  if(p<1) raf=requestAnimationFrame(frame);
+}
+function finish(){
+  if(raf){cancelAnimationFrame(raf);raf=0}
+  for(const o of vis){o.cx=o.tx;o.cy=o.ty}
+  vc={x:vt.x,y:vt.y,k:vt.k}; draw();
+}
+function bbox(list){
+  let x0=1e9,y0=1e9,x1=-1e9,y1=-1e9;
+  list.forEach(o=>{x0=Math.min(x0,o.tx);y0=Math.min(y0,o.ty);x1=Math.max(x1,o.tx+o.w);y1=Math.max(y1,o.ty+o.h)});
+  return {x:x0,y:y0,w:x1-x0,h:y1-y0};
+}
+function fit(list){
+  const W=stage.clientWidth,H=stage.clientHeight,pad=narrow?16:36,b=bbox(list||vis);
+  let k=Math.min((W-2*pad)/b.w,(H-2*pad-30)/b.h,1.15);
+  const floor=narrow?.62:KMIN;
+  k=Math.max(k,floor);
+  vt.k=k;
+  vt.x=b.w*k>W-2*pad?pad-b.x*k:W/2-k*(b.x+b.w/2);
+  vt.y=(H-30)/2-k*(b.y+b.h/2);
+  startAnim();
+}
+function relayout(anchor){
+  const ox=anchor?anchor.cx:0, oy=anchor?anchor.cy:0;
+  layout();
+  vt={x:vc.x,y:vc.y,k:vc.k};
+  if(anchor&&anchor.vis){
+    vt.x-=(anchor.tx-ox)*vc.k; vt.y-=(anchor.ty-oy)*vc.k;
+    if(anchor.open) nudge([anchor].concat(anchor.children));
+    nudge([anchor]);
+  }
+  startAnim();
+}
+function nudge(list){
+  const W=stage.clientWidth,H=stage.clientHeight,pad=20,b=bbox(list),k=vt.k;
+  const l=vt.x+b.x*k, r=l+b.w*k, t=vt.y+b.y*k, bt=t+b.h*k;
+  if(r>W-pad) vt.x-=r-(W-pad); else if(l<pad) vt.x+=pad-l;
+  if(bt>H-pad) vt.y-=bt-(H-pad); else if(t<pad) vt.y+=pad-t;
+}
+function reveal(o){ if(!o.vis) return; vt={x:vt.x,y:vt.y,k:vt.k}; nudge([o]); startAnim() }
+function panBy(dx,dy){ [vc,vs,vt].forEach(v=>{v.x+=dx;v.y+=dy}); applyView() }
+function zoomAt(sx,sy,f,animate){
+  finish();
+  const k2=Math.min(KMAX,Math.max(KMIN,vc.k*f)), wx=(sx-vc.x)/vc.k, wy=(sy-vc.y)/vc.k;
+  vt={x:sx-wx*k2,y:sy-wy*k2,k:k2};
+  if(animate) startAnim(); else { vc={x:vt.x,y:vt.y,k:vt.k}; applyView() }
+}
+
+/* ---------- interaction ---------- */
+let quiz=false, dragged=false;
+function onNodeClick(o,e){
+  if(dragged&&e.detail>0) return;
+  if(quiz&&o.d&&o.depth&&o.k!=="ask"&&!o.el.classList.contains("shown")){ o.el.classList.add("shown"); return }
+  if(o===root){ fit(); return }
+  if(!o.children.length){ if(o.files) openPics(o,o.files[0]); return }
+  o.open=!o.open;
+  relayout(o);
+}
+/* picture viewer */
+const viewer=document.getElementById("viewer"), vBody=document.getElementById("vbody"), vTitle=document.getElementById("vtitle");
+function openPics(o,first){
+  vTitle.textContent=o.t; vBody.textContent="";
+  o.files.slice().sort((a,b)=>(b===first)-(a===first)).forEach(file=>{
+    const m=META[file], fig=document.createElement("figure"), im=document.createElement("img"), cap=document.createElement("figcaption");
+    im.src="images/"+file; im.alt=m[2]; im.width=m[0]; im.height=m[1];
+    cap.textContent=m[2]+(m[3]?" — Photo: "+m[3]:"");
+    fig.appendChild(im); fig.appendChild(cap); vBody.appendChild(fig);
+  });
+  viewer.showModal();
+}
+viewer.addEventListener("click",e=>{ if(e.target===viewer) viewer.close() });
+document.getElementById("vclose").onclick=()=>viewer.close();
+function focusNode(o){ if(o&&o.vis){ o.el.focus({preventScroll:true}); reveal(o) } }
+function onNodeKey(o,e){
+  const key=e.key;
+  if((key==="i"||key==="I")&&o.files){ openPics(o,o.files[0]); return }
+  if(!/^Arrow/.test(key)) return;
+  e.preventDefault();
+  if(key==="ArrowUp"||key==="ArrowDown"){
+    if(!o.parent) return;
+    const sibs=o.parent.children.filter(c=>c.side===o.side), i=sibs.indexOf(o)+(key==="ArrowDown"?1:-1);
+    focusNode(sibs[i]); return;
+  }
+  const dir=key==="ArrowRight"?1:-1;
+  if(o===root){ focusNode(root.children.find(c=>c.side===dir)); return }
+  if(dir===o.side){
+    if(!o.children.length) return;
+    if(!o.open){ o.open=true; relayout(o) } else focusNode(o.children[0]);
+  } else focusNode(o.parent);
+}
+
+const pts=new Map(); let down=null, pinch=null;
+const local=e=>{const r=stage.getBoundingClientRect();return {x:e.clientX-r.left,y:e.clientY-r.top}};
+function pinchState(){const a=[...pts.values()];return {d:Math.hypot(a[0].x-a[1].x,a[0].y-a[1].y)||1,mx:(a[0].x+a[1].x)/2,my:(a[0].y+a[1].y)/2}}
+stage.addEventListener("pointerdown",e=>{
+  if(e.target.closest(".zoom")) return;
+  pts.set(e.pointerId,local(e));
+  if(pts.size===1){down=local(e);dragged=false}
+  else if(pts.size===2){finish();pinch=pinchState();dragged=true}
+});
+stage.addEventListener("pointermove",e=>{
+  const p=pts.get(e.pointerId); if(!p) return;
+  const q=local(e), dx=q.x-p.x, dy=q.y-p.y; p.x=q.x; p.y=q.y;
+  if(pts.size===1){
+    if(!dragged){
+      if(Math.hypot(q.x-down.x,q.y-down.y)<5) return;
+      dragged=true; stage.classList.add("grabbing");
+      try{stage.setPointerCapture(e.pointerId)}catch(_){}
+      panBy(q.x-down.x,q.y-down.y); return;
+    }
+    panBy(dx,dy);
+  } else if(pts.size===2&&pinch){
+    const s=pinchState();
+    zoomAt(s.mx,s.my,s.d/pinch.d,false); panBy(s.mx-pinch.mx,s.my-pinch.my); pinch=s;
+  }
+});
+function up(e){ pts.delete(e.pointerId); if(pts.size<2) pinch=null; if(!pts.size) stage.classList.remove("grabbing") }
+stage.addEventListener("pointerup",up); stage.addEventListener("pointercancel",up);
+stage.addEventListener("wheel",e=>{ e.preventDefault(); const q=local(e); zoomAt(q.x,q.y,Math.exp(-e.deltaY*(e.ctrlKey?.01:.0016)),false) },{passive:false});
+stage.addEventListener("scroll",()=>{stage.scrollTop=0;stage.scrollLeft=0});
+
+const centre=()=>[stage.clientWidth/2,stage.clientHeight/2];
+document.getElementById("zin").onclick=()=>zoomAt(...centre(),1.3,true);
+document.getElementById("zout").onclick=()=>zoomAt(...centre(),1/1.3,true);
+document.getElementById("fit").onclick=()=>fit();
+
+function setAll(open){ nodes.forEach(o=>{o.open=open&&o.children.length>0}); root.open=true }
+document.getElementById("openAll").onclick=()=>{ clearSearch(true); setAll(true); layout(); fit() };
+document.getElementById("closeAll").onclick=()=>{ clearSearch(true); setAll(false); layout(); fit() };
+const quizBtn=document.getElementById("quiz");
+quizBtn.onclick=()=>{
+  quiz=!quiz; quizBtn.setAttribute("aria-pressed",quiz?"true":"false");
+  world.classList.toggle("quiz",quiz);
+  if(!quiz) nodes.forEach(o=>o.el.classList.remove("shown"));
+};
+
+/* element chips: show one element on its own */
+const chips=document.getElementById("chips");
+root.children.forEach((c,i)=>{
+  const b=document.createElement("button"); b.type="button"; b.className="chip";
+  b.style.setProperty("--b","var(--c"+(i+1)+")"); b.textContent=c.t;
+  b.onclick=()=>{
+    clearSearch(true);
+    const solo=c.open&&root.children.every(x=>x===c||!x.open);
+    setAll(false); c.open=true;
+    if(solo) c.children.forEach(x=>x.open=true);   // second press opens one level deeper
+    layout();
+    fit([root,c].concat(collect(c)));
+  };
+  chips.appendChild(b);
+});
+function collect(o){ let a=[]; if(o.open) o.children.forEach(c=>{a.push(c);a=a.concat(collect(c))}); return a }
+
+/* search */
+const q=document.getElementById("q"), qcount=document.getElementById("qcount");
+let snapshot=null;
+function clearSearch(keepState){
+  if(!snapshot&&!q.value) return;
+  q.value=""; qcount.textContent="";
+  world.classList.remove("searching");
+  nodes.forEach(o=>{o.el.classList.remove("hit","onpath")});
+  if(snapshot&&!keepState) nodes.forEach((o,i)=>o.open=snapshot[i]);
+  snapshot=null;
+}
+q.addEventListener("input",()=>{
+  const s=q.value.trim().toLowerCase();
+  if(s.length<2){ const had=snapshot; clearSearchKeepText(); if(had){layout();fit()} return }
+  if(!snapshot) snapshot=nodes.map(o=>o.open);
+  setAll(false);
+  let hits=0;
+  nodes.forEach(o=>o.el.classList.remove("hit","onpath"));
+  nodes.forEach(o=>{
+    if(o===root||!(o.t+" "+o.d).toLowerCase().includes(s)) return;
+    hits++; o.el.classList.add("hit");
+    for(let p=o.parent;p;p=p.parent){p.open=true;p.el.classList.add("onpath")}
+  });
+  world.classList.add("searching");
+  qcount.textContent=hits?hits+(hits===1?" match":" matches"):"No matches";
+  layout();
+  const focus=vis.filter(o=>o===root||o.el.classList.contains("hit")||o.el.classList.contains("onpath"));
+  fit(hits?focus:vis);
+});
+function clearSearchKeepText(){ const v=q.value; clearSearch(false); q.value=v }
+q.addEventListener("keydown",e=>{ if(e.key==="Escape"){ const had=snapshot; clearSearch(false); if(had){layout();fit()} } });
+
+/* ---------- go ---------- */
+function boot(){ measure(); first=true; nodes.forEach(o=>o.vis=false); layout(); fit(); finish() }
+boot();
+if(document.fonts&&document.fonts.ready) document.fonts.ready.then(boot);
+let rz=0; window.addEventListener("resize",()=>{clearTimeout(rz);rz=setTimeout(()=>fit(),150)});
+</script>

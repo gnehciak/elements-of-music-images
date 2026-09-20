@@ -1,0 +1,1272 @@
+[
+ {
+  "file": "ex_tempo_mark.png",
+  "alt": "A tempo marking sits above the first bar",
+  "w": 1134,
+  "h": 555,
+  "alpha": false,
+  "kb": 21,
+  "caption": "A tempo marking sits above the first bar",
+  "credit": ""
+ },
+ {
+  "file": "nv_semibreve.png",
+  "alt": "Semibreve – 4 beats",
+  "w": 600,
+  "h": 380,
+  "alpha": false,
+  "kb": 2,
+  "caption": "Semibreve – 4 beats",
+  "credit": ""
+ },
+ {
+  "file": "nv_minim.png",
+  "alt": "Minim – 2 beats",
+  "w": 600,
+  "h": 380,
+  "alpha": false,
+  "kb": 2,
+  "caption": "Minim – 2 beats",
+  "credit": ""
+ },
+ {
+  "file": "nv_crotchet.png",
+  "alt": "Crotchet – 1 beat",
+  "w": 600,
+  "h": 380,
+  "alpha": false,
+  "kb": 1,
+  "caption": "Crotchet – 1 beat",
+  "credit": ""
+ },
+ {
+  "file": "nv_quaver.png",
+  "alt": "Quaver – half a beat",
+  "w": 600,
+  "h": 380,
+  "alpha": false,
+  "kb": 2,
+  "caption": "Quaver – half a beat",
+  "credit": ""
+ },
+ {
+  "file": "nv_quaverpair.png",
+  "alt": "Two beamed quavers – 1 beat altogether",
+  "w": 600,
+  "h": 380,
+  "alpha": false,
+  "kb": 2,
+  "caption": "Two beamed quavers – 1 beat altogether",
+  "credit": ""
+ },
+ {
+  "file": "nv_semiquavers.png",
+  "alt": "Four semiquavers – 1 beat altogether",
+  "w": 600,
+  "h": 380,
+  "alpha": false,
+  "kb": 2,
+  "caption": "Four semiquavers – 1 beat altogether",
+  "credit": ""
+ },
+ {
+  "file": "nv_dotted_minim.png",
+  "alt": "Dotted minim – 3 beats",
+  "w": 600,
+  "h": 380,
+  "alpha": false,
+  "kb": 2,
+  "caption": "Dotted minim – 3 beats",
+  "credit": ""
+ },
+ {
+  "file": "nv_dotted_crotchet.png",
+  "alt": "Dotted crotchet – 1½ beats",
+  "w": 600,
+  "h": 380,
+  "alpha": false,
+  "kb": 2,
+  "caption": "Dotted crotchet – 1½ beats",
+  "credit": ""
+ },
+ {
+  "file": "ex_note_tree.png",
+  "alt": "The note-value pyramid: every row lasts the same time (4 beats). Each note splits into two of the next kind",
+  "w": 2008,
+  "h": 1732,
+  "alpha": false,
+  "kb": 56,
+  "caption": "The note-value pyramid: every row lasts the same time (4 beats). Each note splits into two of the next kind",
+  "credit": ""
+ },
+ {
+  "file": "rest_semibreve.png",
+  "alt": "Semibreve rest – 4 beats. HANGS below the line",
+  "w": 850,
+  "h": 555,
+  "alpha": false,
+  "kb": 8,
+  "caption": "Semibreve rest – 4 beats. HANGS below the line",
+  "credit": ""
+ },
+ {
+  "file": "rest_minim.png",
+  "alt": "Minim rest – 2 beats. SITS on the line like a hat",
+  "w": 850,
+  "h": 555,
+  "alpha": false,
+  "kb": 8,
+  "caption": "Minim rest – 2 beats. SITS on the line like a hat",
+  "credit": ""
+ },
+ {
+  "file": "rest_crotchet.png",
+  "alt": "Crotchet rest – 1 beat",
+  "w": 850,
+  "h": 555,
+  "alpha": false,
+  "kb": 10,
+  "caption": "Crotchet rest – 1 beat",
+  "credit": ""
+ },
+ {
+  "file": "rest_quaver.png",
+  "alt": "Quaver rest – half a beat",
+  "w": 850,
+  "h": 555,
+  "alpha": false,
+  "kb": 9,
+  "caption": "Quaver rest – half a beat",
+  "credit": ""
+ },
+ {
+  "file": "ts_44.png",
+  "alt": "4/4 – four crotchet beats per bar (simple quadruple)",
+  "w": 850,
+  "h": 555,
+  "alpha": false,
+  "kb": 10,
+  "caption": "4/4 – four crotchet beats per bar (simple quadruple)",
+  "credit": ""
+ },
+ {
+  "file": "ts_34.png",
+  "alt": "3/4 – three crotchet beats per bar (simple triple)",
+  "w": 850,
+  "h": 555,
+  "alpha": false,
+  "kb": 10,
+  "caption": "3/4 – three crotchet beats per bar (simple triple)",
+  "credit": ""
+ },
+ {
+  "file": "ts_68.png",
+  "alt": "6/8 – compound duple",
+  "w": 850,
+  "h": 555,
+  "alpha": false,
+  "kb": 11,
+  "caption": "6/8 – compound duple",
+  "credit": ""
+ },
+ {
+  "file": "bar_68_group.png",
+  "alt": "6/8: quavers are beamed in two groups of three",
+  "w": 1535,
+  "h": 555,
+  "alpha": false,
+  "kb": 17,
+  "caption": "6/8: quavers are beamed in two groups of three",
+  "credit": ""
+ },
+ {
+  "file": "ts_24.png",
+  "alt": "2/4 – two crotchet beats per bar (simple duple), like a march",
+  "w": 850,
+  "h": 555,
+  "alpha": false,
+  "kb": 11,
+  "caption": "2/4 – two crotchet beats per bar (simple duple), like a march",
+  "credit": ""
+ },
+ {
+  "file": "ex_34_quavers.png",
+  "alt": "3/4 also holds six quavers – but grouped in THREE pairs (simple time). Compare with 6/8 above: TWO groups of three (compound time)",
+  "w": 1535,
+  "h": 555,
+  "alpha": false,
+  "kb": 16,
+  "caption": "3/4 also holds six quavers – but grouped in THREE pairs (simple time). Compare with 6/8 above: TWO groups of three (compound time)",
+  "credit": ""
+ },
+ {
+  "file": "ex_ostinato.png",
+  "alt": "Ostinato – the same one-bar rhythm repeated over and over",
+  "w": 2008,
+  "h": 362,
+  "alpha": false,
+  "kb": 10,
+  "caption": "Ostinato – the same one-bar rhythm repeated over and over",
+  "credit": ""
+ },
+ {
+  "file": "ex_syncopation.png",
+  "alt": "Syncopation – bar 2 accents the notes that fall BETWEEN the beats",
+  "w": 2008,
+  "h": 547,
+  "alpha": false,
+  "kb": 27,
+  "caption": "Syncopation – bar 2 accents the notes that fall BETWEEN the beats",
+  "credit": ""
+ },
+ {
+  "file": "ex_backbeat.png",
+  "alt": "Backbeat on a drum kit – hi-hat quavers on top, bass drum on beats 1 and 3, accented snare on beats 2 and 4",
+  "w": 2008,
+  "h": 489,
+  "alpha": false,
+  "kb": 12,
+  "caption": "Backbeat on a drum kit – hi-hat quavers on top, bass drum on beats 1 and 3, accented snare on beats 2 and 4",
+  "credit": ""
+ },
+ {
+  "file": "ex_repeat_both.png",
+  "alt": "Start and end repeat signs – play the two bars between the dots twice, then go on",
+  "w": 2008,
+  "h": 445,
+  "alpha": false,
+  "kb": 17,
+  "caption": "Start and end repeat signs – play the two bars between the dots twice, then go on",
+  "credit": ""
+ },
+ {
+  "file": "final_barline.png",
+  "alt": "Final (double) bar line – the end of the piece",
+  "w": 1134,
+  "h": 555,
+  "alpha": false,
+  "kb": 11,
+  "caption": "Final (double) bar line – the end of the piece",
+  "credit": ""
+ },
+ {
+  "file": "repeat_sign.png",
+  "alt": "Repeat sign – go back and play the section again",
+  "w": 1134,
+  "h": 555,
+  "alpha": false,
+  "kb": 12,
+  "caption": "Repeat sign – go back and play the section again",
+  "credit": ""
+ },
+ {
+  "file": "clef_treble.png",
+  "alt": "Treble clef (G clef) – higher notes. It curls around the G line",
+  "w": 850,
+  "h": 555,
+  "alpha": false,
+  "kb": 8,
+  "caption": "Treble clef (G clef) – higher notes. It curls around the G line",
+  "credit": ""
+ },
+ {
+  "file": "clef_bass.png",
+  "alt": "Bass clef (F clef) – lower notes. The two dots sit either side of the F line",
+  "w": 850,
+  "h": 555,
+  "alpha": false,
+  "kb": 5,
+  "caption": "Bass clef (F clef) – lower notes. The two dots sit either side of the F line",
+  "credit": ""
+ },
+ {
+  "file": "ref_grand_staff.png",
+  "alt": "The grand staff (piano music): treble and bass staves joined by a brace. MIDDLE C sits on a ledger line between them – it is the same note in both clefs",
+  "w": 1535,
+  "h": 981,
+  "alpha": false,
+  "kb": 42,
+  "caption": "The grand staff (piano music): treble and bass staves joined by a brace. MIDDLE C sits on a ledger line between them – it is the same note in both clefs",
+  "credit": ""
+ },
+ {
+  "file": "ex_ledger.png",
+  "alt": "Ledger lines extend the staff below and above",
+  "w": 1535,
+  "h": 616,
+  "alpha": false,
+  "kb": 22,
+  "caption": "Ledger lines extend the staff below and above",
+  "credit": ""
+ },
+ {
+  "file": "ref_treble_notes.png",
+  "alt": "Treble clef: middle C (on a ledger line) up to high A",
+  "w": 2480,
+  "h": 732,
+  "alpha": false,
+  "kb": 39,
+  "caption": "Treble clef: middle C (on a ledger line) up to high A",
+  "credit": ""
+ },
+ {
+  "file": "ref_bass_notes.png",
+  "alt": "Bass clef: low E up to middle C (on a ledger line)",
+  "w": 2480,
+  "h": 732,
+  "alpha": false,
+  "kb": 35,
+  "caption": "Bass clef: low E up to middle C (on a ledger line)",
+  "credit": ""
+ },
+ {
+  "file": "ref_keyboard.png",
+  "alt": "C is always the white key to the left of the group of TWO black keys (middle C highlighted)",
+  "w": 1600,
+  "h": 520,
+  "alpha": false,
+  "kb": 13,
+  "caption": "C is always the white key to the left of the group of TWO black keys (middle C highlighted)",
+  "credit": ""
+ },
+ {
+  "file": "kb_semitone_tone.png",
+  "alt": "C to D is a TONE (there is a black key in between). E to F is a SEMITONE (no key in between)",
+  "w": 900,
+  "h": 650,
+  "alpha": false,
+  "kb": 15,
+  "caption": "C to D is a TONE (there is a black key in between). E to F is a SEMITONE (no key in between)",
+  "credit": ""
+ },
+ {
+  "file": "kb_octave.png",
+  "alt": "An octave on the keyboard",
+  "w": 900,
+  "h": 650,
+  "alpha": false,
+  "kb": 17,
+  "caption": "An octave on the keyboard",
+  "credit": ""
+ },
+ {
+  "file": "ex_octave.png",
+  "alt": "An octave on the staff: middle C up to the next C",
+  "w": 1134,
+  "h": 542,
+  "alpha": false,
+  "kb": 13,
+  "caption": "An octave on the staff: middle C up to the next C",
+  "credit": ""
+ },
+ {
+  "file": "ex_intervals.png",
+  "alt": "Intervals above C – count both notes: C to E is C-D-E = a 3rd",
+  "w": 2008,
+  "h": 542,
+  "alpha": false,
+  "kb": 32,
+  "caption": "Intervals above C – count both notes: C to E is C-D-E = a 3rd",
+  "credit": ""
+ },
+ {
+  "file": "acc_sharp.png",
+  "alt": "Sharp – raises the note by a semitone (F sharp)",
+  "w": 850,
+  "h": 555,
+  "alpha": false,
+  "kb": 10,
+  "caption": "Sharp – raises the note by a semitone (F sharp)",
+  "credit": ""
+ },
+ {
+  "file": "acc_flat.png",
+  "alt": "Flat – lowers the note by a semitone (B flat)",
+  "w": 850,
+  "h": 555,
+  "alpha": false,
+  "kb": 10,
+  "caption": "Flat – lowers the note by a semitone (B flat)",
+  "credit": ""
+ },
+ {
+  "file": "acc_natural.png",
+  "alt": "Natural – cancels a sharp or flat",
+  "w": 850,
+  "h": 555,
+  "alpha": false,
+  "kb": 10,
+  "caption": "Natural – cancels a sharp or flat",
+  "credit": ""
+ },
+ {
+  "file": "mel_steps.png",
+  "alt": "By STEP – to the next-door note",
+  "w": 1535,
+  "h": 555,
+  "alpha": false,
+  "kb": 14,
+  "caption": "By STEP – to the next-door note",
+  "credit": ""
+ },
+ {
+  "file": "mel_leaps.png",
+  "alt": "By LEAP – jumping over notes",
+  "w": 1535,
+  "h": 555,
+  "alpha": false,
+  "kb": 14,
+  "caption": "By LEAP – jumping over notes",
+  "credit": ""
+ },
+ {
+  "file": "mel_repeat.png",
+  "alt": "REPEATED notes",
+  "w": 1535,
+  "h": 555,
+  "alpha": false,
+  "kb": 12,
+  "caption": "REPEATED notes",
+  "credit": ""
+ },
+ {
+  "file": "mel_ascending.png",
+  "alt": "Ascending contour",
+  "w": 1535,
+  "h": 555,
+  "alpha": false,
+  "kb": 15,
+  "caption": "Ascending contour",
+  "credit": ""
+ },
+ {
+  "file": "mel_arch.png",
+  "alt": "Arch contour – up, then down",
+  "w": 1535,
+  "h": 555,
+  "alpha": false,
+  "kb": 14,
+  "caption": "Arch contour – up, then down",
+  "credit": ""
+ },
+ {
+  "file": "mel_descending.png",
+  "alt": "Descending contour",
+  "w": 1535,
+  "h": 555,
+  "alpha": false,
+  "kb": 15,
+  "caption": "Descending contour",
+  "credit": ""
+ },
+ {
+  "file": "mel_wave.png",
+  "alt": "Wave-like contour – up and down, over and over",
+  "w": 1535,
+  "h": 555,
+  "alpha": false,
+  "kb": 13,
+  "caption": "Wave-like contour – up and down, over and over",
+  "credit": ""
+ },
+ {
+  "file": "scale_cmaj.png",
+  "alt": "C major scale – eight notes moving by step from C to C",
+  "w": 1535,
+  "h": 555,
+  "alpha": false,
+  "kb": 15,
+  "caption": "C major scale – eight notes moving by step from C to C",
+  "credit": ""
+ },
+ {
+  "file": "key_g.png",
+  "alt": "G major – one sharp (F sharp)",
+  "w": 850,
+  "h": 555,
+  "alpha": false,
+  "kb": 9,
+  "caption": "G major – one sharp (F sharp)",
+  "credit": ""
+ },
+ {
+  "file": "key_f.png",
+  "alt": "F major – one flat (B flat)",
+  "w": 850,
+  "h": 555,
+  "alpha": false,
+  "kb": 9,
+  "caption": "F major – one flat (B flat)",
+  "credit": ""
+ },
+ {
+  "file": "scale_cmaj_tts.png",
+  "alt": "Every major scale follows the same pattern of steps: Tone, Tone, Semitone, Tone, Tone, Tone, Semitone",
+  "w": 1535,
+  "h": 532,
+  "alpha": false,
+  "kb": 18,
+  "caption": "Every major scale follows the same pattern of steps: Tone, Tone, Semitone, Tone, Tone, Tone, Semitone",
+  "credit": ""
+ },
+ {
+  "file": "scale_amin.png",
+  "alt": "A minor scale (natural minor) – same notes as C major but starting on A. Sounds darker",
+  "w": 1535,
+  "h": 555,
+  "alpha": false,
+  "kb": 15,
+  "caption": "A minor scale (natural minor) – same notes as C major but starting on A. Sounds darker",
+  "credit": ""
+ },
+ {
+  "file": "scale_cpent.png",
+  "alt": "C major pentatonic – only five different notes: C D E G A (no F or B)",
+  "w": 1535,
+  "h": 555,
+  "alpha": false,
+  "kb": 14,
+  "caption": "C major pentatonic – only five different notes: C D E G A (no F or B)",
+  "credit": ""
+ },
+ {
+  "file": "scale_ddorian.png",
+  "alt": "D Dorian mode (modal) – the white notes from D to D",
+  "w": 1535,
+  "h": 555,
+  "alpha": false,
+  "kb": 15,
+  "caption": "D Dorian mode (modal) – the white notes from D to D",
+  "credit": ""
+ },
+ {
+  "file": "scale_chromatic.png",
+  "alt": "Chromatic scale – every semitone, all 12 notes",
+  "w": 2008,
+  "h": 555,
+  "alpha": false,
+  "kb": 21,
+  "caption": "Chromatic scale – every semitone, all 12 notes",
+  "credit": ""
+ },
+ {
+  "file": "key_d.png",
+  "alt": "D major – two sharps (F sharp, C sharp)",
+  "w": 850,
+  "h": 555,
+  "alpha": false,
+  "kb": 10,
+  "caption": "D major – two sharps (F sharp, C sharp)",
+  "credit": ""
+ },
+ {
+  "file": "key_bb.png",
+  "alt": "B flat major – two flats (B flat, E flat)",
+  "w": 850,
+  "h": 555,
+  "alpha": false,
+  "kb": 10,
+  "caption": "B flat major – two flats (B flat, E flat)",
+  "credit": ""
+ },
+ {
+  "file": "triad_c.png",
+  "alt": "C major triad: C – E – G",
+  "w": 850,
+  "h": 555,
+  "alpha": false,
+  "kb": 11,
+  "caption": "C major triad: C – E – G",
+  "credit": ""
+ },
+ {
+  "file": "ex_chords_c.png",
+  "alt": "The primary chords in C major, with chord symbols above and Roman numerals below",
+  "w": 1535,
+  "h": 617,
+  "alpha": false,
+  "kb": 27,
+  "caption": "The primary chords in C major, with chord symbols above and Roman numerals below",
+  "credit": ""
+ },
+ {
+  "file": "ex_major_minor.png",
+  "alt": "Major vs minor triad – only the middle note changes (E becomes E flat)",
+  "w": 1134,
+  "h": 591,
+  "alpha": false,
+  "kb": 20,
+  "caption": "Major vs minor triad – only the middle note changes (E becomes E flat)",
+  "credit": ""
+ },
+ {
+  "file": "ex_guitar_chord_c.png",
+  "alt": "Chord diagram: C on guitar. Dots = where fingers press, O = open string, X = do not play",
+  "w": 1045,
+  "h": 1205,
+  "alpha": false,
+  "kb": 25,
+  "caption": "Chord diagram: C on guitar. Dots = where fingers press, O = open string, X = do not play",
+  "credit": ""
+ },
+ {
+  "file": "ex_uke_chord_c.png",
+  "alt": "Chord diagram: C on ukulele – one finger on the 3rd fret",
+  "w": 1165,
+  "h": 1190,
+  "alpha": false,
+  "kb": 18,
+  "caption": "Chord diagram: C on ukulele – one finger on the 3rd fret",
+  "credit": ""
+ },
+ {
+  "file": "ex_riff.png",
+  "alt": "A bass riff – a short, catchy pattern that keeps repeating (note the repeat sign)",
+  "w": 2008,
+  "h": 373,
+  "alpha": false,
+  "kb": 15,
+  "caption": "A bass riff – a short, catchy pattern that keeps repeating (note the repeat sign)",
+  "credit": ""
+ },
+ {
+  "file": "ex_drone.png",
+  "alt": "A drone – the bottom staff holds the same two notes (D and A) while the melody moves above",
+  "w": 2008,
+  "h": 756,
+  "alpha": false,
+  "kb": 43,
+  "caption": "A drone – the bottom staff holds the same two notes (D and A) while the melody moves above",
+  "credit": ""
+ },
+ {
+  "file": "ex_tab_staff.png",
+  "alt": "The same notes written in staff notation (top) and guitar TAB (bottom)",
+  "w": 1535,
+  "h": 969,
+  "alpha": false,
+  "kb": 33,
+  "caption": "The same notes written in staff notation (top) and guitar TAB (bottom)",
+  "credit": ""
+ },
+ {
+  "file": "ex_graphic_notation.png",
+  "alt": "A graphic score – shapes show pitch (height), length (width) and volume (size)",
+  "w": 1700,
+  "h": 760,
+  "alpha": false,
+  "kb": 33,
+  "caption": "A graphic score – shapes show pitch (height), length (width) and volume (size)",
+  "credit": ""
+ },
+ {
+  "file": "tab.png",
+  "alt": "Guitar tablature (TAB)",
+  "w": 1535,
+  "h": 520,
+  "alpha": false,
+  "kb": 13,
+  "caption": "Guitar tablature (TAB)",
+  "credit": ""
+ },
+ {
+  "file": "ex_texture_graph.png",
+  "alt": "A texture graph (layer diagram) of a pop song – count the coloured layers in each section to see the texture get thicker and thinner",
+  "w": 1740,
+  "h": 690,
+  "alpha": false,
+  "kb": 36,
+  "caption": "A texture graph (layer diagram) of a pop song – count the coloured layers in each section to see the texture get thicker and thinner",
+  "credit": ""
+ },
+ {
+  "file": "tex_roles.png",
+  "alt": "Roles of layers: melodic (top), harmonic (middle), bass line (bottom)",
+  "w": 1772,
+  "h": 1150,
+  "alpha": false,
+  "kb": 61,
+  "caption": "Roles of layers: melodic (top), harmonic (middle), bass line (bottom)",
+  "credit": ""
+ },
+ {
+  "file": "tex_unison.png",
+  "alt": "Unison – both voices have exactly the same notes",
+  "w": 1772,
+  "h": 818,
+  "alpha": false,
+  "kb": 41,
+  "caption": "Unison – both voices have exactly the same notes",
+  "credit": ""
+ },
+ {
+  "file": "tex_poly.png",
+  "alt": "Polyphonic – a round (Frère Jacques): Voice 2 starts the tune two bars later, so two independent melodies overlap",
+  "w": 2244,
+  "h": 818,
+  "alpha": false,
+  "kb": 45,
+  "caption": "Polyphonic – a round (Frère Jacques): Voice 2 starts the tune two bars later, so two independent melodies overlap",
+  "credit": ""
+ },
+ {
+  "file": "tex_mono.png",
+  "alt": "Monophonic – one melody line only",
+  "w": 2008,
+  "h": 555,
+  "alpha": false,
+  "kb": 19,
+  "caption": "Monophonic – one melody line only",
+  "credit": ""
+ },
+ {
+  "file": "tex_homo.png",
+  "alt": "Homophonic – melody (top) supported by chords (bottom)",
+  "w": 1535,
+  "h": 898,
+  "alpha": false,
+  "kb": 31,
+  "caption": "Homophonic – melody (top) supported by chords (bottom)",
+  "credit": ""
+ },
+ {
+  "file": "ex_orchestra_layout.png",
+  "alt": "Where the families sit in a symphony orchestra – quieter strings at the front, louder brass and percussion at the back",
+  "w": 2100,
+  "h": 1500,
+  "alpha": false,
+  "kb": 88,
+  "caption": "Where the families sit in a symphony orchestra – quieter strings at the front, louder brass and percussion at the back",
+  "credit": ""
+ },
+ {
+  "file": "violin.jpg",
+  "alt": "Violin – highest string instrument. Photo: Just plain Bill, public domain, via Wikimedia Commons",
+  "w": 700,
+  "h": 1100,
+  "alpha": false,
+  "kb": 31,
+  "caption": "Violin – highest string instrument",
+  "credit": "Just plain Bill, public domain, via Wikimedia Commons"
+ },
+ {
+  "file": "cello.png",
+  "alt": "Cello – played sitting down. Photo: Georg Feitscher, CC BY 3.0, via Wikimedia Commons",
+  "w": 465,
+  "h": 705,
+  "alpha": true,
+  "kb": 204,
+  "caption": "Cello – played sitting down",
+  "credit": "Georg Feitscher, CC BY 3.0, via Wikimedia Commons"
+ },
+ {
+  "file": "double_bass.jpg",
+  "alt": "Double bass – lowest string instrument. Photo: AndrewKepert, CC BY-SA 3.0, via Wikimedia Commons",
+  "w": 960,
+  "h": 1353,
+  "alpha": false,
+  "kb": 116,
+  "caption": "Double bass – lowest string instrument",
+  "credit": "AndrewKepert, CC BY-SA 3.0, via Wikimedia Commons"
+ },
+ {
+  "file": "flute.jpg",
+  "alt": "Flute – blow across the hole (no reed). Photo: Thea Paraskevaides, CC BY-SA 4.0, via Wikimedia Commons",
+  "w": 882,
+  "h": 771,
+  "alpha": false,
+  "kb": 86,
+  "caption": "Flute – blow across the hole (no reed)",
+  "credit": "Thea Paraskevaides, CC BY-SA 4.0, via Wikimedia Commons"
+ },
+ {
+  "file": "clarinet.jpg",
+  "alt": "Clarinet – single reed. Photo: Yamaha Corporation, CC BY-SA 4.0, via Wikimedia Commons",
+  "w": 960,
+  "h": 192,
+  "alpha": false,
+  "kb": 25,
+  "caption": "Clarinet – single reed",
+  "credit": "Yamaha Corporation, CC BY-SA 4.0, via Wikimedia Commons"
+ },
+ {
+  "file": "saxophone.jpg",
+  "alt": "Alto saxophone – metal body but a single reed, so it is woodwind. Photo: [muzyczny.pl](http://muzyczny.pl), CC BY-SA 4.0, via Wikimedia Commons",
+  "w": 960,
+  "h": 2090,
+  "alpha": false,
+  "kb": 298,
+  "caption": "Alto saxophone – metal body but a single reed, so it is woodwind",
+  "credit": "muzyczny.pl, CC BY-SA 4.0, via Wikimedia Commons"
+ },
+ {
+  "file": "trumpet.jpg",
+  "alt": "Trumpet – highest brass, three valves. Photo: Yamaha Corporation, CC BY-SA 4.0, via Wikimedia Commons",
+  "w": 960,
+  "h": 524,
+  "alpha": false,
+  "kb": 46,
+  "caption": "Trumpet – highest brass, three valves",
+  "credit": "Yamaha Corporation, CC BY-SA 4.0, via Wikimedia Commons"
+ },
+ {
+  "file": "french_horn.png",
+  "alt": "French horn – coiled tubing, mellow sound. Photo: BenP, CC BY 2.5, via Wikimedia Commons",
+  "w": 960,
+  "h": 720,
+  "alpha": false,
+  "kb": 458,
+  "caption": "French horn – coiled tubing, mellow sound",
+  "credit": "BenP, CC BY 2.5, via Wikimedia Commons"
+ },
+ {
+  "file": "trombone.jpg",
+  "alt": "Trombone – uses a slide instead of valves. Photo: Yamaha Corporation, CC BY-SA 4.0, via Wikimedia Commons",
+  "w": 960,
+  "h": 224,
+  "alpha": false,
+  "kb": 23,
+  "caption": "Trombone – uses a slide instead of valves",
+  "credit": "Yamaha Corporation, CC BY-SA 4.0, via Wikimedia Commons"
+ },
+ {
+  "file": "tuba.png",
+  "alt": "Tuba – lowest brass. Photo: Buffet Crampon, CC BY-SA 4.0, via Wikimedia Commons",
+  "w": 945,
+  "h": 1592,
+  "alpha": true,
+  "kb": 1391,
+  "caption": "Tuba – lowest brass",
+  "credit": "Buffet Crampon, CC BY-SA 4.0, via Wikimedia Commons"
+ },
+ {
+  "file": "timpani.jpg",
+  "alt": "Timpani (kettledrums) – TUNED percussion. Photo: Reinhold Möller, CC BY-SA 4.0, via Wikimedia Commons",
+  "w": 960,
+  "h": 770,
+  "alpha": false,
+  "kb": 247,
+  "caption": "Timpani (kettledrums) – TUNED percussion",
+  "credit": "Reinhold Möller, CC BY-SA 4.0, via Wikimedia Commons"
+ },
+ {
+  "file": "snare_drum.png",
+  "alt": "Snare drum – UNTUNED percussion. Photo: Edrocked, CC BY-SA 4.0, via Wikimedia Commons",
+  "w": 960,
+  "h": 960,
+  "alpha": true,
+  "kb": 628,
+  "caption": "Snare drum – UNTUNED percussion",
+  "credit": "Edrocked, CC BY-SA 4.0, via Wikimedia Commons"
+ },
+ {
+  "file": "drum_kit.jpg",
+  "alt": "Drum kit – bass drum, snare, toms, hi-hat and cymbals. Photo: Mostafameraji, CC BY 4.0, via Wikimedia Commons",
+  "w": 960,
+  "h": 640,
+  "alpha": false,
+  "kb": 95,
+  "caption": "Drum kit – bass drum, snare, toms, hi-hat and cymbals",
+  "credit": "Mostafameraji, CC BY 4.0, via Wikimedia Commons"
+ },
+ {
+  "file": "maracas.jpg",
+  "alt": "Maracas – played by SHAKING. Photo: Axel Heymann, CC BY-SA 3.0, via Wikimedia Commons",
+  "w": 693,
+  "h": 768,
+  "alpha": false,
+  "kb": 203,
+  "caption": "Maracas – played by SHAKING",
+  "credit": "Axel Heymann, CC BY-SA 3.0, via Wikimedia Commons"
+ },
+ {
+  "file": "guiro.jpg",
+  "alt": "Guiro – played by SCRAPING. Photo: Miguel Andrade, public domain, via Wikimedia Commons",
+  "w": 533,
+  "h": 800,
+  "alpha": false,
+  "kb": 36,
+  "caption": "Guiro – played by SCRAPING",
+  "credit": "Miguel Andrade, public domain, via Wikimedia Commons"
+ },
+ {
+  "file": "ex_drum_key.png",
+  "alt": "How the drum kit is written on a percussion staff",
+  "w": 2008,
+  "h": 502,
+  "alpha": false,
+  "kb": 24,
+  "caption": "How the drum kit is written on a percussion staff",
+  "credit": ""
+ },
+ {
+  "file": "piano.png",
+  "alt": "Grand piano – hammers strike strings. Photo: Steinway and Sons, CC BY-SA 3.0, via Wikimedia Commons",
+  "w": 960,
+  "h": 925,
+  "alpha": false,
+  "kb": 362,
+  "caption": "Grand piano – hammers strike strings",
+  "credit": "Steinway and Sons, CC BY-SA 3.0, via Wikimedia Commons"
+ },
+ {
+  "file": "synthesizer.jpg",
+  "alt": "Synthesiser – ELECTRONIC sound source. Photo: PerfectCircuit, CC0, via Wikimedia Commons",
+  "w": 960,
+  "h": 618,
+  "alpha": false,
+  "kb": 110,
+  "caption": "Synthesiser – ELECTRONIC sound source",
+  "credit": "PerfectCircuit, CC0, via Wikimedia Commons"
+ },
+ {
+  "file": "acoustic_guitar.jpg",
+  "alt": "Acoustic guitar – strummed or plucked. Photo: Tony 1212, CC BY-SA 4.0, via Wikimedia Commons",
+  "w": 960,
+  "h": 1431,
+  "alpha": false,
+  "kb": 330,
+  "caption": "Acoustic guitar – strummed or plucked",
+  "credit": "Tony 1212, CC BY-SA 4.0, via Wikimedia Commons"
+ },
+ {
+  "file": "electric_guitar.png",
+  "alt": "Electric guitar – needs an amplifier. Image: Spike78, CC BY-SA 4.0, via Wikimedia Commons",
+  "w": 960,
+  "h": 2577,
+  "alpha": false,
+  "kb": 1432,
+  "caption": "Electric guitar – needs an amplifier",
+  "credit": "Spike78, CC BY-SA 4.0, via Wikimedia Commons"
+ },
+ {
+  "file": "ukulele.jpg",
+  "alt": "Ukulele – four strings. Photo: Zapyon, CC BY-SA 4.0, via Wikimedia Commons",
+  "w": 960,
+  "h": 720,
+  "alpha": false,
+  "kb": 284,
+  "caption": "Ukulele – four strings",
+  "credit": "Zapyon, CC BY-SA 4.0, via Wikimedia Commons"
+ },
+ {
+  "file": "didgeridoo.jpg",
+  "alt": "Didgeridoo (yidaki) – played with vibrating lips to make a drone. Photo: CC BY-SA 3.0, via Wikimedia Commons",
+  "w": 458,
+  "h": 800,
+  "alpha": false,
+  "kb": 298,
+  "caption": "Didgeridoo (yidaki) – played with vibrating lips to make a drone",
+  "credit": "CC BY-SA 3.0, via Wikimedia Commons"
+ },
+ {
+  "file": "ex_pizz_arco.png",
+  "alt": "Playing techniques are written into the music: pizz. = pluck the strings, arco = go back to the bow",
+  "w": 1535,
+  "h": 512,
+  "alpha": false,
+  "kb": 25,
+  "caption": "Playing techniques are written into the music: pizz. = pluck the strings, arco = go back to the bow",
+  "credit": ""
+ },
+ {
+  "file": "ex_voice_ranges.png",
+  "alt": "Approximate ranges of the four voice types, lowest note to highest note",
+  "w": 2008,
+  "h": 1000,
+  "alpha": false,
+  "kb": 59,
+  "caption": "Approximate ranges of the four voice types, lowest note to highest note",
+  "credit": ""
+ },
+ {
+  "file": "dyn_pp.png",
+  "alt": "pianissimo – very soft",
+  "w": 600,
+  "h": 380,
+  "alpha": false,
+  "kb": 5,
+  "caption": "pianissimo – very soft",
+  "credit": ""
+ },
+ {
+  "file": "dyn_mp.png",
+  "alt": "mezzo piano – moderately soft",
+  "w": 600,
+  "h": 380,
+  "alpha": false,
+  "kb": 7,
+  "caption": "mezzo piano – moderately soft",
+  "credit": ""
+ },
+ {
+  "file": "dyn_mf.png",
+  "alt": "mezzo forte – moderately loud",
+  "w": 600,
+  "h": 380,
+  "alpha": false,
+  "kb": 7,
+  "caption": "mezzo forte – moderately loud",
+  "credit": ""
+ },
+ {
+  "file": "dyn_ff.png",
+  "alt": "fortissimo – very loud",
+  "w": 600,
+  "h": 380,
+  "alpha": false,
+  "kb": 5,
+  "caption": "fortissimo – very loud",
+  "credit": ""
+ },
+ {
+  "file": "dyn_p.png",
+  "alt": "piano – soft",
+  "w": 600,
+  "h": 380,
+  "alpha": false,
+  "kb": 5,
+  "caption": "piano – soft",
+  "credit": ""
+ },
+ {
+  "file": "dyn_f.png",
+  "alt": "forte – loud",
+  "w": 600,
+  "h": 380,
+  "alpha": false,
+  "kb": 5,
+  "caption": "forte – loud",
+  "credit": ""
+ },
+ {
+  "file": "ex_dynamics_passage.png",
+  "alt": "Dynamics in a real melody: start soft (p), crescendo to loud (f), diminuendo, end very soft (pp)",
+  "w": 2008,
+  "h": 546,
+  "alpha": false,
+  "kb": 28,
+  "caption": "Dynamics in a real melody: start soft (p), crescendo to loud (f), diminuendo, end very soft (pp)",
+  "credit": ""
+ },
+ {
+  "file": "hairpin_cresc.png",
+  "alt": "Crescendo (cresc.) – gradually getting louder",
+  "w": 1535,
+  "h": 555,
+  "alpha": false,
+  "kb": 15,
+  "caption": "Crescendo (cresc.) – gradually getting louder",
+  "credit": ""
+ },
+ {
+  "file": "hairpin_dim.png",
+  "alt": "Diminuendo / decrescendo (dim.) – gradually getting softer",
+  "w": 1535,
+  "h": 555,
+  "alpha": false,
+  "kb": 15,
+  "caption": "Diminuendo / decrescendo (dim.) – gradually getting softer",
+  "credit": ""
+ },
+ {
+  "file": "ex_cresc_text.png",
+  "alt": "A crescendo can also be written as a word (cresc.) with a dashed line instead of a hairpin",
+  "w": 1535,
+  "h": 546,
+  "alpha": false,
+  "kb": 21,
+  "caption": "A crescendo can also be written as a word (cresc.) with a dashed line instead of a hairpin",
+  "credit": ""
+ },
+ {
+  "file": "art_staccato.png",
+  "alt": "Staccato (dots) – short and detached",
+  "w": 1134,
+  "h": 555,
+  "alpha": false,
+  "kb": 12,
+  "caption": "Staccato (dots) – short and detached",
+  "credit": ""
+ },
+ {
+  "file": "art_accent.png",
+  "alt": "Accent – play the note with emphasis",
+  "w": 1134,
+  "h": 555,
+  "alpha": false,
+  "kb": 12,
+  "caption": "Accent – play the note with emphasis",
+  "credit": ""
+ },
+ {
+  "file": "art_slur.png",
+  "alt": "Slur – play legato (smooth and connected)",
+  "w": 1134,
+  "h": 555,
+  "alpha": false,
+  "kb": 13,
+  "caption": "Slur – play legato (smooth and connected)",
+  "credit": ""
+ },
+ {
+  "file": "art_tie.png",
+  "alt": "Tie – joins two notes of the SAME pitch into one longer note",
+  "w": 1134,
+  "h": 555,
+  "alpha": false,
+  "kb": 11,
+  "caption": "Tie – joins two notes of the SAME pitch into one longer note",
+  "credit": ""
+ },
+ {
+  "file": "art_fermata.png",
+  "alt": "Fermata (pause) – hold the note longer",
+  "w": 850,
+  "h": 555,
+  "alpha": false,
+  "kb": 11,
+  "caption": "Fermata (pause) – hold the note longer",
+  "credit": ""
+ },
+ {
+  "file": "art_tenuto.png",
+  "alt": "Tenuto (lines) – hold each note for its full length, slightly stressed",
+  "w": 1134,
+  "h": 555,
+  "alpha": false,
+  "kb": 11,
+  "caption": "Tenuto (lines) – hold each note for its full length, slightly stressed",
+  "credit": ""
+ },
+ {
+  "file": "ex_gliss.png",
+  "alt": "Glissando – slide from one note to the other",
+  "w": 1134,
+  "h": 445,
+  "alpha": false,
+  "kb": 13,
+  "caption": "Glissando – slide from one note to the other",
+  "credit": ""
+ },
+ {
+  "file": "ex_trill.png",
+  "alt": "Trill (tr) – rapidly alternate with the note above",
+  "w": 850,
+  "h": 555,
+  "alpha": false,
+  "kb": 11,
+  "caption": "Trill (tr) – rapidly alternate with the note above",
+  "credit": ""
+ },
+ {
+  "file": "ex_expression_text.png",
+  "alt": "Expressive directions in a score: Andante (tempo), rit. (slow down) and a fermata on the last note",
+  "w": 2008,
+  "h": 477,
+  "alpha": false,
+  "kb": 29,
+  "caption": "Expressive directions in a score: Andante (tempo), rit. (slow down) and a fermata on the last note",
+  "credit": ""
+ },
+ {
+  "file": "form_binary.png",
+  "alt": "Binary – two contrasting sections",
+  "w": 498,
+  "h": 320,
+  "alpha": false,
+  "kb": 6,
+  "caption": "Binary – two contrasting sections",
+  "credit": ""
+ },
+ {
+  "file": "form_ternary.png",
+  "alt": "Ternary – the A section comes back",
+  "w": 706,
+  "h": 320,
+  "alpha": false,
+  "kb": 7,
+  "caption": "Ternary – the A section comes back",
+  "credit": ""
+ },
+ {
+  "file": "form_rondo.png",
+  "alt": "Rondo – A keeps returning between new sections",
+  "w": 1122,
+  "h": 320,
+  "alpha": false,
+  "kb": 8,
+  "caption": "Rondo – A keeps returning between new sections",
+  "credit": ""
+ },
+ {
+  "file": "form_verse_chorus.png",
+  "alt": "A typical verse–chorus song map",
+  "w": 1826,
+  "h": 300,
+  "alpha": false,
+  "kb": 19,
+  "caption": "A typical verse–chorus song map",
+  "credit": ""
+ },
+ {
+  "file": "form_12bar_blues.png",
+  "alt": "The 12-bar blues chord pattern (shown in C) – this 12-bar cycle repeats for the whole song",
+  "w": 1148,
+  "h": 642,
+  "alpha": false,
+  "kb": 22,
+  "caption": "The 12-bar blues chord pattern (shown in C) – this 12-bar cycle repeats for the whole song",
+  "credit": ""
+ },
+ {
+  "file": "ex_motif.png",
+  "alt": "Motif – the famous four-note idea from Beethoven's Symphony No. 5, then repeated a step lower",
+  "w": 2008,
+  "h": 966,
+  "alpha": false,
+  "kb": 53,
+  "caption": "Motif – the famous four-note idea from Beethoven's Symphony No. 5, then repeated a step lower",
+  "credit": ""
+ },
+ {
+  "file": "ex_phrases.png",
+  "alt": "Phrases – Beethoven's Ode to Joy: a 'question' phrase that sounds unfinished, then an 'answer' phrase that ends on the home note",
+  "w": 2008,
+  "h": 1040,
+  "alpha": false,
+  "kb": 63,
+  "caption": "Phrases – Beethoven's Ode to Joy: a 'question' phrase that sounds unfinished, then an 'answer' phrase that ends on the home note",
+  "credit": ""
+ },
+ {
+  "file": "ex_call_response.png",
+  "alt": "Call and response",
+  "w": 2008,
+  "h": 499,
+  "alpha": false,
+  "kb": 27,
+  "caption": "Call and response",
+  "credit": ""
+ },
+ {
+  "file": "ex_volta.png",
+  "alt": "1st and 2nd time bars – first time play bracket 1 and repeat; second time skip to bracket 2",
+  "w": 2008,
+  "h": 502,
+  "alpha": false,
+  "kb": 22,
+  "caption": "1st and 2nd time bars – first time play bracket 1 and repeat; second time skip to bracket 2",
+  "credit": ""
+ },
+ {
+  "file": "ex_dc_fine.png",
+  "alt": "D.C. al Fine – go back to the beginning and stop at Fine",
+  "w": 2008,
+  "h": 461,
+  "alpha": false,
+  "kb": 25,
+  "caption": "D.C. al Fine – go back to the beginning and stop at Fine",
+  "credit": ""
+ }
+]
