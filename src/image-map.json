@@ -1,0 +1,474 @@
+{
+ "Beat and tempo>Reading a tempo marking": [
+  "ex_tempo_mark.png"
+ ],
+ "Note values>Semibreve": [
+  "nv_semibreve.png"
+ ],
+ "Note values>Minim": [
+  "nv_minim.png"
+ ],
+ "Note values>Crotchet": [
+  "nv_crotchet.png"
+ ],
+ "Note values>Quaver": [
+  "nv_quaver.png",
+  "nv_quaverpair.png"
+ ],
+ "Note values>Semiquaver": [
+  "nv_semiquaver.png",
+  "nv_semiquavers.png"
+ ],
+ "Note values>Dotted minim": [
+  "nv_dotted_minim.png"
+ ],
+ "Note values>Dotted crotchet": [
+  "nv_dotted_crotchet.png"
+ ],
+ "Note values>The note-value pyramid": [
+  "ex_note_tree.png"
+ ],
+ "Rests (silence)>Semibreve rest": [
+  "rest_semibreve.png"
+ ],
+ "Rests (silence)>Minim rest": [
+  "rest_minim.png"
+ ],
+ "Rests (silence)>Crotchet rest": [
+  "rest_crotchet.png"
+ ],
+ "Rests (silence)>Quaver rest": [
+  "rest_quaver.png"
+ ],
+ "Simple time>2/4": [
+  "ts_24.png"
+ ],
+ "Simple time>3/4": [
+  "ts_34.png"
+ ],
+ "Simple time>4/4": [
+  "ts_44.png"
+ ],
+ "Compound time>6/8": [
+  "ts_68.png",
+  "bar_68_group.png"
+ ],
+ "Metre and time signatures>3/4 or 6/8?": [
+  "ex_34_quavers.png"
+ ],
+ "Rhythmic devices>Ostinato": [
+  "ex_ostinato.png"
+ ],
+ "Rhythmic devices>Syncopation": [
+  "ex_syncopation.png"
+ ],
+ "Rhythmic devices>Backbeat": [
+  "ex_backbeat.png"
+ ],
+ "Bar lines>Final (double) bar line": [
+  "final_barline.png"
+ ],
+ "Bar lines>Repeat sign": [
+  "repeat_sign.png"
+ ],
+ "Bar lines>Start and end repeat signs": [
+  "ex_repeat_both.png"
+ ],
+ "The staff and clefs>Treble clef (G clef)": [
+  "clef_treble.png"
+ ],
+ "The staff and clefs>Bass clef (F clef)": [
+  "clef_bass.png"
+ ],
+ "The staff and clefs>Ledger lines": [
+  "ex_ledger.png"
+ ],
+ "The staff and clefs>Grand staff": [
+  "ref_grand_staff.png"
+ ],
+ "Pitch>Treble clef notes": [
+  "ref_treble_notes.png"
+ ],
+ "Pitch>Bass clef notes": [
+  "ref_bass_notes.png"
+ ],
+ "The keyboard>Finding C": [
+  "ref_keyboard.png"
+ ],
+ "The keyboard>Semitone": [
+  "kb_semitone_tone.png"
+ ],
+ "The keyboard>Octave": [
+  "kb_octave.png",
+  "ex_octave.png"
+ ],
+ "The keyboard>Interval": [
+  "ex_intervals.png"
+ ],
+ "Accidentals>Sharp ♯": [
+  "acc_sharp.png"
+ ],
+ "Accidentals>Flat ♭": [
+  "acc_flat.png"
+ ],
+ "Accidentals>Natural ♮": [
+  "acc_natural.png"
+ ],
+ "How melodies move>By step": [
+  "mel_steps.png"
+ ],
+ "How melodies move>By leap": [
+  "mel_leaps.png"
+ ],
+ "How melodies move>Repeated notes": [
+  "mel_repeat.png"
+ ],
+ "Contour>Ascending": [
+  "mel_ascending.png"
+ ],
+ "Contour>Descending": [
+  "mel_descending.png"
+ ],
+ "Contour>Arch": [
+  "mel_arch.png"
+ ],
+ "Contour>Wave-like": [
+  "mel_wave.png"
+ ],
+ "Major>C major scale": [
+  "scale_cmaj.png"
+ ],
+ "Major>The major pattern": [
+  "scale_cmaj_tts.png"
+ ],
+ "Major>G major": [
+  "key_g.png"
+ ],
+ "Major>D major": [
+  "key_d.png"
+ ],
+ "Major>F major": [
+  "key_f.png"
+ ],
+ "Major>B flat major": [
+  "key_bb.png"
+ ],
+ "Minor>A minor (natural minor)": [
+  "scale_amin.png"
+ ],
+ "Pentatonic>C major pentatonic": [
+  "scale_cpent.png"
+ ],
+ "Modal>D Dorian": [
+  "scale_ddorian.png"
+ ],
+ "Tonality>Chromatic scale": [
+  "scale_chromatic.png"
+ ],
+ "Harmony and chords>Triad": [
+  "triad_c.png"
+ ],
+ "Harmony and chords>Primary chords in C major": [
+  "ex_chords_c.png"
+ ],
+ "Harmony and chords>Major vs minor triad": [
+  "ex_major_minor.png"
+ ],
+ "Harmony and chords>Chord diagrams": [
+  "ex_guitar_chord_c.png",
+  "ex_uke_chord_c.png"
+ ],
+ "Pitch devices>Riff": [
+  "ex_riff.png"
+ ],
+ "Pitch devices>Drone": [
+  "ex_drone.png"
+ ],
+ "Ways of notating pitch>Staff notation": [
+  "ex_tab_staff.png"
+ ],
+ "Ways of notating pitch>Tablature (TAB)": [
+  "tab.png"
+ ],
+ "Ways of notating pitch>Graphic notation": [
+  "ex_graphic_notation.png"
+ ],
+ "Density>Texture graph": [
+  "ex_texture_graph.png"
+ ],
+ "Texture>Roles of layers": [
+  "tex_roles.png"
+ ],
+ "Types of texture>Unison": [
+  "tex_unison.png"
+ ],
+ "Types of texture>Monophonic": [
+  "tex_mono.png"
+ ],
+ "Types of texture>Homophonic": [
+  "tex_homo.png"
+ ],
+ "Types of texture>Polyphonic": [
+  "tex_poly.png"
+ ],
+ "Performing media and timbre>Families of the orchestra": [
+  "ex_orchestra_layout.png"
+ ],
+ "Strings>Violin": [
+  "violin.jpg"
+ ],
+ "Strings>Cello": [
+  "cello.png"
+ ],
+ "Strings>Double bass": [
+  "double_bass.jpg"
+ ],
+ "Woodwind>Flute": [
+  "flute.jpg"
+ ],
+ "Woodwind>Clarinet": [
+  "clarinet.jpg"
+ ],
+ "Woodwind>Saxophone": [
+  "saxophone.jpg"
+ ],
+ "Brass>Trumpet": [
+  "trumpet.jpg"
+ ],
+ "Brass>French horn": [
+  "french_horn.png"
+ ],
+ "Brass>Trombone": [
+  "trombone.jpg"
+ ],
+ "Brass>Tuba": [
+  "tuba.png"
+ ],
+ "Percussion>Drum kit": [
+  "drum_kit.jpg",
+  "ex_drum_key.png"
+ ],
+ "Percussion>Maracas": [
+  "maracas.jpg"
+ ],
+ "Percussion>Guiro": [
+  "guiro.jpg"
+ ],
+ "Keyboards, guitars and others>Grand piano": [
+  "piano.png"
+ ],
+ "Keyboards, guitars and others>Synthesiser": [
+  "synthesizer.jpg"
+ ],
+ "Keyboards, guitars and others>Acoustic guitar": [
+  "acoustic_guitar.jpg"
+ ],
+ "Keyboards, guitars and others>Electric guitar": [
+  "electric_guitar.png"
+ ],
+ "Keyboards, guitars and others>Ukulele": [
+  "ukulele.jpg"
+ ],
+ "Keyboards, guitars and others>Didgeridoo (yidaki)": [
+  "didgeridoo.jpg"
+ ],
+ "Performing media and timbre>Playing techniques": [
+  "ex_pizz_arco.png"
+ ],
+ "Voices and ensembles>Voice types (SATB)": [
+  "ex_voice_ranges.png"
+ ],
+ "Dynamics>pp – pianissimo": [
+  "dyn_pp.png"
+ ],
+ "Dynamics>p – piano": [
+  "dyn_p.png"
+ ],
+ "Dynamics>mp – mezzo piano": [
+  "dyn_mp.png"
+ ],
+ "Dynamics>mf – mezzo forte": [
+  "dyn_mf.png"
+ ],
+ "Dynamics>f – forte": [
+  "dyn_f.png"
+ ],
+ "Dynamics>ff – fortissimo": [
+  "dyn_ff.png"
+ ],
+ "Dynamics>In a real melody": [
+  "ex_dynamics_passage.png"
+ ],
+ "Gradual changes>Crescendo (cresc.)": [
+  "hairpin_cresc.png",
+  "ex_cresc_text.png"
+ ],
+ "Gradual changes>Diminuendo / decrescendo (dim.)": [
+  "hairpin_dim.png"
+ ],
+ "Articulation>Staccato (dots)": [
+  "art_staccato.png"
+ ],
+ "Articulation>Accent": [
+  "art_accent.png"
+ ],
+ "Articulation>Slur": [
+  "art_slur.png"
+ ],
+ "Articulation>Tie": [
+  "art_tie.png"
+ ],
+ "Articulation>Tenuto (lines)": [
+  "art_tenuto.png"
+ ],
+ "Articulation>Fermata (pause)": [
+  "art_fermata.png"
+ ],
+ "Expressive techniques and effects>Glissando": [
+  "ex_gliss.png"
+ ],
+ "Expressive techniques and effects>Trill (tr)": [
+  "ex_trill.png"
+ ],
+ "Expressive techniques and effects>Why Italian?": [
+  "ex_expression_text.png"
+ ],
+ "Macrostructure>Binary – A B": [
+  "form_binary.png"
+ ],
+ "Macrostructure>Ternary – A B A": [
+  "form_ternary.png"
+ ],
+ "Macrostructure>Rondo – A B A C A": [
+  "form_rondo.png"
+ ],
+ "Macrostructure>Verse–chorus": [
+  "form_verse_chorus.png"
+ ],
+ "Macrostructure>12-bar blues": [
+  "form_12bar_blues.png"
+ ],
+ "Microstructure>Motif": [
+  "ex_motif.png"
+ ],
+ "Microstructure>Phrase": [
+  "ex_phrases.png"
+ ],
+ "Microstructure>Call and response": [
+  "ex_call_response.png"
+ ],
+ "Signs that change the order>1st and 2nd time bars": [
+  "ex_volta.png"
+ ],
+ "Signs that change the order>Fine": [
+  "ex_dc_fine.png"
+ ],
+ "Beat and tempo>Tempo": [
+  "metronome.jpg"
+ ],
+ "Beat and tempo>Changing tempo": [
+  "ex_accel_rit.png"
+ ],
+ "Note values>The dot rule": [
+  "ex_dot_rule.png"
+ ],
+ "Metre and time signatures>Top number": [
+  "ex_time_sig_count.png"
+ ],
+ "The staff and clefs>Staff (stave)": [
+  "ref_staff_lines_spaces.png"
+ ],
+ "Treble clef notes>Lines: E G B D F": [
+  "ref_treble_lines.png"
+ ],
+ "Treble clef notes>Spaces: F A C E": [
+  "ref_treble_spaces.png"
+ ],
+ "Bass clef notes>Lines: G B D F A": [
+  "ref_bass_lines.png"
+ ],
+ "Bass clef notes>Spaces: A C E G": [
+  "ref_bass_spaces.png"
+ ],
+ "Key ideas>Melody": [
+  "ex_melody_harmony.png"
+ ],
+ "Key ideas>Harmony": [
+  "ex_melody_harmony.png"
+ ],
+ "The keyboard>Tone": [
+  "kb_semitone_tone.png"
+ ],
+ "Contour>Staying the same": [
+  "mel_repeat.png"
+ ],
+ "Primary chords in C major>I – Tonic": [
+  "triad_c.png"
+ ],
+ "Primary chords in C major>IV – Subdominant": [
+  "triad_f.png"
+ ],
+ "Primary chords in C major>V – Dominant": [
+  "triad_g.png"
+ ],
+ "Primary chords in C major>V7 – Dominant seventh": [
+  "chord_g7.png"
+ ],
+ "Pitch devices>Ostinato": [
+  "ex_melodic_ostinato.png"
+ ],
+ "Strings>Viola": [
+  "viola.jpg"
+ ],
+ "Strings>Harp": [
+  "harp.jpg"
+ ],
+ "Woodwind>Oboe": [
+  "oboe.jpg"
+ ],
+ "Woodwind>Bassoon": [
+  "bassoon.jpg"
+ ],
+ "Tuned>Xylophone": [
+  "xylophone.jpg"
+ ],
+ "Tuned>Glockenspiel": [
+  "glockenspiel.jpg"
+ ],
+ "Tuned>Timpani (kettledrums)": [
+  "timpani.jpg"
+ ],
+ "Untuned>Snare drum": [
+  "snare_drum.png"
+ ],
+ "Untuned>Cymbals": [
+  "cymbals.jpg"
+ ],
+ "Untuned>Tambourine": [
+  "tambourine.jpg"
+ ],
+ "Keyboards, guitars and others>Bass guitar": [
+  "bass_guitar.jpg"
+ ],
+ "Expressive techniques and effects>Pizzicato": [
+  "ex_pizz_arco.png"
+ ],
+ "Expressive techniques and effects>Arco": [
+  "ex_pizz_arco.png"
+ ],
+ "Macrostructure>Cyclic": [
+  "form_cyclic.png"
+ ],
+ "Structure>Song sections": [
+  "form_verse_chorus.png"
+ ],
+ "Signs that change the order>Repeat sign": [
+  "repeat_sign.png"
+ ],
+ "Signs that change the order>Da Capo (D.C.)": [
+  "ex_dc_fine.png"
+ ],
+ "Signs that change the order>Coda": [
+  "sign_coda.png"
+ ]
+}

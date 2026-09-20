@@ -3,7 +3,9 @@
 Images for the Stage 4 *Elements of Music* reference (NSW Music 7–10 Syllabus, 2024), plus the interactive mindmap that uses them.
 
 - `index.html` – the interactive mindmap (open it in a browser; it loads pictures from `images/`)
-- `images/` – 127 notation graphics and instrument photos, exported from the Notion page
+- `src/` + `build.py` – mindmap source: `content.js` (the text), `image-map.json` (which picture goes on which node), `template.html` (design and behaviour). Run `python3 build.py` to rebuild `index.html`
+- `lilypond/` – LilyPond sources for the notation graphics added later
+- `images/` – 153 notation graphics and instrument photos, exported from the Notion page
 - `captions.json` – file name, caption, credit and pixel size for every image
 
 ## Linking an image
@@ -149,3 +151,29 @@ Instrument photos come from Wikimedia Commons under the licences listed; keep th
 | [`ex_call_response.png`](https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/ex_call_response.png) | Call and response | Own notation graphic |
 | [`ex_volta.png`](https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/ex_volta.png) | 1st and 2nd time bars – first time play bracket 1 and repeat; second time skip to bracket 2 | Own notation graphic |
 | [`ex_dc_fine.png`](https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/ex_dc_fine.png) | D.C. al Fine – go back to the beginning and stop at Fine | Own notation graphic |
+| [`metronome.jpg`](https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/metronome.jpg) | Metronome – clicks a steady beat at the BPM you set | Vincent Quach (Invincible), CC BY-SA 3.0, via Wikimedia Commons |
+| [`ex_accel_rit.png`](https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/ex_accel_rit.png) | Tempo changes written into the music: accel. = gradually faster, rit. = gradually slower | Own notation graphic |
+| [`nv_semiquaver.png`](https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/nv_semiquaver.png) | Semiquaver – quarter of a beat | Own notation graphic |
+| [`ex_dot_rule.png`](https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/ex_dot_rule.png) | The dot rule: a dot adds half of the note's value | Own notation graphic |
+| [`ex_time_sig_count.png`](https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/ex_time_sig_count.png) | 4/4 – the top 4 means four beats in every bar (count 1 2 3 4); the bottom 4 means crotchet beats | Own notation graphic |
+| [`ref_staff_lines_spaces.png`](https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/ref_staff_lines_spaces.png) | The staff: 5 lines and 4 spaces, always counted from the bottom up | Own notation graphic |
+| [`ref_treble_lines.png`](https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/ref_treble_lines.png) | Treble clef lines: E G B D F | Own notation graphic |
+| [`ref_treble_spaces.png`](https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/ref_treble_spaces.png) | Treble clef spaces: F A C E | Own notation graphic |
+| [`ref_bass_lines.png`](https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/ref_bass_lines.png) | Bass clef lines: G B D F A | Own notation graphic |
+| [`ref_bass_spaces.png`](https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/ref_bass_spaces.png) | Bass clef spaces: A C E G | Own notation graphic |
+| [`ex_melody_harmony.png`](https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/ex_melody_harmony.png) | Melody is one note at a time; harmony is notes sounding together | Own notation graphic |
+| [`triad_f.png`](https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/triad_f.png) | Chord IV in C major – F: F A C | Own notation graphic |
+| [`triad_g.png`](https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/triad_g.png) | Chord V in C major – G: G B D | Own notation graphic |
+| [`chord_g7.png`](https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/chord_g7.png) | Chord V7 in C major – G7: G B D F | Own notation graphic |
+| [`ex_melodic_ostinato.png`](https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/ex_melodic_ostinato.png) | A melodic ostinato – the same one-bar pattern repeated over and over | Own notation graphic |
+| [`sign_coda.png`](https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/sign_coda.png) | The coda sign – marks the jump to the ending section | Own notation graphic |
+| [`form_cyclic.png`](https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/form_cyclic.png) | Cyclic – a pattern or loop that repeats around and around | Own notation graphic |
+| [`viola.jpg`](https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/viola.jpg) | Viola – slightly bigger and lower than the violin | Museum für Kunst und Gewerbe Hamburg, CC0, via Wikimedia Commons |
+| [`oboe.jpg`](https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/oboe.jpg) | Oboe – double reed | Gebrüder Mönnig, Markneukirchen, CC BY-SA 4.0, via Wikimedia Commons |
+| [`bassoon.jpg`](https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/bassoon.jpg) | Bassoon – lowest woodwind, double reed | Yamaha Corporation, CC BY-SA 4.0, via Wikimedia Commons |
+| [`harp.jpg`](https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/harp.jpg) | Harp – plucked strings | N.S.M. s.p.a., CC BY-SA 4.0, via Wikimedia Commons |
+| [`xylophone.jpg`](https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/xylophone.jpg) | Xylophones – wooden bars, TUNED percussion | Ferbr1, CC BY-SA 3.0, via Wikimedia Commons |
+| [`glockenspiel.jpg`](https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/glockenspiel.jpg) | Glockenspiel – metal bars, TUNED percussion | flamurai, Public domain, via Wikimedia Commons |
+| [`cymbals.jpg`](https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/cymbals.jpg) | Cymbals – UNTUNED percussion | Kovac9478, CC BY 3.0, via Wikimedia Commons |
+| [`tambourine.jpg`](https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/tambourine.jpg) | Tambourine – UNTUNED percussion, struck or shaken | Unknown photographer, CC0, via Wikimedia Commons |
+| [`bass_guitar.jpg`](https://raw.githubusercontent.com/gnehciak/elements-of-music-images/main/images/bass_guitar.jpg) | Bass guitar – four strings, plays the bass line | Niranjan Arminius, CC BY-SA 4.0, via Wikimedia Commons |
