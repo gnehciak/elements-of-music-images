@@ -179,7 +179,12 @@ button,input{font:inherit;color:inherit}
   .search{flex:1 1 150px}
   .mini{display:none}
   .hint{left:16px;right:74px;transform:none;white-space:normal;font-size:17px;line-height:1.15}
-  .node.d1 .t{font-size:38px}
+  .node.d1 .t{font-size:34px}
+  .node.d1 .card{max-width:290px;padding:12px 14px}
+  .node.d0 .card{padding:14px 18px 12px;border-width:5px;outline-offset:-11px}
+  .node.d0 .t{font-size:28px}
+  .node.d0 .def{font-size:15px}
+  .node.d0 .stave{gap:4px;margin:10px 2px 8px}
 }
 @media (prefers-reduced-motion:reduce){
   .node .card,.world path,.bill,.hint,.viewer[open],.viewer::backdrop{animation:none}
@@ -586,7 +591,7 @@ function measure(){
 
 /* ---------- layout ---------- */
 const vgap=d=>d<=1?30:d===2?14:8;
-const hgap=d=>d===0?96:d===1?64:44;
+const hgap=d=>d===0?(narrow?44:96):d===1?(narrow?48:64):44;
 function sub(o){
   if(!o.open||!o.children.length){o.ch=0;return o.sh=o.h}
   let s=0; o.children.forEach((c,i)=>{s+=sub(c)+(i?vgap(c.depth):0)});
@@ -690,7 +695,7 @@ const topInset=()=>22;
 function fit(list,instant){
   const W=stage.clientWidth,H=stage.clientHeight,pad=narrow?16:40,top=topInset(),bot=narrow?70:30,b=bbox(list||vis);
   let k=Math.min((W-2*pad)/b.w,(H-top-bot)/b.h,1.15);
-  k=Math.max(k,narrow?.62:KMIN);
+  k=Math.max(k,narrow?.56:KMIN);
   vt.k=k;
   vt.x=b.w*k>W-2*pad?pad-b.x*k:W/2-k*(b.x+b.w/2);
   vt.y=top+(H-top-bot)/2-k*(b.y+b.h/2);
@@ -958,7 +963,7 @@ new ResizeObserver(()=>{
   lastW=stage.clientWidth; lastH=stage.clientHeight;
   clearTimeout(rz); rz=setTimeout(()=>{
     const n=window.innerWidth<720;
-    if(n!==narrow){ narrow=n; applySides(); finish(); layout() }
+    if(n!==narrow){ narrow=n; applySides(); finish(); measure(); layout() }
     fit(null,!touched);
   },120);
 }).observe(stage);
