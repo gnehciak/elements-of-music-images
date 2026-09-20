@@ -1,6 +1,6 @@
 /* Mindmap content, from the Notion page "Content". n(title, definition, children, kind) */
 function n(t,d,c,k){ if(Array.isArray(d)){k=c;c=d;d=""} return {t:t,d:d||"",c:c||[],k:k||""} }
-const ask=(...qs)=>n("Ask the class","Questions for listening",qs.map(q=>n(q,"",[],"ask")),"ask");
+const ask=(...qs)=>n("Ask yourself","Questions for listening",qs.map(q=>n(q,"",[],"ask")),"ask");
 const tip=(t,d)=>n(t,d,[],"tip");
 
 const DATA=n("Elements of Music","Stage 4 · NSW Music 7–10 Syllabus (2024)",[
