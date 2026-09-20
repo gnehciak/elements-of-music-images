@@ -577,9 +577,12 @@ function build(src,parent,depth,branch){
 }
 function light(o,on){ for(let p=o;p&&p.link;p=p.parent) p.link.classList.toggle("lit",on) }
 function setSide(o,s){ o.side=s; o.el.classList.toggle("l",s<0); o.children.forEach(c=>setSide(c,s)) }
-function applySides(){ root.children.forEach((c,i)=>setSide(c,narrow||i<3?1:-1)) }
+function applySides(){ root.children.forEach((c,i)=>setSide(c,narrow||i>=3?1:-1)) }
 
 root=build(DATA,null,0,0);
+/* display order: first three sit left of the headline (top to bottom), last three right. Colours stay tied to the element. */
+const ORDER=["Pitch","Duration","Dynamics and expression","Performing media and timbre","Texture","Structure"];
+root.children.sort((a,b)=>ORDER.indexOf(a.t)-ORDER.indexOf(b.t));
 root.open=true;
 applySides();
 
@@ -905,7 +908,7 @@ quizBtn.onclick=()=>{
 const chips=document.getElementById("chips");
 root.children.forEach((c,i)=>{
   const b=mk("button","chip",c.t); b.type="button";
-  b.style.setProperty("--b","var(--c"+(i+1)+")"); b.style.setProperty("--o","var(--o"+(i+1)+")");
+  b.style.setProperty("--b","var(--c"+(c.branch+1)+")"); b.style.setProperty("--o","var(--o"+(c.branch+1)+")");
   b.onclick=()=>{
     clearSearch(true); hideHint();
     const solo=c.open&&root.children.every(x=>x===c||!x.open);
